@@ -14,4 +14,4 @@ opening a pull request, and merging it on GitHub.
 - Open a pull request
 - Review and merge it
 
-Feel free to use this repo to keep practicing the workflow whenver you'd like.
+Feel free to use this repo to keep practicing the workflow whenever you'd like.
