@@ -40,6 +40,19 @@ To make the LoftRest page your homepage, replace your theme's `templates/index.j
 
 `sections/loftrest-listicle.liquid` and `templates/page.listicle.json` are a "5 reasons" article page (source: `listicle.html` in the repo root). Prices, the discount and the three Buy buttons come from the product. In **Customize → Pages → listicle** you can pick the product, change the top image, and turn on **Show 30-night trial**. Only turn that on if you really offer the trial. After editing `listicle.html`, run `python3 build_listicle.py` in the `shopify` folder.
 
+## Product page
+
+`sections/loftrest-product.liquid` and `templates/product.loftrest.json` are the LoftRest product page (source: `src/loftrest-product.liquid`). The product uses it when its **Theme template** is set to `loftrest`. Edit it in **Customize → Products → LoftRest**:
+
+| To change | Do this |
+| --- | --- |
+| Offers | Each **Offer** block is one option (quantity, label, badge). To show a bundle discount, first create a real discount code under **Discounts**, then enter the same code and % in the block. Both must be filled in or no discount shows. |
+| Reviews | **Add block → Customer review** for genuine reviews, or install a review app (e.g. Judge.me) and **Add block → Apps**. The reviews section and star rating stay hidden until there is at least one review. |
+| Trust | **Shipping promise**, **Show trial badge** (only if you really offer one) and **Support email** in the section settings. Returns and shipping links appear automatically once you add those policies under **Settings → Policies**. |
+| Questions | Each **FAQ question** block is one question. Google's FAQ data updates automatically. |
+
+After editing `src/loftrest-product.liquid`, run `python3 build_product.py` in the `shopify` folder.
+
 ## Editing on Shopify
 
 Most changes can be made in **Online Store → Themes → Customize → Pages → LoftRest → LoftRest landing page**. You don't need to touch any code.

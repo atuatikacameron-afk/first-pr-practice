@@ -1,0 +1,509 @@
+{%- comment -%}
+  LoftRest product page. Generated from src/loftrest-product.liquid by shopify/build_product.py.
+  Edit offers, reviews, FAQ and trust settings in Online Store > Themes > Customize (Products > LoftRest).
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* Minimal reset scoped to this page so the rest of your theme is untouched */
+  .loftrest { font-family: 'Inter', -apple-system, sans-serif; color: #1e293b; background: #F8FAFC; -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .loftrest *, .loftrest *::before, .loftrest *::after { box-sizing: border-box; border-width: 0; border-style: solid; border-color: #e5e7eb; }
+  .loftrest h1, .loftrest h2, .loftrest h3, .loftrest p, .loftrest figure, .loftrest blockquote, .loftrest ol, .loftrest ul { margin: 0; padding: 0; }
+  .loftrest h1, .loftrest h2, .loftrest h3 { font-family: inherit; font-size: inherit; font-weight: inherit; letter-spacing: inherit; color: inherit; line-height: 1.2; }
+  .loftrest ol, .loftrest ul { list-style: none; }
+  .loftrest a { color: inherit; text-decoration: none; }
+  .loftrest button, .loftrest input { font: inherit; color: inherit; margin: 0; background: transparent; }
+  .loftrest button { cursor: pointer; }
+  .loftrest svg { display: block; }
+  .loftrest summary { padding: 0; }
+  .loftrest summary::-webkit-details-marker { display: none; }
+  /* Page styles (Tailwind, compiled by build.py) */
+  .loftrest,.loftrest *,.loftrest :after,.loftrest :before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.loftrest ::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.loftrest .lr-fixed{position:fixed}.loftrest .lr-absolute{position:absolute}.loftrest .lr-relative{position:relative}.loftrest .lr-inset-x-0{left:0;right:0}.loftrest .lr-bottom-0{bottom:0}.loftrest .lr-left-4{left:1rem}.loftrest .lr-top-4{top:1rem}.loftrest .lr-z-40{z-index:40}.loftrest .lr-mx-auto{margin-left:auto;margin-right:auto}.loftrest .lr-mb-3{margin-bottom:.75rem}.loftrest .lr-mt-1{margin-top:.25rem}.loftrest .lr-mt-10{margin-top:2.5rem}.loftrest .lr-mt-12{margin-top:3rem}.loftrest .lr-mt-2{margin-top:.5rem}.loftrest .lr-mt-3{margin-top:.75rem}.loftrest .lr-mt-4{margin-top:1rem}.loftrest .lr-mt-5{margin-top:1.25rem}.loftrest .lr-mt-6{margin-top:1.5rem}.loftrest .lr-mt-8{margin-top:2rem}.loftrest .lr-block{display:block}.loftrest .lr-flex{display:flex}.loftrest .lr-inline-flex{display:inline-flex}.loftrest .lr-grid{display:grid}.loftrest .lr-aspect-square{aspect-ratio:1/1}.loftrest .lr-h-4{height:1rem}.loftrest .lr-h-5{height:1.25rem}.loftrest .lr-h-6{height:1.5rem}.loftrest .lr-h-full{height:100%}.loftrest .lr-w-4{width:1rem}.loftrest .lr-w-5{width:1.25rem}.loftrest .lr-w-6{width:1.5rem}.loftrest .lr-w-auto{width:auto}.loftrest .lr-w-full{width:100%}.loftrest .lr-min-w-0{min-width:0}.loftrest .lr-min-w-\[560px\]{min-width:560px}.loftrest .lr-max-w-3xl{max-width:48rem}.loftrest .lr-max-w-4xl{max-width:56rem}.loftrest .lr-max-w-5xl{max-width:64rem}.loftrest .lr-max-w-6xl{max-width:72rem}.loftrest .lr-flex-1{flex:1 1 0%}.loftrest .lr-shrink-0{flex-shrink:0}.loftrest .lr-cursor-pointer{cursor:pointer}.loftrest .lr-scroll-mt-16{scroll-margin-top:4rem}.loftrest .lr-list-none{list-style-type:none}.loftrest .lr-grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.loftrest .lr-grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.loftrest .lr-grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.loftrest .lr-flex-col{flex-direction:column}.loftrest .lr-flex-wrap{flex-wrap:wrap}.loftrest .lr-items-center{align-items:center}.loftrest .lr-items-baseline{align-items:baseline}.loftrest .lr-justify-between{justify-content:space-between}.loftrest .lr-gap-1{gap:.25rem}.loftrest .lr-gap-2{gap:.5rem}.loftrest .lr-gap-3{gap:.75rem}.loftrest .lr-gap-4{gap:1rem}.loftrest .lr-gap-6{gap:1.5rem}.loftrest .lr-gap-8{gap:2rem}.loftrest :is(.lr-space-y-2\.5>:not([hidden])~:not([hidden])){--tw-space-y-reverse:0;margin-top:calc(.625rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.625rem*var(--tw-space-y-reverse))}.loftrest :is(.lr-space-y-3>:not([hidden])~:not([hidden])){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.loftrest :is(.lr-space-y-4>:not([hidden])~:not([hidden])){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.loftrest .lr-overflow-hidden{overflow:hidden}.loftrest .lr-overflow-x-auto{overflow-x:auto}.loftrest .lr-truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.loftrest .lr-rounded{border-radius:.25rem}.loftrest .lr-rounded-2xl{border-radius:1rem}.loftrest .lr-rounded-full{border-radius:9999px}.loftrest .lr-rounded-lg{border-radius:.5rem}.loftrest .lr-rounded-xl{border-radius:.75rem}.loftrest .lr-border{border-width:1px}.loftrest .lr-border-2{border-width:2px}.loftrest .lr-border-y{border-top-width:1px}.loftrest .lr-border-b,.loftrest .lr-border-y{border-bottom-width:1px}.loftrest .lr-border-t{border-top-width:1px}.loftrest .lr-border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138/var(--tw-border-opacity,1))}.loftrest .lr-border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249/var(--tw-border-opacity,1))}.loftrest .lr-border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.loftrest .lr-bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235/var(--tw-bg-opacity,1))}.loftrest .lr-bg-brand-blue{--tw-bg-opacity:1;background-color:rgb(2 132 199/var(--tw-bg-opacity,1))}.loftrest .lr-bg-brand-emerald{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.loftrest .lr-bg-brand-heat{--tw-bg-opacity:1;background-color:rgb(249 115 22/var(--tw-bg-opacity,1))}.loftrest .lr-bg-brand-navy{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.loftrest .lr-bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.loftrest .lr-bg-white\/95{background-color:hsla(0,0%,100%,.95)}.loftrest .lr-fill-current{fill:currentColor}.loftrest .lr-object-cover{-o-object-fit:cover;object-fit:cover}.loftrest .lr-p-4{padding:1rem}.loftrest .lr-p-5{padding:1.25rem}.loftrest .lr-p-6{padding:1.5rem}.loftrest .lr-px-2{padding-left:.5rem;padding-right:.5rem}.loftrest .lr-px-2\.5{padding-left:.625rem;padding-right:.625rem}.loftrest .lr-px-3{padding-left:.75rem;padding-right:.75rem}.loftrest .lr-px-4{padding-left:1rem;padding-right:1rem}.loftrest .lr-px-5{padding-left:1.25rem;padding-right:1.25rem}.loftrest .lr-px-8{padding-left:2rem;padding-right:2rem}.loftrest .lr-py-1{padding-top:.25rem;padding-bottom:.25rem}.loftrest .lr-py-12{padding-top:3rem;padding-bottom:3rem}.loftrest .lr-py-16{padding-top:4rem;padding-bottom:4rem}.loftrest .lr-py-3{padding-top:.75rem;padding-bottom:.75rem}.loftrest .lr-py-4{padding-top:1rem;padding-bottom:1rem}.loftrest .lr-py-6{padding-top:1.5rem;padding-bottom:1.5rem}.loftrest .lr-pb-24{padding-bottom:6rem}.loftrest .lr-pl-3{padding-left:.75rem}.loftrest .lr-pr-4{padding-right:1rem}.loftrest .lr-pt-6{padding-top:1.5rem}.loftrest .lr-text-left{text-align:left}.loftrest .lr-text-center{text-align:center}.loftrest .lr-text-right{text-align:right}.loftrest .lr-text-2xl{font-size:1.5rem;line-height:2rem}.loftrest .lr-text-3xl{font-size:1.875rem;line-height:2.25rem}.loftrest .lr-text-base{font-size:1rem;line-height:1.5rem}.loftrest .lr-text-lg{font-size:1.125rem;line-height:1.75rem}.loftrest .lr-text-sm{font-size:.875rem;line-height:1.25rem}.loftrest .lr-text-xs{font-size:.75rem;line-height:1rem}.loftrest .lr-font-bold{font-weight:700}.loftrest .lr-font-extrabold{font-weight:800}.loftrest .lr-font-normal{font-weight:400}.loftrest .lr-font-semibold{font-weight:600}.loftrest .lr-uppercase{text-transform:uppercase}.loftrest .lr-leading-relaxed{line-height:1.625}.loftrest .lr-tracking-tight{letter-spacing:-.025em}.loftrest .lr-tracking-wide{letter-spacing:.025em}.loftrest .lr-text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.loftrest .lr-text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11/var(--tw-text-opacity,1))}.loftrest .lr-text-brand-blue{--tw-text-opacity:1;color:rgb(2 132 199/var(--tw-text-opacity,1))}.loftrest .lr-text-brand-emerald{--tw-text-opacity:1;color:rgb(16 185 129/var(--tw-text-opacity,1))}.loftrest .lr-text-brand-heat{--tw-text-opacity:1;color:rgb(249 115 22/var(--tw-text-opacity,1))}.loftrest .lr-text-brand-navy{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.loftrest .lr-text-sky-400{--tw-text-opacity:1;color:rgb(56 189 248/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.loftrest .lr-text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.loftrest .lr-underline{text-decoration-line:underline}.loftrest .lr-line-through{text-decoration-line:line-through}.loftrest .lr-accent-brand-blue{accent-color:#0284c7}.loftrest .lr-shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.loftrest .lr-backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.loftrest .lr-transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.loftrest .lr-transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.loftrest .hover\:lr-border-brand-blue:hover{--tw-border-opacity:1;border-color:rgb(2 132 199/var(--tw-border-opacity,1))}.loftrest .hover\:lr-bg-sky-600:hover{--tw-bg-opacity:1;background-color:rgb(2 132 199/var(--tw-bg-opacity,1))}.loftrest .disabled\:lr-opacity-50:disabled{opacity:.5}.loftrest :is(.lr-group[open] .group-open\:lr-rotate-180){--tw-rotate:180deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.loftrest .has-\[\:checked\]\:lr-border-brand-blue:has(:checked){--tw-border-opacity:1;border-color:rgb(2 132 199/var(--tw-border-opacity,1))}.loftrest .has-\[\:checked\]\:lr-bg-brand-lightBlue\/40:has(:checked){background-color:rgba(224,242,254,.4)}@media (min-width:640px){.loftrest .sm\:lr-grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:768px){.loftrest .md\:lr-hidden{display:none}.loftrest .md\:lr-grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.loftrest .md\:lr-grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.loftrest .md\:lr-grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.loftrest .md\:lr-gap-12{gap:3rem}.loftrest .md\:lr-pb-0{padding-bottom:0}.loftrest .md\:lr-pt-10{padding-top:2.5rem}.loftrest .md\:lr-text-4xl{font-size:2.25rem;line-height:2.5rem}.loftrest .md\:lr-text-base{font-size:1rem;line-height:1.5rem}}@media (min-width:1024px){.loftrest .lg\:lr-grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+
+<div class="loftrest" id="loftrest-{{ section.id }}">
+{%- assign variant = product.selected_or_first_available_variant -%}
+{%- assign on_sale = false -%}
+{%- if variant.compare_at_price > variant.price -%}{%- assign on_sale = true -%}{%- endif -%}
+{%- assign reviews = section.blocks | where: 'type', 'review' -%}
+{%- assign review_count = reviews | size -%}
+{%- assign star_total = 0 -%}
+{%- for r in reviews -%}{%- assign star_total = star_total | plus: r.settings.stars -%}{%- endfor -%}
+{%- if review_count > 0 -%}{%- assign rating = star_total | times: 1.0 | divided_by: review_count | round: 1 -%}{%- endif -%}
+{%- assign offers = section.blocks | where: 'type', 'offer' -%}
+{%- assign support_email = section.settings.support_email | default: shop.email -%}
+
+<div class="lr-pb-24 md:lr-pb-0">
+
+  <!-- ABOVE THE FOLD: gallery + buy box -->
+  <section class="lr-max-w-6xl lr-mx-auto lr-px-4 lr-pt-6 md:lr-pt-10 lr-grid lr-grid-cols-1 md:lr-grid-cols-2 lr-gap-8 md:lr-gap-12">
+
+    <!-- Gallery -->
+    <div>
+      <div class="lr-relative lr-aspect-square lr-rounded-2xl lr-overflow-hidden lr-bg-white lr-border lr-border-slate-200">
+        {%- if product.featured_media -%}
+          {{ product.featured_media | image_url: width: 1400 | image_tag: widths: '400, 600, 800, 1000, 1200, 1400', sizes: '(min-width: 768px) 50vw, 100vw', class: 'lr-w-full lr-h-full lr-object-cover', id: 'lr-main-image', loading: 'eager', fetchpriority: 'high' }}
+        {%- endif -%}
+        {%- if on_sale -%}
+        <span class="lr-absolute lr-top-4 lr-left-4 lr-bg-brand-heat lr-text-white lr-text-xs lr-font-bold lr-px-2.5 lr-py-1 lr-rounded-full">SAVE {{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round }}%</span>
+        {%- endif -%}
+      </div>
+      {%- if product.media.size > 1 -%}
+      <div class="lr-mt-3 lr-grid lr-grid-cols-5 lr-gap-2">
+        {%- for media in product.media limit: 10 -%}
+          {%- if media.media_type == 'image' -%}
+          <button type="button" data-lr-thumb="{{ media | image_url: width: 1400 }}" data-lr-alt="{{ media.alt | escape }}" aria-label="Show image {{ forloop.index }}" class="lr-aspect-square lr-rounded-lg lr-overflow-hidden lr-border lr-border-slate-200 hover:lr-border-brand-blue">
+            {{ media | image_url: width: 200 | image_tag: class: 'lr-w-full lr-h-full lr-object-cover', loading: 'lazy' }}
+          </button>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      {%- endif -%}
+    </div>
+
+    <!-- Buy box -->
+    <div>
+      <p class="lr-text-brand-blue lr-font-bold lr-text-xs lr-uppercase lr-tracking-wide">{{ product.vendor | escape }}</p>
+      <h1 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">{{ product.title | escape }}</h1>
+
+      {%- if review_count > 0 -%}
+      <a href="#reviews" class="lr-mt-3 lr-inline-flex lr-items-center lr-gap-2 lr-text-sm lr-text-slate-600">
+        {%- assign rating_rounded = rating | round -%}
+        <span class="lr-flex" aria-hidden="true">{%- for i in (1..5) -%}{%- if i <= rating_rounded -%}<svg class="lr-w-4 lr-h-4 lr-fill-current lr-text-amber-400" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>{%- else -%}<svg class="lr-w-4 lr-h-4 lr-text-slate-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>{%- endif -%}{%- endfor -%}</span>
+        <span><strong class="lr-text-brand-navy">{{ rating }}</strong> from {{ review_count }} review{% if review_count != 1 %}s{% endif %}</span>
+      </a>
+      {%- endif -%}
+
+      <p class="lr-mt-4 lr-text-slate-600 lr-text-lg">{{ section.settings.subtitle | escape }}</p>
+
+      <div class="lr-mt-5 lr-flex lr-flex-wrap lr-items-baseline lr-gap-3">
+        <span class="lr-text-3xl lr-font-extrabold lr-text-brand-navy">{{ variant.price | money }}</span>
+        {%- if on_sale -%}
+        <span class="lr-text-lg lr-text-slate-400 lr-line-through">{{ variant.compare_at_price | money }}</span>
+        <span class="lr-text-xs lr-font-bold lr-bg-brand-heat lr-text-white lr-px-2 lr-py-1 lr-rounded">SAVE {{ variant.compare_at_price | minus: variant.price | money_without_trailing_zeros }}</span>
+        {%- endif -%}
+      </div>
+      <p class="lr-mt-1 lr-text-xs lr-text-slate-500">{% if cart.taxes_included %}Tax included. {% endif %}Shipping calculated at checkout.</p>
+
+      <ul class="lr-mt-6 lr-space-y-2.5 lr-text-slate-700">
+        <li class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-blue" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12.8 19.6A2 2 0 1 0 14 16H2" /><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" /><path d="M9.8 4.4A2 2 0 1 1 11 8H2" /></svg> Pneumatic air traction gently stretches the neck</li>
+        <li class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-heat" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" /></svg> Constant-temperature heat relaxes tight muscles</li>
+        <li class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg> Micro-kinetic massage modes</li>
+        <li class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-navy" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" /></svg> Memory foam pillow for all-night support</li>
+      </ul>
+
+      {%- form 'product', product, id: 'lr-product-form', class: 'lr-mt-6' -%}
+        <input type="hidden" name="id" value="{{ variant.id }}">
+        <input type="hidden" name="return_to" id="lr-return-to" value="{% if section.settings.go_to_checkout %}/checkout{% else %}{{ routes.cart_url }}{% endif %}">
+
+        {%- if offers.size > 0 -%}
+        <fieldset class="lr-space-y-3">
+          <legend class="lr-font-bold lr-text-brand-navy lr-mb-3">Choose your offer</legend>
+          {%- for block in offers -%}
+            {%- assign qty = block.settings.quantity -%}
+            {%- assign bundle_price = variant.price | times: qty -%}
+            {%- assign use_discount = false -%}
+            {%- if block.settings.discount_percent > 0 and block.settings.discount_code != blank -%}{%- assign use_discount = true -%}{%- endif -%}
+            {%- if use_discount -%}
+              {%- assign off = bundle_price | times: block.settings.discount_percent | divided_by: 100 -%}
+              {%- assign bundle_final = bundle_price | minus: off -%}
+            {%- endif -%}
+          <label class="lr-flex lr-items-center lr-gap-4 lr-rounded-xl lr-border-2 lr-border-slate-200 lr-p-4 lr-cursor-pointer has-[:checked]:lr-border-brand-blue has-[:checked]:lr-bg-brand-lightBlue/40" {{ block.shopify_attributes }}>
+            <input type="radio" name="lr-offer" class="lr-accent-brand-blue lr-w-4 lr-h-4" value="{{ qty }}" data-code="{% if use_discount %}{{ block.settings.discount_code | escape }}{% endif %}" {% if forloop.first %}checked{% endif %}>
+            <span class="lr-flex-1">
+              <span class="lr-block lr-font-bold lr-text-brand-navy">{{ block.settings.label | escape }}</span>
+              {%- if block.settings.note != blank -%}<span class="lr-block lr-text-sm lr-text-slate-500">{{ block.settings.note | escape }}</span>{%- endif -%}
+            </span>
+            <span class="lr-text-right">
+              {%- if use_discount -%}
+              <span class="lr-block lr-font-extrabold lr-text-brand-navy">{{ bundle_final | money }}</span>
+              <span class="lr-block lr-text-xs lr-text-slate-400 lr-line-through">{{ bundle_price | money }}</span>
+              {%- else -%}
+              <span class="lr-block lr-font-extrabold lr-text-brand-navy">{{ bundle_price | money }}</span>
+              {%- endif -%}
+            </span>
+            {%- if block.settings.badge != blank -%}<span class="lr-text-xs lr-font-bold lr-bg-brand-emerald lr-text-white lr-px-2 lr-py-1 lr-rounded">{{ block.settings.badge | escape }}</span>{%- endif -%}
+          </label>
+          {%- endfor -%}
+        </fieldset>
+        <input type="hidden" name="quantity" id="lr-qty" value="{{ offers.first.settings.quantity | default: 1 }}">
+        {%- else -%}
+        <input type="hidden" name="quantity" id="lr-qty" value="1">
+        {%- endif -%}
+
+        <button type="submit" id="lr-add" {% unless variant.available %}disabled{% endunless %} class="lr-mt-5 lr-w-full lr-bg-brand-blue hover:lr-bg-sky-600 disabled:lr-opacity-50 lr-text-white lr-font-extrabold lr-text-lg lr-px-8 lr-py-4 lr-rounded-xl lr-shadow-lg lr-transition-colors">
+          {%- if variant.available -%}Add to cart{%- else -%}Sold out{%- endif -%}
+        </button>
+        <div class="lr-mt-3">{{ form | payment_button }}</div>
+      {%- endform -%}
+
+      <!-- Trust row: only facts that are true for this store -->
+      <ul class="lr-mt-6 lr-grid lr-grid-cols-1 sm:lr-grid-cols-2 lr-gap-3 lr-text-sm lr-text-slate-700">
+        <li class="lr-flex lr-items-center lr-gap-2"><svg class="lr-w-4 lr-h-4 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg> Secure checkout by Shopify</li>
+        {%- if section.settings.shipping_note != blank -%}
+        <li class="lr-flex lr-items-center lr-gap-2"><svg class="lr-w-4 lr-h-4 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></svg> {{ section.settings.shipping_note | escape }}</li>
+        {%- endif -%}
+        {%- if section.settings.show_trial -%}
+        <li class="lr-flex lr-items-center lr-gap-2"><svg class="lr-w-4 lr-h-4 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg> {{ section.settings.trial_days }}-night trial</li>
+        {%- endif -%}
+        {%- if shop.refund_policy.url != blank -%}
+        <li class="lr-flex lr-items-center lr-gap-2"><svg class="lr-w-4 lr-h-4 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></svg> <a href="{{ shop.refund_policy.url }}" class="lr-underline">Returns &amp; refunds</a></li>
+        {%- endif -%}
+      </ul>
+      {%- if shop.enabled_payment_types.size > 0 -%}
+      <ul class="lr-mt-4 lr-flex lr-flex-wrap lr-gap-2" aria-label="Accepted payment methods">
+        {%- for type in shop.enabled_payment_types -%}<li>{{ type | payment_type_svg_tag: class: 'lr-h-6 lr-w-auto' }}</li>{%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="lr-mt-12 lr-bg-brand-navy lr-text-white">
+    <div class="lr-max-w-6xl lr-mx-auto lr-px-4 lr-py-6 lr-grid lr-grid-cols-2 md:lr-grid-cols-4 lr-gap-4 lr-text-sm">
+      <div class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-6 lr-h-6 lr-shrink-0 lr-text-sky-400" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 2h4" /><path d="M4.6 11a8 8 0 0 0 1.7 8.7 8 8 0 0 0 8.7 1.7" /><path d="M7.4 7.4a8 8 0 0 1 10.3 1 8 8 0 0 1 .9 10.2" /><path d="m2 2 20 20" /><path d="M12 12v-2" /></svg> Automatic shut-off timer</div>
+      <div class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-6 lr-h-6 lr-shrink-0 lr-text-sky-400" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="10" cy="7" r="1" /><circle cx="4" cy="20" r="1" /><path d="M4.7 19.3 19 5" /><path d="m21 3-3 1 2 2Z" /><path d="M9.26 7.68 5 12l2 5" /><path d="m10 14 5 2 3.5-3.5" /><path d="m18 12 1-1 1 1-1 1Z" /></svg> Low-voltage 5V USB power</div>
+      <div class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-6 lr-h-6 lr-shrink-0 lr-text-sky-400" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></svg> High-density memory foam</div>
+      <div class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-6 lr-h-6 lr-shrink-0 lr-text-sky-400" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg> Secure Shopify checkout</div>
+    </div>
+  </section>
+
+  <!-- DOES IT WORK? (honest explainer) -->
+  <section class="lr-max-w-4xl lr-mx-auto lr-px-4 lr-py-16">
+    <p class="lr-text-brand-blue lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">How it works</p>
+    <h2 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">Does a cervical traction pillow actually work?</h2>
+    <div class="lr-mt-6 lr-space-y-4 lr-text-lg lr-text-slate-700 lr-leading-relaxed">
+      <p>Cervical traction, gently stretching the neck to ease compression, is a long-standing technique used by physical therapists and chiropractors. Heat and massage are two of the most common ways people relax tight neck and shoulder muscles at home.</p>
+      <p>LoftRest™ puts all three into one device for a 15&ndash;30 minute session, then works as a contoured memory foam pillow you sleep on all night. Many people with everyday neck stiffness and tension find this kind of routine helps them get comfortable and wake up less stiff.</p>
+      <p class="lr-text-base lr-text-slate-500">Results vary from person to person. LoftRest™ is a comfort device, not a medical treatment. If you have ongoing or severe neck pain, see a doctor or physical therapist.</p>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section class="lr-bg-white lr-border-y lr-border-slate-200">
+    <div class="lr-max-w-5xl lr-mx-auto lr-px-4 lr-py-16">
+      <h2 class="lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight lr-text-center">How LoftRest™ compares</h2>
+      <div class="lr-mt-8 lr-overflow-x-auto">
+        <table class="lr-w-full lr-min-w-[560px] lr-text-left lr-text-sm md:lr-text-base">
+          <thead>
+            <tr class="lr-border-b lr-border-slate-200">
+              <th class="lr-py-3 lr-pr-4 lr-font-semibold lr-text-slate-500">Feature</th>
+              <th class="lr-py-3 lr-px-3 lr-font-extrabold lr-text-brand-blue">LoftRest™</th>
+              <th class="lr-py-3 lr-px-3 lr-font-semibold lr-text-slate-600">Memory foam pillow</th>
+              <th class="lr-py-3 lr-px-3 lr-font-semibold lr-text-slate-600">Foam neck stretcher</th>
+              <th class="lr-py-3 lr-pl-3 lr-font-semibold lr-text-slate-600">Heat pack</th>
+            </tr>
+          </thead>
+          <tbody class="lr-text-slate-700">
+            <tr class="lr-border-b lr-border-slate-100"><td class="lr-py-3 lr-pr-4">Air traction (adjustable stretch)</td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg></td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-slate-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></td><td class="lr-py-3 lr-px-3 lr-text-slate-500">Fixed shape</td><td class="lr-py-3 lr-pl-3"><svg class="lr-w-5 lr-h-5 lr-text-slate-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></td></tr>
+            <tr class="lr-border-b lr-border-slate-100"><td class="lr-py-3 lr-pr-4">Built-in heat</td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg></td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-slate-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-slate-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></td><td class="lr-py-3 lr-pl-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg></td></tr>
+            <tr class="lr-border-b lr-border-slate-100"><td class="lr-py-3 lr-pr-4">Massage modes</td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg></td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-slate-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-slate-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></td><td class="lr-py-3 lr-pl-3"><svg class="lr-w-5 lr-h-5 lr-text-slate-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></td></tr>
+            <tr class="lr-border-b lr-border-slate-100"><td class="lr-py-3 lr-pr-4">Sleep on it all night</td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg></td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg></td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-slate-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></td><td class="lr-py-3 lr-pl-3"><svg class="lr-w-5 lr-h-5 lr-text-slate-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></td></tr>
+            <tr><td class="lr-py-3 lr-pr-4">Automatic shut-off</td><td class="lr-py-3 lr-px-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg></td><td class="lr-py-3 lr-px-3 lr-text-slate-500">n/a</td><td class="lr-py-3 lr-px-3 lr-text-slate-500">n/a</td><td class="lr-py-3 lr-pl-3 lr-text-slate-500">Varies</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECS + SAFETY -->
+  <section class="lr-max-w-5xl lr-mx-auto lr-px-4 lr-py-16 lr-grid lr-grid-cols-1 md:lr-grid-cols-2 lr-gap-8">
+    <div class="lr-rounded-2xl lr-bg-white lr-border lr-border-slate-200 lr-p-6">
+      <h2 class="lr-text-2xl lr-font-extrabold lr-text-brand-navy">Specifications</h2>
+      <dl class="lr-mt-5 lr-space-y-4 lr-text-slate-700">
+        <div class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-blue" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z" /><path d="m14.5 12.5 2-2" /><path d="m11.5 9.5 2-2" /><path d="m8.5 6.5 2-2" /><path d="m17.5 15.5 2-2" /></svg><div><dt class="lr-font-semibold lr-text-brand-navy">Size</dt><dd>42.5 &times; 27 cm (16.7 &times; 10.6 in)</dd></div></div>
+        <div class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-blue" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></svg><div><dt class="lr-font-semibold lr-text-brand-navy">Pillow</dt><dd>High-density contoured memory foam</dd></div></div>
+        <div class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-blue" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></svg><div><dt class="lr-font-semibold lr-text-brand-navy">Cover</dt><dd>Soft, breathable flannel</dd></div></div>
+        <div class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-blue" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="10" cy="7" r="1" /><circle cx="4" cy="20" r="1" /><path d="M4.7 19.3 19 5" /><path d="m21 3-3 1 2 2Z" /><path d="M9.26 7.68 5 12l2 5" /><path d="m10 14 5 2 3.5-3.5" /><path d="m18 12 1-1 1 1-1 1Z" /></svg><div><dt class="lr-font-semibold lr-text-brand-navy">Power</dt><dd>5V USB. Works with a USB wall adapter, laptop or power bank.</dd></div></div>
+        <div class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-blue" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M10 2h4" /><path d="M4.6 11a8 8 0 0 0 1.7 8.7 8 8 0 0 0 8.7 1.7" /><path d="M7.4 7.4a8 8 0 0 1 10.3 1 8 8 0 0 1 .9 10.2" /><path d="m2 2 20 20" /><path d="M12 12v-2" /></svg><div><dt class="lr-font-semibold lr-text-brand-navy">Safety</dt><dd>Built-in automatic shut-off timer</dd></div></div>
+        <div class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-blue" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z" /></svg><div><dt class="lr-font-semibold lr-text-brand-navy">Therapy modes</dt><dd>Air traction, constant-temperature heat, micro-kinetic massage</dd></div></div>
+      </dl>
+    </div>
+    <div class="lr-rounded-2xl lr-bg-amber-50 lr-border lr-border-amber-200 lr-p-6">
+      <h2 class="lr-flex lr-items-center lr-gap-2 lr-text-2xl lr-font-extrabold lr-text-brand-navy"><svg class="lr-w-6 lr-h-6 lr-text-amber-500" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg> Safe use</h2>
+      <ul class="lr-mt-5 lr-space-y-3 lr-text-slate-700">
+        <li>Start on the gentlest setting and build up gradually.</li>
+        <li>Stop if you feel sharp pain, numbness, tingling or dizziness.</li>
+        <li>Talk to your doctor first if you are pregnant, have had neck or spine surgery, or have osteoporosis, a recent neck injury, rheumatoid arthritis, a spinal condition or a circulation disorder.</li>
+        <li>LoftRest™ is a comfort device and is not a substitute for medical diagnosis or treatment.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- REVIEWS: genuine reviews only (review blocks or a review app block) -->
+  {%- assign app_blocks = section.blocks | where: 'type', '@app' -%}
+  {%- if review_count > 0 or app_blocks.size > 0 -%}
+  <section id="reviews" class="lr-bg-white lr-border-t lr-border-slate-200 lr-scroll-mt-16">
+    <div class="lr-max-w-6xl lr-mx-auto lr-px-4 lr-py-16">
+      <h2 class="lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight lr-text-center">Customer reviews</h2>
+      {%- if review_count > 0 -%}
+      <p class="lr-mt-3 lr-text-center lr-text-slate-600"><strong class="lr-text-brand-navy">{{ rating }} out of 5</strong> from {{ review_count }} review{% if review_count != 1 %}s{% endif %}</p>
+      <div class="lr-mt-10 lr-grid lr-grid-cols-1 sm:lr-grid-cols-2 lg:lr-grid-cols-3 lr-gap-6">
+        {%- for block in reviews -%}
+        <figure class="lr-rounded-2xl lr-border lr-border-slate-200 lr-p-6 lr-flex lr-flex-col" {{ block.shopify_attributes }}>
+          <div class="lr-flex lr-text-amber-400" aria-label="{{ block.settings.stars }} out of 5 stars">{%- for i in (1..block.settings.stars) -%}<svg class="lr-w-4 lr-h-4 lr-fill-current" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>{%- endfor -%}</div>
+          {%- if block.settings.title != blank -%}<h3 class="lr-mt-3 lr-font-bold lr-text-brand-navy">{{ block.settings.title | escape }}</h3>{%- endif -%}
+          <blockquote class="lr-mt-2 lr-text-slate-600 lr-flex-1">{{ block.settings.review | escape }}</blockquote>
+          <figcaption class="lr-mt-4 lr-text-sm lr-font-semibold lr-text-slate-800">{{ block.settings.name | escape }}{%- if block.settings.verified -%} <span class="lr-inline-flex lr-items-center lr-gap-1 lr-font-normal lr-text-brand-emerald"><svg class="lr-w-4 lr-h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /><path d="m16 9-5.5 5.5L8 12" /></svg> Verified buyer</span>{%- endif -%}</figcaption>
+        </figure>
+        {%- endfor -%}
+      </div>
+      {%- endif -%}
+      {%- for block in app_blocks -%}<div class="lr-mt-10">{% render block %}</div>{%- endfor -%}
+    </div>
+  </section>
+  {%- endif -%}
+
+  <!-- FAQ -->
+  {%- assign faqs = section.blocks | where: 'type', 'faq' -%}
+  {%- if faqs.size > 0 -%}
+  <section class="lr-max-w-3xl lr-mx-auto lr-px-4 lr-py-16">
+    <h2 class="lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight lr-text-center">Questions before you buy</h2>
+    <div class="lr-mt-10 lr-space-y-3">
+      {%- for block in faqs -%}
+      <details class="lr-group lr-rounded-xl lr-border lr-border-slate-200 lr-bg-white lr-p-5" {{ block.shopify_attributes }}>
+        <summary class="lr-flex lr-items-center lr-justify-between lr-gap-4 lr-cursor-pointer lr-font-bold lr-text-brand-navy lr-list-none">
+          <h3>{{ block.settings.question | escape }}</h3>
+          <svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-transition-transform group-open:lr-rotate-180" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m6 9 6 6 6-6" /></svg>
+        </summary>
+        <p class="lr-mt-3 lr-text-slate-600 lr-leading-relaxed">{{ block.settings.answer | escape }}</p>
+      </details>
+      {%- endfor -%}
+    </div>
+  </section>
+  {%- endif -%}
+
+  <!-- POLICIES & CONTACT -->
+  <section class="lr-bg-white lr-border-t lr-border-slate-200">
+    <div class="lr-max-w-5xl lr-mx-auto lr-px-4 lr-py-12 lr-grid lr-grid-cols-1 md:lr-grid-cols-3 lr-gap-6 lr-text-sm lr-text-slate-700">
+      <div class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-blue" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg><div><p class="lr-font-bold lr-text-brand-navy">Questions?</p>{%- if support_email != blank -%}<p class="lr-mt-1">Email us at <a href="mailto:{{ support_email }}" class="lr-underline">{{ support_email }}</a></p>{%- endif -%}</div></div>
+      <div class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-blue" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></svg><div><p class="lr-font-bold lr-text-brand-navy">Shipping</p><p class="lr-mt-1">{%- if shop.shipping_policy.url != blank -%}<a href="{{ shop.shipping_policy.url }}" class="lr-underline">Read our shipping policy</a>{%- else -%}{{ section.settings.shipping_note | default: 'Shipping options are shown at checkout.' | escape }}{%- endif -%}</p></div></div>
+      <div class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-blue" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M9 14 4 9l5-5" /><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11" /></svg><div><p class="lr-font-bold lr-text-brand-navy">Returns</p><p class="lr-mt-1">{%- if shop.refund_policy.url != blank -%}<a href="{{ shop.refund_policy.url }}" class="lr-underline">Read our refund policy</a>{%- else -%}Contact us about returns.{%- endif -%}</p></div></div>
+    </div>
+  </section>
+
+  <!-- STICKY ADD TO CART (mobile) -->
+  <div class="md:lr-hidden lr-fixed lr-inset-x-0 lr-bottom-0 lr-z-40 lr-border-t lr-border-slate-200 lr-bg-white/95 lr-backdrop-blur-md">
+    <div class="lr-px-4 lr-py-3 lr-flex lr-items-center lr-justify-between lr-gap-3">
+      <div class="lr-min-w-0">
+        <p class="lr-font-bold lr-text-brand-navy lr-truncate lr-text-sm">{{ product.title | escape }}</p>
+        <p class="lr-text-sm"><span class="lr-font-extrabold lr-text-brand-navy">{{ variant.price | money }}</span>{%- if on_sale -%} <span class="lr-text-slate-400 lr-line-through">{{ variant.compare_at_price | money }}</span>{%- endif -%}</p>
+      </div>
+      <button type="submit" form="lr-product-form" {% unless variant.available %}disabled{% endunless %} class="lr-shrink-0 lr-bg-brand-blue hover:lr-bg-sky-600 disabled:lr-opacity-50 lr-text-white lr-font-extrabold lr-px-5 lr-py-3 lr-rounded-xl lr-shadow-lg">Add to cart</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var root = document.getElementById('loftrest-{{ section.id }}');
+    if (!root) return;
+    // Gallery thumbnails
+    var main = root.querySelector('#lr-main-image');
+    root.querySelectorAll('[data-lr-thumb]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (!main) return;
+        main.removeAttribute('srcset');
+        main.src = btn.dataset.lrThumb;
+        main.alt = btn.dataset.lrAlt || '';
+      });
+    });
+    // Offers: set quantity and apply the matching discount code at checkout
+    var qty = root.querySelector('#lr-qty');
+    var returnTo = root.querySelector('#lr-return-to');
+    var base = returnTo ? returnTo.value : '/checkout';
+    function applyOffer(input) {
+      if (!input || !qty) return;
+      qty.value = input.value;
+      if (returnTo) returnTo.value = input.dataset.code ? '/discount/' + encodeURIComponent(input.dataset.code) + '?redirect=' + encodeURIComponent(base) : base;
+    }
+    root.querySelectorAll('input[name="lr-offer"]').forEach(function (input) {
+      input.addEventListener('change', function () { applyOffer(input); });
+    });
+    applyOffer(root.querySelector('input[name="lr-offer"]:checked'));
+  })();
+</script>
+
+<script type="application/ld+json">{{ product | structured_data }}</script>
+{%- if faqs.size > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for block in faqs -%}
+    { "@type": "Question", "name": {{ block.settings.question | json }}, "acceptedAnswer": { "@type": "Answer", "text": {{ block.settings.answer | json }} } }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "LoftRest product page",
+  "tag": "div",
+  "class": "loftrest-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Short description",
+      "default": "A 3-in-1 cervical traction device and memory foam pillow: 15–30 minutes of air traction, heat and massage, then all-night neck support."
+    },
+    {
+      "type": "checkbox",
+      "id": "go_to_checkout",
+      "label": "Add to cart goes straight to checkout",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Trust"
+    },
+    {
+      "type": "text",
+      "id": "shipping_note",
+      "label": "Shipping promise",
+      "default": "Free express shipping",
+      "info": "Only say what your shipping settings really offer. Leave empty to hide."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_trial",
+      "label": "Show trial badge",
+      "default": false,
+      "info": "Only turn on if you really offer a trial with a full refund."
+    },
+    {
+      "type": "range",
+      "id": "trial_days",
+      "label": "Trial length (nights)",
+      "min": 7,
+      "max": 100,
+      "step": 1,
+      "default": 30
+    },
+    {
+      "type": "text",
+      "id": "support_email",
+      "label": "Support email",
+      "info": "Shown to customers. Leave empty to use your store email."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "offer",
+      "name": "Offer",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Buy 1"
+        },
+        {
+          "type": "text",
+          "id": "note",
+          "label": "Note"
+        },
+        {
+          "type": "range",
+          "id": "quantity",
+          "label": "Quantity",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 1
+        },
+        {
+          "type": "paragraph",
+          "content": "To show a bundle discount, create a real discount code in Shopify (Discounts) first, then enter the same code and percentage here. Both must be filled in or no discount is shown."
+        },
+        {
+          "type": "text",
+          "id": "discount_code",
+          "label": "Discount code"
+        },
+        {
+          "type": "range",
+          "id": "discount_percent",
+          "label": "Discount %",
+          "min": 0,
+          "max": 50,
+          "step": 1,
+          "default": 0
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge",
+          "info": "e.g. Most popular"
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Customer review",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Only add genuine reviews from real customers, with their permission."
+        },
+        {
+          "type": "range",
+          "id": "stars",
+          "label": "Stars",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "review",
+          "label": "Review"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Customer name",
+          "info": "e.g. Sarah, Melbourne"
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "Verified buyer",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
