@@ -10,105 +10,21 @@
   <meta property="og:title" content="LoftRest™ Neck Traction Device | Relieve Neck Pain &amp; Sleep Better">
   <meta property="og:description" content="LoftRest™ neck traction device combines air traction, infrared heat and vibration to relieve neck pain, ease tech neck and help you sleep better in 15 minutes a day.">
 
-  <!-- Structured data for Google (product + FAQ rich results).
-       Add "aggregateRating" to the Product only once you have real reviews to back it. -->
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "LoftRest™ 3-in-1 Cervical Therapy Device",
-  "description": "Neck traction device with pneumatic air traction, infrared heat and kinetic vibration for at-home neck pain relief.",
-  "brand": {
-    "@type": "Brand",
-    "name": "LoftRest"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "119.00",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
-  }
-}
-  </script>
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Does neck traction actually work for neck pain?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Cervical traction is a long-standing technique used by physical therapists and chiropractors. It gently stretches the neck to create space between the vertebrae and ease pressure on discs, joints, and nerves. Many people with neck stiffness or tension find it helpful, especially alongside stretching and posture work. Results vary from person to person, so if you have ongoing or severe pain, ask your doctor or physical therapist whether traction suits you."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can a neck stretcher help me sleep better?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Neck pain and poor sleep often feed each other: pain makes it hard to get comfortable, and bad sleep leaves muscles tighter the next day. A 15-minute LoftRest™ session before bed uses traction, heat, and vibration to help your neck and shoulders relax, so it is easier to settle into a comfortable position and stay there."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long and how often should I use LoftRest™?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Each session takes about 15 minutes. Most people use it once a day, often in the evening before sleep. Start on the gentlest setting, build up gradually, and stop if anything feels painful rather than a comfortable stretch."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is it safe to use a neck traction device every day?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "For most healthy adults, short daily sessions at a comfortable pressure are fine. Never push through sharp pain, numbness, tingling, or dizziness. If you notice any of these, stop and talk to a healthcare professional."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is heat good for neck pain?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Warmth increases blood flow and helps tight muscles relax, which is why heat is a common go-to for everyday neck stiffness and tension. For a fresh injury with swelling, cold is usually recommended first; ask a clinician if you are unsure."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can LoftRest™ help with \"tech neck\" from phones and laptops?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Looking down at screens for hours puts extra load on the neck and shoulders and can leave them tight and sore. LoftRest™ gently stretches the neck in the opposite direction while heat and vibration relax the surrounding muscles, making it a good end-of-day reset. Pair it with regular screen breaks and a raised monitor for best results."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between a cervical traction device and a neck pillow?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A pillow supports your neck while you sleep. A traction device like LoftRest™ actively lifts and stretches the neck for a short session, then you put it away and sleep on your normal pillow. Many people use both."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who should not use neck traction?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Talk to your doctor before using LoftRest™ if you are pregnant, have had neck or spine surgery, or have osteoporosis, a recent neck injury, rheumatoid arthritis, a known spinal condition, or a circulation disorder. LoftRest™ is a comfort device and is not a substitute for medical diagnosis or treatment."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does shipping take, and what does it cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Express worldwide shipping is free during the Spring Sleep Sale."
-      }
-    }
-  ]
-}
+  <!-- ================================================================
+       EASY SETTINGS: change these and the whole page updates.
+       Price, sale badge, "% off" button, order total, checkout button
+       and Google product info all read from here.
+       ================================================================ -->
+  <script>
+    window.LOFTREST = {
+      price: 119.00,            // current price
+      oldPrice: 169.00,         // crossed-out price (set to 0 to hide it)
+      currencySymbol: '$',
+      currencyCode: 'USD',
+      saleName: 'Spring Sleep Sale',
+      checkoutUrl: '',          // paste your Shopify/Stripe checkout link between the quotes
+      maxQuantity: 10
+    };
   </script>
 
   <!-- Inter font -->
@@ -149,7 +65,7 @@
   <!-- ANNOUNCEMENT BAR -->
   <div class="bg-brand-navy text-white text-xs py-2 px-4 text-center font-medium flex justify-center items-center gap-2">
     <span class="inline-block w-2 h-2 rounded-full bg-brand-emerald animate-ping"></span>
-    <span><strong>SPRING SLEEP SALE:</strong> Save $50 + Free Express Worldwide Shipping</span>
+    <span><strong data-sale-name data-upper>SPRING SLEEP SALE</strong><strong>:</strong> <span data-if-sale>Save <span data-savings>$50</span> + </span>Free Express Worldwide Shipping</span>
   </div>
 
   <!-- NAVIGATION -->
@@ -189,7 +105,7 @@
         </p>
         <div class="pt-4 flex flex-wrap gap-4">
           <a href="#order" class="bg-brand-blue hover:bg-sky-600 text-white font-extrabold text-lg px-8 py-4 rounded-xl shadow-xl transition-colors">
-            Get 30% Off LoftRest Today
+            <span data-no-sale-text="Order LoftRest Today">Get <span data-percent-off>30%</span> Off LoftRest Today</span>
           </a>
           <a href="#how" class="inline-flex items-center gap-2 text-brand-navy font-bold text-lg px-4 py-4">
             See how it works <i data-lucide="arrow-down" class="w-5 h-5"></i>
@@ -441,14 +357,14 @@
         <div>
           <h2 class="text-3xl font-extrabold">Claim Your LoftRest™ 3-in-1 Therapy Device</h2>
           <div class="mt-6 flex flex-wrap items-baseline gap-4">
-            <span class="text-4xl font-extrabold">$119.00</span>
-            <span class="text-xl text-slate-500 line-through">$169.00</span>
-            <span class="text-xs font-bold bg-brand-heat text-white px-2 py-1 rounded">SAVE $50</span>
+            <span class="text-4xl font-extrabold" data-price>$119.00</span>
+            <span class="text-xl text-slate-500 line-through" data-old-price>$169.00</span>
+            <span class="text-xs font-bold bg-brand-heat text-white px-2 py-1 rounded" data-savings-badge>SAVE <span data-savings>$50</span></span>
           </div>
           <ul class="mt-6 space-y-3 text-slate-300">
             <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-emerald"></i> Air traction, infrared heat &amp; vibration</li>
             <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-emerald"></i> Free express worldwide shipping</li>
-            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-emerald"></i> Spring Sleep Sale price</li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-emerald"></i> <span data-sale-name>Spring Sleep Sale</span> price</li>
           </ul>
         </div>
         <div class="bg-white/5 rounded-2xl border border-white/10 p-6 space-y-5">
@@ -464,7 +380,7 @@
             <span class="text-slate-400">Total</span>
             <span id="total" class="font-extrabold">$119.00</span>
           </div>
-          <!-- TODO: replace href with your real checkout link (Shopify, Stripe, etc.) -->
+          <!-- The checkout link is set in EASY SETTINGS at the top of this file (checkoutUrl). -->
           <a href="#" id="buy" class="block w-full text-center bg-brand-blue hover:bg-sky-600 text-white font-extrabold text-lg px-8 py-4 rounded-xl shadow-xl transition-colors">
             Buy Now
           </a>
@@ -545,7 +461,7 @@
             <h3>How long does shipping take, and what does it cost?</h3>
             <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition-transform group-open:rotate-180"></i>
           </summary>
-          <p class="mt-3 text-slate-600 leading-relaxed">Express worldwide shipping is free during the Spring Sleep Sale.</p>
+          <p class="mt-3 text-slate-600 leading-relaxed">Express worldwide shipping is free during the <span data-sale-name>Spring Sleep Sale</span>.</p>
         </details>
       </div>
     </div>
@@ -565,18 +481,68 @@
   <script>
     if (window.lucide) lucide.createIcons();
 
+    const S = window.LOFTREST;
+    const money = (n) => S.currencySymbol + n.toFixed(2);
+    const fill = (sel, text) => document.querySelectorAll(sel).forEach((el) => {
+      el.textContent = el.hasAttribute('data-upper') ? text.toUpperCase() : text;
+    });
+
+    // Prices and sale text
+    const savings = S.oldPrice - S.price;
+    fill('[data-price]', money(S.price));
+    fill('[data-sale-name]', S.saleName);
+    if (savings > 0) {
+      fill('[data-old-price]', money(S.oldPrice));
+      fill('[data-savings]', S.currencySymbol + (Number.isInteger(savings) ? savings : savings.toFixed(2)));
+      fill('[data-percent-off]', Math.round((savings / S.oldPrice) * 100) + '%');
+    } else {
+      document.querySelectorAll('[data-old-price], [data-savings-badge], [data-if-sale]').forEach((el) => el.remove());
+      document.querySelectorAll('[data-no-sale-text]').forEach((el) => { el.textContent = el.dataset.noSaleText; });
+    }
+
+    // Checkout button
+    if (S.checkoutUrl) document.getElementById('buy').href = S.checkoutUrl;
+
     // Quantity selector and running total
-    const PRICE = 119;
     const qty = document.getElementById('qty');
     const total = document.getElementById('total');
-    const clamp = (n) => Math.min(10, Math.max(1, Number.isFinite(n) ? n : 1));
+    qty.max = S.maxQuantity;
+    const clamp = (n) => Math.min(S.maxQuantity, Math.max(1, Number.isFinite(n) ? n : 1));
     const render = () => {
       qty.value = clamp(parseInt(qty.value, 10));
-      total.textContent = '$' + (PRICE * qty.value).toFixed(2);
+      total.textContent = money(S.price * qty.value);
     };
     document.getElementById('qty-minus').addEventListener('click', () => { qty.value = parseInt(qty.value, 10) - 1; render(); });
     document.getElementById('qty-plus').addEventListener('click', () => { qty.value = parseInt(qty.value, 10) + 1; render(); });
     qty.addEventListener('change', render);
+    render();
+
+    // Google structured data (product + FAQ rich results), built from the page.
+    // Edit the FAQ section and the settings above; this stays in sync automatically.
+    const addSchema = (data) => {
+      const el = document.createElement('script');
+      el.type = 'application/ld+json';
+      el.textContent = JSON.stringify(data);
+      document.head.appendChild(el);
+    };
+    addSchema({
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: 'LoftRest™ 3-in-1 Cervical Therapy Device',
+      description: document.querySelector('meta[name="description"]').content,
+      brand: { '@type': 'Brand', name: 'LoftRest' },
+      offers: { '@type': 'Offer', price: S.price.toFixed(2), priceCurrency: S.currencyCode, availability: 'https://schema.org/InStock' }
+      // Add "aggregateRating" here only once you have real reviews to back it.
+    });
+    addSchema({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [...document.querySelectorAll('#faq details')].map((d) => ({
+        '@type': 'Question',
+        name: d.querySelector('h3').textContent.trim(),
+        acceptedAnswer: { '@type': 'Answer', text: d.querySelector('p').textContent.trim() }
+      }))
+    });
 
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
