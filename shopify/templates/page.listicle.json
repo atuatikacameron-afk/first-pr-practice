@@ -5,11 +5,11 @@
       "settings": {
         "product": "loftrest-neck-traction-device",
         "image_top": "shopify://shop_images/neck-pain-hd.webp",
-        "caption_top": "That deep ache at the base of your neck? Hours at a desk, heavy lifting and the wrong pillow all add up.",
+        "caption_top": "Hours at a desk, heavy lifting and the wrong pillow can leave your neck feeling tight by the end of the day.",
         "image_middle": "shopify://shop_images/loftrest-hero.webp",
         "caption_middle": "Heat, traction and massage first, then all-night memory foam support.",
         "image_bottom": "shopify://shop_images/waking-up.webp",
-        "caption_bottom": "The goal: waking up ready for the day, not stiff and sore.",
+        "caption_bottom": "The goal: waking up comfortable and ready for the day.",
         "show_trial": false
       }
     }

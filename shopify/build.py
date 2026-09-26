@@ -177,7 +177,7 @@ schema = {
       {"type": "textarea", "id": "answer", "label": "Answer"}]},
     {"type": "review", "name": "Customer review", "settings": [
       {"type": "paragraph", "content": "Only add genuine reviews from real customers, with their permission."},
-      {"type": "text", "id": "topic", "label": "Topic", "info": "e.g. Sleep, Neck pain, Tech neck"},
+      {"type": "text", "id": "topic", "label": "Topic", "info": "e.g. Sleep, Relaxation, Desk days"},
       {"type": "text", "id": "question", "label": "Heading", "info": "e.g. Did it help you sleep better?"},
       {"type": "range", "id": "stars", "label": "Stars", "min": 1, "max": 5, "step": 1, "default": 5},
       {"type": "textarea", "id": "review", "label": "Review"},

@@ -43,17 +43,17 @@ Each section in `index.html` starts with a label in capitals, like `<!-- FAQ -->
 | `NAVIGATION` | Logo and menu links |
 | `HERO SECTION` | Headline, intro text, main button, product image area |
 | `HOW IT WORKS` | The three therapy cards |
-| `NECK PAIN & SLEEP` | How neck pain and sleep affect each other |
+| `NECK TENSION & SLEEP` | Why a tense neck makes it hard to switch off |
 | `BENEFITS` | The six benefit cards |
-| `WHO IT'S FOR` | Desk workers, physical workers, people waking up stiff |
-| `ROUTINE: THERAPY THEN SLEEP` | The three steps |
+| `WHO IT'S FOR` | Desk workers, physical workers, restless sleepers |
+| `ROUTINE: RELAX THEN SLEEP` | The three steps |
 | `SPECS` | Size, materials, power and safety |
 | `REVIEWS` | Customer review cards |
 | `CHECKOUT & ORDER SECTION` | Price box and Buy Now button |
 | `FAQ` | Questions and answers |
 | `FOOTER` | Bottom of the page |
 
-To change any wording, find it in the file and type over it. Leave the parts inside `< >` alone.
+To change any wording, find it in the file and type over it. Leave the parts inside `< >` alone. Before publishing new wording, check it against [COMPLIANCE.md](COMPLIANCE.md).
 
 ## Common changes
 
