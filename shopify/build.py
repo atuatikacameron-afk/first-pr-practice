@@ -62,7 +62,7 @@ lambda m: '''      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ga
             {%- for i in (1..block.settings.stars) -%}<i data-lucide="star" class="w-4 h-4 fill-current"></i>{%- endfor -%}
           </div>
           <blockquote class="mt-3 text-slate-600 flex-1">{{ block.settings.review | escape }}</blockquote>
-          <figcaption class="mt-4 text-sm font-semibold text-slate-800">{{ block.settings.name | escape }}{%- if block.settings.verified -%} <span class="font-normal text-slate-500">· Verified buyer</span>{%- endif -%}</figcaption>
+          <figcaption class="mt-4 text-sm font-semibold text-slate-800">{{ block.settings.name | escape }}{% if block.settings.verified %} <span class="font-normal text-slate-500">· Verified buyer</span>{% endif %}</figcaption>
         </figure>
           {%- endif -%}
         {%- endfor -%}

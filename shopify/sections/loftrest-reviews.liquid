@@ -1,0 +1,227 @@
+{%- comment -%}
+  LoftRest reviews page. Generated from src/loftrest-reviews.liquid by shopify/build_pages.py.
+  Edit it in Online Store > Themes > Customize.
+{%- endcomment -%}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* Minimal reset scoped to this page so the rest of your theme is untouched */
+  .loftrest { font-family: 'Inter', -apple-system, sans-serif; color: #1e293b; background: #F8FAFC; -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .loftrest *, .loftrest *::before, .loftrest *::after { box-sizing: border-box; border-width: 0; border-style: solid; border-color: #e5e7eb; }
+  .loftrest h1, .loftrest h2, .loftrest h3, .loftrest p, .loftrest figure, .loftrest blockquote, .loftrest ol, .loftrest ul { margin: 0; padding: 0; }
+  .loftrest h1, .loftrest h2, .loftrest h3 { font-family: inherit; font-size: inherit; font-weight: inherit; letter-spacing: inherit; color: inherit; line-height: 1.2; }
+  .loftrest ol, .loftrest ul { list-style: none; }
+  .loftrest a { color: inherit; text-decoration: none; }
+  .loftrest button, .loftrest input { font: inherit; color: inherit; margin: 0; background: transparent; }
+  .loftrest button { cursor: pointer; }
+  .loftrest svg { display: block; }
+  .loftrest summary { padding: 0; }
+  .loftrest summary::-webkit-details-marker { display: none; }
+  /* Page styles (Tailwind, compiled by build.py) */
+  .loftrest,.loftrest *,.loftrest :after,.loftrest :before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.loftrest ::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.loftrest .lr-mx-auto{margin-left:auto;margin-right:auto}.loftrest .lr-mb-4{margin-bottom:1rem}.loftrest .lr-mt-1{margin-top:.25rem}.loftrest .lr-mt-2{margin-top:.5rem}.loftrest .lr-mt-3{margin-top:.75rem}.loftrest .lr-mt-4{margin-top:1rem}.loftrest .lr-mt-5{margin-top:1.25rem}.loftrest .lr-mt-6{margin-top:1.5rem}.loftrest .lr-inline-block{display:inline-block}.loftrest .lr-flex{display:flex}.loftrest .lr-inline-flex{display:inline-flex}.loftrest .lr-grid{display:grid}.loftrest .lr-aspect-square{aspect-ratio:1/1}.loftrest .lr-h-14{height:3.5rem}.loftrest .lr-h-4{height:1rem}.loftrest .lr-h-5{height:1.25rem}.loftrest .lr-h-7{height:1.75rem}.loftrest .lr-w-14{width:3.5rem}.loftrest .lr-w-4{width:1rem}.loftrest .lr-w-5{width:1.25rem}.loftrest .lr-w-7{width:1.75rem}.loftrest .lr-w-full{width:100%}.loftrest .lr-max-w-2xl{max-width:42rem}.loftrest .lr-max-w-3xl{max-width:48rem}.loftrest .lr-max-w-4xl{max-width:56rem}.loftrest .lr-max-w-6xl{max-width:72rem}.loftrest .lr-flex-1{flex:1 1 0%}.loftrest .lr-shrink-0{flex-shrink:0}.loftrest .lr-grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.loftrest .lr-flex-col{flex-direction:column}.loftrest .lr-items-center{align-items:center}.loftrest .lr-justify-center{justify-content:center}.loftrest .lr-justify-between{justify-content:space-between}.loftrest .lr-gap-1{gap:.25rem}.loftrest .lr-gap-2{gap:.5rem}.loftrest .lr-gap-3{gap:.75rem}.loftrest .lr-gap-6{gap:1.5rem}.loftrest :is(.lr-space-y-3>:not([hidden])~:not([hidden])){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.loftrest .lr-whitespace-pre-line{white-space:pre-line}.loftrest .lr-rounded-2xl{border-radius:1rem}.loftrest .lr-rounded-3xl{border-radius:1.5rem}.loftrest .lr-rounded-xl{border-radius:.75rem}.loftrest .lr-border{border-width:1px}.loftrest .lr-border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.loftrest .lr-bg-brand-blue{--tw-bg-opacity:1;background-color:rgb(2 132 199/var(--tw-bg-opacity,1))}.loftrest .lr-bg-brand-lightBlue{--tw-bg-opacity:1;background-color:rgb(224 242 254/var(--tw-bg-opacity,1))}.loftrest .lr-bg-brand-navy{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.loftrest .lr-bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.loftrest .lr-bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.loftrest .lr-fill-current{fill:currentColor}.loftrest .lr-object-cover{-o-object-fit:cover;object-fit:cover}.loftrest .lr-p-4{padding:1rem}.loftrest .lr-p-6{padding:1.5rem}.loftrest .lr-px-4{padding-left:1rem;padding-right:1rem}.loftrest .lr-px-6{padding-left:1.5rem;padding-right:1.5rem}.loftrest .lr-px-8{padding-left:2rem;padding-right:2rem}.loftrest .lr-py-12{padding-top:3rem;padding-bottom:3rem}.loftrest .lr-py-4{padding-top:1rem;padding-bottom:1rem}.loftrest .lr-pb-16{padding-bottom:4rem}.loftrest .lr-pt-10{padding-top:2.5rem}.loftrest .lr-pt-12{padding-top:3rem}.loftrest .lr-pt-16{padding-top:4rem}.loftrest .lr-text-center{text-align:center}.loftrest .lr-text-2xl{font-size:1.5rem;line-height:2rem}.loftrest .lr-text-3xl{font-size:1.875rem;line-height:2.25rem}.loftrest .lr-text-lg{font-size:1.125rem;line-height:1.75rem}.loftrest .lr-text-sm{font-size:.875rem;line-height:1.25rem}.loftrest .lr-text-xs{font-size:.75rem;line-height:1rem}.loftrest .lr-font-bold{font-weight:700}.loftrest .lr-font-extrabold{font-weight:800}.loftrest .lr-font-normal{font-weight:400}.loftrest .lr-font-semibold{font-weight:600}.loftrest .lr-uppercase{text-transform:uppercase}.loftrest .lr-tracking-tight{letter-spacing:-.025em}.loftrest .lr-tracking-wide{letter-spacing:.025em}.loftrest .lr-text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.loftrest .lr-text-brand-blue{--tw-text-opacity:1;color:rgb(2 132 199/var(--tw-text-opacity,1))}.loftrest .lr-text-brand-emerald{--tw-text-opacity:1;color:rgb(16 185 129/var(--tw-text-opacity,1))}.loftrest .lr-text-brand-navy{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.loftrest .lr-text-sky-400{--tw-text-opacity:1;color:rgb(56 189 248/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.loftrest .lr-text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.loftrest .lr-shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.loftrest .lr-transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.loftrest .hover\:lr-bg-sky-600:hover{--tw-bg-opacity:1;background-color:rgb(2 132 199/var(--tw-bg-opacity,1))}@media (min-width:640px){.loftrest .sm\:lr-grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:768px){.loftrest .md\:lr-grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.loftrest .md\:lr-p-10{padding:2.5rem}.loftrest .md\:lr-py-16{padding-top:4rem;padding-bottom:4rem}.loftrest .md\:lr-text-5xl{font-size:3rem;line-height:1}}@media (min-width:1024px){.loftrest .lg\:lr-grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+
+<div class="loftrest" id="loftrest-{{ section.id }}">
+{%- assign reviews = section.blocks | where: 'type', 'review' -%}
+{%- assign review_count = reviews | size -%}
+{%- assign app_blocks = section.blocks | where: 'type', '@app' -%}
+{%- assign star_total = 0 -%}
+{%- for r in reviews -%}{%- assign star_total = star_total | plus: r.settings.stars -%}{%- endfor -%}
+{%- if review_count > 0 -%}
+  {%- assign rating = star_total | times: 1.0 | divided_by: review_count | round: 1 -%}
+  {%- assign rating_rounded = rating | round -%}
+{%- endif -%}
+{%- assign support_email = section.settings.support_email | default: shop.email -%}
+{%- assign product = section.settings.product -%}
+
+<div class="lr-pb-16">
+  <!-- HEADER -->
+  <header class="lr-bg-brand-navy lr-text-white">
+    <div class="lr-max-w-4xl lr-mx-auto lr-px-4 lr-py-12 md:lr-py-16 lr-text-center">
+      <p class="lr-text-sky-400 lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">Reviews</p>
+      <h1 class="lr-mt-3 lr-text-3xl md:lr-text-5xl lr-font-extrabold lr-tracking-tight">{{ section.settings.heading | escape }}</h1>
+      {%- if review_count > 0 -%}
+      <div class="lr-mt-6 lr-inline-flex lr-flex-col lr-items-center lr-gap-2">
+        <span class="lr-flex" aria-hidden="true">{%- for i in (1..5) -%}{%- if i <= rating_rounded -%}<svg class="lr-w-7 lr-h-7 lr-fill-current lr-text-amber-400" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>{%- else -%}<svg class="lr-w-7 lr-h-7 lr-text-slate-500" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>{%- endif -%}{%- endfor -%}</span>
+        <p class="lr-text-lg"><strong>{{ rating }} out of 5</strong> <span class="lr-text-slate-300">from {{ review_count }} review{% if review_count != 1 %}s{% endif %}</span></p>
+      </div>
+      {%- elsif section.settings.intro != blank -%}
+      <p class="lr-mt-4 lr-text-lg lr-text-slate-300 lr-max-w-2xl lr-mx-auto">{{ section.settings.intro | escape }}</p>
+      {%- endif -%}
+    </div>
+  </header>
+
+  <div class="lr-max-w-6xl lr-mx-auto lr-px-4">
+    {%- if review_count > 0 -%}
+    <!-- REVIEW CARDS -->
+    <div class="lr-pt-12 lr-grid lr-grid-cols-1 sm:lr-grid-cols-2 lg:lr-grid-cols-3 lr-gap-6">
+      {%- for block in reviews -%}
+      <figure class="lr-rounded-2xl lr-border lr-border-slate-200 lr-bg-white lr-p-6 lr-flex lr-flex-col" {{ block.shopify_attributes }}>
+        {%- if block.settings.photo != blank -%}
+          {{ block.settings.photo | image_url: width: 800 | image_tag: widths: '400, 600, 800', sizes: '(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw', class: 'lr-w-full lr-aspect-square lr-object-cover lr-rounded-xl lr-mb-4', loading: 'lazy', alt: block.settings.photo.alt }}
+        {%- endif -%}
+        <div class="lr-flex lr-items-center lr-justify-between lr-gap-3">
+          <span class="lr-flex" aria-label="{{ block.settings.stars }} out of 5 stars">{%- for i in (1..5) -%}{%- if i <= block.settings.stars -%}<svg class="lr-w-4 lr-h-4 lr-fill-current lr-text-amber-400" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>{%- else -%}<svg class="lr-w-4 lr-h-4 lr-text-slate-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>{%- endif -%}{%- endfor -%}</span>
+          {%- if block.settings.date != blank -%}<span class="lr-text-xs lr-text-slate-400">{{ block.settings.date | escape }}</span>{%- endif -%}
+        </div>
+        {%- if block.settings.title != blank -%}<h2 class="lr-mt-3 lr-font-bold lr-text-brand-navy">{{ block.settings.title | escape }}</h2>{%- endif -%}
+        <blockquote class="lr-mt-2 lr-text-slate-600 lr-flex-1 lr-whitespace-pre-line">{{ block.settings.review | escape }}</blockquote>
+        <figcaption class="lr-mt-4 lr-text-sm lr-font-semibold lr-text-slate-800">{{ block.settings.name | escape }}{% if block.settings.verified %} <span class="lr-inline-flex lr-items-center lr-gap-1 lr-font-normal lr-text-brand-emerald"><svg class="lr-w-4 lr-h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /><path d="m16 9-5.5 5.5L8 12" /></svg> Verified buyer</span>{% endif %}</figcaption>
+        {%- if block.settings.reply != blank -%}
+        <div class="lr-mt-4 lr-rounded-xl lr-bg-slate-50 lr-p-4 lr-text-sm lr-text-slate-600"><p class="lr-font-semibold lr-text-brand-navy">Reply from LoftRest™</p><p class="lr-mt-1 lr-whitespace-pre-line">{{ block.settings.reply | escape }}</p></div>
+        {%- endif -%}
+      </figure>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+
+    {%- for block in app_blocks -%}<div class="lr-pt-12">{% render block %}</div>{%- endfor -%}
+
+    {%- if review_count == 0 and app_blocks.size == 0 -%}
+    <!-- EMPTY STATE: honest, no placeholder reviews -->
+    <div class="lr-pt-12 lr-max-w-2xl lr-mx-auto lr-text-center">
+      <div class="lr-mx-auto lr-w-14 lr-h-14 lr-rounded-2xl lr-bg-brand-lightBlue lr-text-brand-blue lr-flex lr-items-center lr-justify-center"><svg class="lr-w-7 lr-h-7" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /><path d="M7.5 9.5c0 .687.265 1.383.697 1.844l3.009 3.264a1.14 1.14 0 0 0 .407.314 1 1 0 0 0 .783-.004 1.14 1.14 0 0 0 .398-.31l3.008-3.264A2.77 2.77 0 0 0 16.5 9.5 2.5 2.5 0 0 0 12 8a2.5 2.5 0 0 0-4.5 1.5" /></svg></div>
+      <h2 class="lr-mt-5 lr-text-2xl lr-font-extrabold lr-text-brand-navy">Be one of our first reviewers</h2>
+      <p class="lr-mt-3 lr-text-slate-600">LoftRest™ is new, so we don't have customer reviews to show yet. We'd rather show nothing than show reviews that aren't real. If you've bought LoftRest™, we'd love to hear how you're finding it.</p>
+    </div>
+    {%- endif -%}
+
+    <!-- HOW OUR REVIEWS WORK -->
+    <section class="lr-pt-16 lr-max-w-3xl lr-mx-auto">
+      <div class="lr-rounded-3xl lr-border lr-border-slate-200 lr-bg-white lr-p-6 md:lr-p-10">
+        <h2 class="lr-flex lr-items-center lr-gap-3 lr-text-2xl lr-font-extrabold lr-text-brand-navy"><svg class="lr-w-7 lr-h-7 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg> How our reviews work</h2>
+        <ul class="lr-mt-6 lr-space-y-3 lr-text-slate-700">
+          <li class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg> Every review is from a real customer. We never write our own or pay for positive reviews.</li>
+          <li class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg> "Verified buyer" means we've matched the review to an order.</li>
+          <li class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg> We show reviews as written. We don't edit them to change their meaning.</li>
+          <li class="lr-flex lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 6 9 17l-5-5" /></svg> We don't hide reviews because they're negative. We only remove spam or content that's offensive or unlawful.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SHARE YOUR EXPERIENCE -->
+    <section class="lr-pt-10 lr-max-w-3xl lr-mx-auto">
+      <div class="lr-rounded-3xl lr-bg-brand-lightBlue lr-p-6 md:lr-p-10 lr-grid lr-grid-cols-1 md:lr-grid-cols-2 lr-gap-6 lr-items-center">
+        <div>
+          <h2 class="lr-text-2xl lr-font-extrabold lr-text-brand-navy">Bought LoftRest™?</h2>
+          <p class="lr-mt-2 lr-text-slate-700">Tell us how it's going, good or bad. With your permission, we'll add your review here.</p>
+        </div>
+        {%- if support_email != blank -%}
+        <a href="mailto:{{ support_email }}?subject=My%20LoftRest%20review" class="lr-flex lr-items-center lr-justify-center lr-gap-2 lr-bg-brand-blue hover:lr-bg-sky-600 lr-text-white lr-font-extrabold lr-px-6 lr-py-4 lr-rounded-xl lr-shadow-lg lr-transition-colors"><svg class="lr-w-5 lr-h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg> Email us your review</a>
+        {%- endif -%}
+      </div>
+    </section>
+
+    <!-- PRODUCT CTA -->
+    {%- if product != blank -%}
+    <section class="lr-pt-12 lr-text-center">
+      <h2 class="lr-text-2xl lr-font-extrabold lr-text-brand-navy">Try LoftRest™ for yourself</h2>
+      <p class="lr-mt-2 lr-text-slate-600">{{ product.selected_or_first_available_variant.price | money }} &middot; Free standard shipping in Australia &middot; 30-day returns</p>
+      <a href="{{ product.url }}" class="lr-mt-5 lr-inline-block lr-bg-brand-blue hover:lr-bg-sky-600 lr-text-white lr-font-extrabold lr-px-8 lr-py-4 lr-rounded-xl lr-shadow-lg lr-transition-colors">Shop LoftRest™</a>
+    </section>
+    {%- endif -%}
+  </div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "LoftRest reviews page",
+  "tag": "div",
+  "class": "loftrest-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What customers say about LoftRest™"
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro (shown until you have reviews)",
+      "default": "Honest reviews from real LoftRest™ customers."
+    },
+    {
+      "type": "text",
+      "id": "support_email",
+      "label": "Support email",
+      "info": "Leave empty to use your store email."
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product for the Shop button"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "review",
+      "name": "Customer review",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Only add genuine reviews from real customers, with their permission. Don't edit them to change their meaning, and don't leave out negative ones."
+        },
+        {
+          "type": "range",
+          "id": "stars",
+          "label": "Stars",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "textarea",
+          "id": "review",
+          "label": "Review"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Customer name",
+          "info": "e.g. Sarah, Melbourne"
+        },
+        {
+          "type": "text",
+          "id": "date",
+          "label": "Date",
+          "info": "e.g. October 2026"
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "Verified buyer",
+          "default": true,
+          "info": "Only tick if you've matched the review to an order."
+        },
+        {
+          "type": "image_picker",
+          "id": "photo",
+          "label": "Customer photo (optional)"
+        },
+        {
+          "type": "textarea",
+          "id": "reply",
+          "label": "Your reply (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LoftRest reviews page"
+    }
+  ]
+}
+{% endschema %}

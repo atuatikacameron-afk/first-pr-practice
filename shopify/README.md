@@ -53,6 +53,13 @@ To make the LoftRest page your homepage, replace your theme's `templates/index.j
 
 After editing `src/loftrest-product.liquid`, run `python3 build_product.py` in the `shopify` folder.
 
+## FAQ and Reviews pages
+
+`sections/loftrest-faq.liquid` + `templates/page.faq.json` and `sections/loftrest-reviews.liquid` + `templates/page.reviews.json` (sources in `src/`, built with `python3 build_pages.py`).
+
+- **FAQ:** each **Question** block has a **Topic**. Questions with the same topic are grouped, and topic buttons at the top jump to each group. Google's FAQ data updates automatically.
+- **Reviews:** add genuine reviews with **Add block → Customer review** (stars, title, text, name, date, optional photo and your reply), or add a review app's block. The star summary appears once there's a review. Until then the page says honestly that there are no reviews yet.
+
 ## Editing on Shopify
 
 Most changes can be made in **Online Store → Themes → Customize → Pages → LoftRest → LoftRest landing page**. You don't need to touch any code.

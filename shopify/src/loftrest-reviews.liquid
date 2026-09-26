@@ -1,0 +1,105 @@
+{%- comment -%}
+  SOURCE for sections/loftrest-reviews.liquid. Edit this file, then run
+  `python3 build_pages.py` in the shopify folder.
+  Only genuine reviews from real customers, shown as written.
+{%- endcomment -%}
+{%- assign reviews = section.blocks | where: 'type', 'review' -%}
+{%- assign review_count = reviews | size -%}
+{%- assign app_blocks = section.blocks | where: 'type', '@app' -%}
+{%- assign star_total = 0 -%}
+{%- for r in reviews -%}{%- assign star_total = star_total | plus: r.settings.stars -%}{%- endfor -%}
+{%- if review_count > 0 -%}
+  {%- assign rating = star_total | times: 1.0 | divided_by: review_count | round: 1 -%}
+  {%- assign rating_rounded = rating | round -%}
+{%- endif -%}
+{%- assign support_email = section.settings.support_email | default: shop.email -%}
+{%- assign product = section.settings.product -%}
+
+<div class="pb-16">
+  <!-- HEADER -->
+  <header class="bg-brand-navy text-white">
+    <div class="max-w-4xl mx-auto px-4 py-12 md:py-16 text-center">
+      <p class="text-sky-400 font-bold text-sm uppercase tracking-wide">Reviews</p>
+      <h1 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight">{{ section.settings.heading | escape }}</h1>
+      {%- if review_count > 0 -%}
+      <div class="mt-6 inline-flex flex-col items-center gap-2">
+        <span class="flex" aria-hidden="true">{%- for i in (1..5) -%}{%- if i <= rating_rounded -%}<i data-lucide="star" class="w-7 h-7 fill-current text-amber-400"></i>{%- else -%}<i data-lucide="star" class="w-7 h-7 text-slate-500"></i>{%- endif -%}{%- endfor -%}</span>
+        <p class="text-lg"><strong>{{ rating }} out of 5</strong> <span class="text-slate-300">from {{ review_count }} review{% if review_count != 1 %}s{% endif %}</span></p>
+      </div>
+      {%- elsif section.settings.intro != blank -%}
+      <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">{{ section.settings.intro | escape }}</p>
+      {%- endif -%}
+    </div>
+  </header>
+
+  <div class="max-w-6xl mx-auto px-4">
+    {%- if review_count > 0 -%}
+    <!-- REVIEW CARDS -->
+    <div class="pt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {%- for block in reviews -%}
+      <figure class="rounded-2xl border border-slate-200 bg-white p-6 flex flex-col" {{ block.shopify_attributes }}>
+        {%- if block.settings.photo != blank -%}
+          {{ block.settings.photo | image_url: width: 800 | image_tag: widths: '400, 600, 800', sizes: '(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw', class: 'lr-w-full lr-aspect-square lr-object-cover lr-rounded-xl lr-mb-4', loading: 'lazy', alt: block.settings.photo.alt }}
+        {%- endif -%}
+        <div class="flex items-center justify-between gap-3">
+          <span class="flex" aria-label="{{ block.settings.stars }} out of 5 stars">{%- for i in (1..5) -%}{%- if i <= block.settings.stars -%}<i data-lucide="star" class="w-4 h-4 fill-current text-amber-400"></i>{%- else -%}<i data-lucide="star" class="w-4 h-4 text-slate-300"></i>{%- endif -%}{%- endfor -%}</span>
+          {%- if block.settings.date != blank -%}<span class="text-xs text-slate-400">{{ block.settings.date | escape }}</span>{%- endif -%}
+        </div>
+        {%- if block.settings.title != blank -%}<h2 class="mt-3 font-bold text-brand-navy">{{ block.settings.title | escape }}</h2>{%- endif -%}
+        <blockquote class="mt-2 text-slate-600 flex-1 whitespace-pre-line">{{ block.settings.review | escape }}</blockquote>
+        <figcaption class="mt-4 text-sm font-semibold text-slate-800">{{ block.settings.name | escape }}{% if block.settings.verified %} <span class="inline-flex items-center gap-1 font-normal text-brand-emerald"><i data-lucide="badge-check" class="w-4 h-4"></i> Verified buyer</span>{% endif %}</figcaption>
+        {%- if block.settings.reply != blank -%}
+        <div class="mt-4 rounded-xl bg-slate-50 p-4 text-sm text-slate-600"><p class="font-semibold text-brand-navy">Reply from LoftRest™</p><p class="mt-1 whitespace-pre-line">{{ block.settings.reply | escape }}</p></div>
+        {%- endif -%}
+      </figure>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+
+    {%- for block in app_blocks -%}<div class="pt-12">{% render block %}</div>{%- endfor -%}
+
+    {%- if review_count == 0 and app_blocks.size == 0 -%}
+    <!-- EMPTY STATE: honest, no placeholder reviews -->
+    <div class="pt-12 max-w-2xl mx-auto text-center">
+      <div class="mx-auto w-14 h-14 rounded-2xl bg-brand-lightBlue text-brand-blue flex items-center justify-center"><i data-lucide="message-square-heart" class="w-7 h-7"></i></div>
+      <h2 class="mt-5 text-2xl font-extrabold text-brand-navy">Be one of our first reviewers</h2>
+      <p class="mt-3 text-slate-600">LoftRest™ is new, so we don't have customer reviews to show yet. We'd rather show nothing than show reviews that aren't real. If you've bought LoftRest™, we'd love to hear how you're finding it.</p>
+    </div>
+    {%- endif -%}
+
+    <!-- HOW OUR REVIEWS WORK -->
+    <section class="pt-16 max-w-3xl mx-auto">
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 md:p-10">
+        <h2 class="flex items-center gap-3 text-2xl font-extrabold text-brand-navy"><i data-lucide="shield-check" class="w-7 h-7 text-brand-emerald"></i> How our reviews work</h2>
+        <ul class="mt-6 space-y-3 text-slate-700">
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 shrink-0 text-brand-emerald"></i> Every review is from a real customer. We never write our own or pay for positive reviews.</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 shrink-0 text-brand-emerald"></i> "Verified buyer" means we've matched the review to an order.</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 shrink-0 text-brand-emerald"></i> We show reviews as written. We don't edit them to change their meaning.</li>
+          <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 shrink-0 text-brand-emerald"></i> We don't hide reviews because they're negative. We only remove spam or content that's offensive or unlawful.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SHARE YOUR EXPERIENCE -->
+    <section class="pt-10 max-w-3xl mx-auto">
+      <div class="rounded-3xl bg-brand-lightBlue p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div>
+          <h2 class="text-2xl font-extrabold text-brand-navy">Bought LoftRest™?</h2>
+          <p class="mt-2 text-slate-700">Tell us how it's going, good or bad. With your permission, we'll add your review here.</p>
+        </div>
+        {%- if support_email != blank -%}
+        <a href="mailto:{{ support_email }}?subject=My%20LoftRest%20review" class="flex items-center justify-center gap-2 bg-brand-blue hover:bg-sky-600 text-white font-extrabold px-6 py-4 rounded-xl shadow-lg transition-colors"><i data-lucide="mail" class="w-5 h-5"></i> Email us your review</a>
+        {%- endif -%}
+      </div>
+    </section>
+
+    <!-- PRODUCT CTA -->
+    {%- if product != blank -%}
+    <section class="pt-12 text-center">
+      <h2 class="text-2xl font-extrabold text-brand-navy">Try LoftRest™ for yourself</h2>
+      <p class="mt-2 text-slate-600">{{ product.selected_or_first_available_variant.price | money }} &middot; Free standard shipping in Australia &middot; 30-day returns</p>
+      <a href="{{ product.url }}" class="mt-5 inline-block bg-brand-blue hover:bg-sky-600 text-white font-extrabold px-8 py-4 rounded-xl shadow-lg transition-colors">Shop LoftRest™</a>
+    </section>
+    {%- endif -%}
+  </div>
+</div>

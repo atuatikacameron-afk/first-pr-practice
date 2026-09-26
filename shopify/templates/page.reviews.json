@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "loftrest-reviews",
+      "settings": {
+        "product": "loftrest-neck-traction-device"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "sections": {
+    "main": {
+      "type": "loftrest-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "category": "About LoftRest™",
+            "question": "What is LoftRest™?",
+            "answer": "LoftRest™ is a 3-in-1 cervical traction pillow. It combines gentle air traction, constant-temperature heat and micro-kinetic massage for a 15–30 minute relaxation session, then works as a contoured memory foam pillow you sleep on all night."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "category": "About LoftRest™",
+            "question": "What does it feel like?",
+            "answer": "Most people describe it as a gentle, lengthening stretch combined with soothing warmth and a light massage. You choose which modes to use and can start on the gentlest setting."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "category": "About LoftRest™",
+            "question": "Can I use the modes separately?",
+            "answer": "Yes. Use air traction, heat and massage together or one at a time, whichever you find most relaxing."
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "category": "About LoftRest™",
+            "question": "What size is it, and what is it made of?",
+            "answer": "LoftRest™ measures 42.5 × 27 cm (16.7 × 10.6 in). It's made from high-density contoured memory foam with a soft, breathable flannel cover."
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "category": "About LoftRest™",
+            "question": "Who is LoftRest™ for?",
+            "answer": "It's popular with people who spend long days at a desk, people who do physical work, and anyone who finds it hard to get comfortable on their pillow at night."
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "category": "Using LoftRest™",
+            "question": "How do I use it?",
+            "answer": "1. Connect LoftRest™ to a 5V USB power source.\n2. Lie back and rest your neck on the contoured foam.\n3. Turn on the modes you want for a 15–30 minute session.\n4. When the timer switches the modes off, stay put and sleep on the memory foam."
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "category": "Using LoftRest™",
+            "question": "How long and how often should I use it?",
+            "answer": "Each session runs for 15–30 minutes. Most people use it once a day, often in the evening before sleep. Start on the gentlest setting, build up gradually, and stop if anything feels uncomfortable."
+          }
+        },
+        "faq_8": {
+          "type": "faq",
+          "settings": {
+            "category": "Using LoftRest™",
+            "question": "Can I sleep on it all night?",
+            "answer": "Yes. That's what it's designed for. After your session, LoftRest™ works as a contoured memory foam pillow until morning."
+          }
+        },
+        "faq_9": {
+          "type": "faq",
+          "settings": {
+            "category": "Using LoftRest™",
+            "question": "What happens if I fall asleep during a session?",
+            "answer": "LoftRest™ has a built-in automatic shut-off timer, so the heat, stretch and massage switch off on their own and you can keep sleeping on the pillow."
+          }
+        },
+        "faq_10": {
+          "type": "faq",
+          "settings": {
+            "category": "Using LoftRest™",
+            "question": "How is it powered?",
+            "answer": "It runs on a 5V USB connection, so you can plug it into a USB wall adapter, a laptop or a power bank. That also makes it easy to use on the sofa or when you travel."
+          }
+        },
+        "faq_11": {
+          "type": "faq",
+          "settings": {
+            "category": "Using LoftRest™",
+            "question": "How do I clean it?",
+            "answer": "Always unplug LoftRest™ before cleaning, never put it in water, and follow the care instructions supplied in the box."
+          }
+        },
+        "faq_12": {
+          "type": "faq",
+          "settings": {
+            "category": "Safety",
+            "question": "Is LoftRest™ safe to use?",
+            "answer": "LoftRest™ runs on low-voltage 5V USB power and has an automatic shut-off timer. Start on the gentlest setting and stop if you feel sharp pain, numbness, tingling or dizziness."
+          }
+        },
+        "faq_13": {
+          "type": "faq",
+          "settings": {
+            "category": "Safety",
+            "question": "Who should not use LoftRest™?",
+            "answer": "Talk to your doctor before using LoftRest™ if you are pregnant, have had neck or spine surgery, or have osteoporosis, a recent neck injury, rheumatoid arthritis, a known spinal condition, or a circulation disorder."
+          }
+        },
+        "faq_14": {
+          "type": "faq",
+          "settings": {
+            "category": "Safety",
+            "question": "Is LoftRest™ a medical device?",
+            "answer": "No. LoftRest™ is a comfort and relaxation product. It is not a medical device and is not designed to diagnose, treat or relieve any medical condition. If you have neck pain or another health concern, see a health professional."
+          }
+        },
+        "faq_15": {
+          "type": "faq",
+          "settings": {
+            "category": "Orders & shipping",
+            "question": "How much is shipping, and how long does it take?",
+            "answer": "Standard shipping is free within Australia on orders of A$100 or more and usually takes 7–14 business days. International shipping is A$20 and usually takes 10–25 business days. Shipping costs are always shown at checkout before you pay."
+          }
+        },
+        "faq_16": {
+          "type": "faq",
+          "settings": {
+            "category": "Orders & shipping",
+            "question": "Which countries do you ship to?",
+            "answer": "Australia, New Zealand, Canada, the United States, the United Kingdom, Norway, Switzerland, Ireland and 13 other European Union countries, Singapore, Hong Kong, Japan, South Korea, Malaysia, Israel and the United Arab Emirates. You'll see if we ship to you at checkout."
+          }
+        },
+        "faq_17": {
+          "type": "faq",
+          "settings": {
+            "category": "Orders & shipping",
+            "question": "Will I get tracking?",
+            "answer": "Yes. Once your order ships, we'll email you tracking details where available."
+          }
+        },
+        "faq_18": {
+          "type": "faq",
+          "settings": {
+            "category": "Orders & shipping",
+            "question": "Is there a discount for buying two?",
+            "answer": "Yes. Buy 2 or more LoftRest™ pillows and get 10% off with the code LOFTREST2PACK. If you choose the 2 × LoftRest™ option on the product page, the code is applied for you at checkout."
+          }
+        },
+        "faq_19": {
+          "type": "faq",
+          "settings": {
+            "category": "Orders & shipping",
+            "question": "Is checkout secure?",
+            "answer": "Yes. Payments are processed securely by Shopify, and we never see or store your full card details."
+          }
+        },
+        "faq_20": {
+          "type": "faq",
+          "settings": {
+            "category": "Returns & refunds",
+            "question": "Can I return LoftRest™ if I change my mind?",
+            "answer": "Yes. You can return it within 30 days of delivery if it's in its original condition and packaging. For change-of-mind returns, you pay the return shipping."
+          }
+        },
+        "faq_21": {
+          "type": "faq",
+          "settings": {
+            "category": "Returns & refunds",
+            "question": "What if my LoftRest™ is faulty or damaged?",
+            "answer": "Contact us and we'll arrange a repair, replacement or refund, and cover the return shipping. Your rights under the Australian Consumer Law always apply."
+          }
+        },
+        "faq_22": {
+          "type": "faq",
+          "settings": {
+            "category": "Returns & refunds",
+            "question": "How do I start a return?",
+            "answer": "Email us with your order number and the reason for the return, and we'll send you instructions. Please contact us before sending anything back."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8",
+        "faq_9",
+        "faq_10",
+        "faq_11",
+        "faq_12",
+        "faq_13",
+        "faq_14",
+        "faq_15",
+        "faq_16",
+        "faq_17",
+        "faq_18",
+        "faq_19",
+        "faq_20",
+        "faq_21",
+        "faq_22"
+      ],
+      "settings": {
+        "product": "loftrest-neck-traction-device",
+        "phone": "+61 450 213 111"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
