@@ -97,6 +97,16 @@ for a, b in [
     order = order.replace(a, b)
 body = body.replace(order_html, order)
 
+# ---- Hero image: a photo uploaded in the theme editor replaces the placeholder art ----
+placeholder = re.search(r'          <div class="absolute inset-10 rounded-full.*?\n          </div>\n(?=          <div class="absolute top-6)', body, re.S)
+assert placeholder, 'hero placeholder not found'
+body = body.replace(placeholder.group(0), """          {%- if section.settings.hero_image != blank -%}
+          {%- assign hero_alt = section.settings.hero_image.alt | default: 'LoftRest 3-in-1 cervical traction pillow' -%}
+          {{ section.settings.hero_image | image_url: width: 1400 | image_tag: widths: '400, 600, 800, 1000, 1200, 1400', sizes: '(min-width: 1024px) 40vw, 100vw', class: 'lr-absolute lr-inset-0 lr-w-full lr-h-full lr-object-cover', loading: 'eager', fetchpriority: 'high', alt: hero_alt }}
+          {%- else -%}
+""" + placeholder.group(0) + """          {%- endif -%}
+""", 1)
+
 # ---- Hero sale wording follows the product's compare-at price ----
 for a, b in [
     ('<span data-no-sale-text="Order LoftRest Today">Get <span data-percent-off>30%</span> Off LoftRest Today</span>',
@@ -208,6 +218,7 @@ schema = {
   "tag": "div",
   "class": "loftrest-section",
   "settings": [
+    {"type": "image_picker", "id": "hero_image", "label": "Hero image", "info": "Shown at the top of the page next to the headline. Square photos work best (at least 1200 x 1200 px)."},
     {"type": "product", "id": "product", "label": "Product", "info": "Price, sale price and the Buy Now button come from this product. Set a 'Compare-at price' on the product to show the sale."},
     {"type": "text", "id": "sale_name", "label": "Sale name", "default": "Spring Sleep Sale"},
     {"type": "checkbox", "id": "go_to_checkout", "label": "Buy Now goes straight to checkout", "default": True, "info": "Turn off to send buyers to the cart instead."}

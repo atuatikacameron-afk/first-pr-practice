@@ -44,6 +44,7 @@ Most changes can be made in **Online Store → Themes → Customize → Pages �
 | --- | --- |
 | Price or sale | Edit the product's **Price** and **Compare-at price**. The page, badge, "% off" button and total all update. |
 | End the sale | Clear the product's **Compare-at price**. All sale wording disappears. |
+| Image at the top | **Hero image** field in the section settings. Click **Select**, upload your photo, **Save**. Square photos work best (at least 1200 × 1200 px). Leave it empty to show the placeholder. |
 | Sale name | **Sale name** field in the section settings |
 | Buy Now goes to cart or checkout | **Buy Now goes straight to checkout** checkbox |
 | Add a review | **Add block → Customer review**. Only use genuine reviews from real customers, with their permission. The reviews section stays hidden until you add one. |
