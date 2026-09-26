@@ -36,6 +36,10 @@ These two files add the LoftRest landing page to your Shopify store. Your store'
 
 To make the LoftRest page your homepage, replace your theme's `templates/index.json` with the one here: **Edit code → Templates → index.json**, delete everything, paste in `templates/index.json`, **Save**. To edit the homepage version, go to **Customize** and pick **Home page** at the top. The homepage and the `/pages/loftrest` page have separate review and FAQ blocks, so if you use the homepage you can leave the page hidden.
 
+## Listicle page
+
+`sections/loftrest-listicle.liquid` and `templates/page.listicle.json` are a "5 reasons" article page (source: `listicle.html` in the repo root). Prices, the discount and the three Buy buttons come from the product. In **Customize → Pages → listicle** you can pick the product, change the top image, and turn on **Show 30-night trial**. Only turn that on if you really offer the trial. After editing `listicle.html`, run `python3 build_listicle.py` in the `shopify` folder.
+
 ## Editing on Shopify
 
 Most changes can be made in **Online Store → Themes → Customize → Pages → LoftRest → LoftRest landing page**. You don't need to touch any code.
