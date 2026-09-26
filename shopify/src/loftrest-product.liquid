@@ -129,7 +129,7 @@
         <li class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-brand-emerald"></i> {{ section.settings.trial_days }}-night trial</li>
         {%- endif -%}
         {%- if shop.refund_policy.url != blank -%}
-        <li class="flex items-center gap-2"><i data-lucide="undo-2" class="w-4 h-4 text-brand-emerald"></i> <a href="{{ shop.refund_policy.url }}" class="underline">Returns &amp; refunds</a></li>
+        <li class="flex items-center gap-2"><i data-lucide="undo-2" class="w-4 h-4 text-brand-emerald"></i> <a href="{{ shop.refund_policy.url }}" class="underline">{{ section.settings.returns_label | default: 'Returns and refunds' | escape }}</a></li>
         {%- endif -%}
       </ul>
       {%- if shop.enabled_payment_types.size > 0 -%}

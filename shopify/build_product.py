@@ -36,8 +36,8 @@ faqs = [
    "It runs on a 5V USB connection, so you can plug it into a USB wall adapter, a laptop or a power bank."),
   ("What size is it?",
    "LoftRest™ measures 42.5 × 27 cm (16.7 × 10.6 in). It's made from high-density contoured memory foam with a soft, breathable flannel cover."),
-  ("What are your shipping and returns policies?",
-   "Shipping options and costs are shown at checkout. Our shipping and refund policies are linked at the bottom of this page, or email us with any questions before you order."),
+  ("How long does shipping take, and can I return it?",
+   "Standard shipping is free within Australia and usually takes 7–14 business days. International shipping is A$20 and usually takes 10–25 business days. If you change your mind, you can return LoftRest™ within 30 days, and faulty items are always covered. Full details are in our shipping and refund policies. Both are linked at the bottom of this page."),
 ]
 
 schema = {
@@ -48,7 +48,8 @@ schema = {
     {"type": "text", "id": "subtitle", "label": "Short description", "default": "A 3-in-1 cervical traction device and memory foam pillow: 15–30 minutes of air traction, heat and massage, then all-night neck support."},
     {"type": "checkbox", "id": "go_to_checkout", "label": "Add to cart goes straight to checkout", "default": True},
     {"type": "header", "content": "Trust"},
-    {"type": "text", "id": "shipping_note", "label": "Shipping promise", "default": "Free express shipping", "info": "Only say what your shipping settings really offer. Leave empty to hide."},
+    {"type": "text", "id": "shipping_note", "label": "Shipping promise", "default": "Free standard shipping in Australia", "info": "Only say what your shipping settings really offer. Leave empty to hide."},
+    {"type": "text", "id": "returns_label", "label": "Returns link text", "default": "30-day returns", "info": "Shown when your store has a refund policy. Keep it in line with that policy."},
     {"type": "checkbox", "id": "show_trial", "label": "Show trial badge", "default": False, "info": "Only turn on if you really offer a trial with a full refund."},
     {"type": "range", "id": "trial_days", "label": "Trial length (nights)", "min": 7, "max": 100, "step": 1, "default": 30},
     {"type": "text", "id": "support_email", "label": "Support email", "info": "Shown to customers. Leave empty to use your store email."}
@@ -95,12 +96,13 @@ liquid = f'''{{%- comment -%}}
 
 blocks = {
   "offer_1": {"type": "offer", "settings": {"label": "1 × LoftRest™", "note": "For you", "quantity": 1}},
-  "offer_2": {"type": "offer", "settings": {"label": "2 × LoftRest™", "note": "One for you, one for someone you love", "quantity": 2}},
+  "offer_2": {"type": "offer", "settings": {"label": "2 × LoftRest™", "note": "One for you, one for someone you love", "quantity": 2,
+                                            "discount_code": "LOFTREST2PACK", "discount_percent": 10, "badge": "Save 10%"}},
 }
 blocks.update({f"faq_{i+1}": {"type": "faq", "settings": {"question": q, "answer": a}} for i, (q, a) in enumerate(faqs)})
 template = {
   "sections": {"main": {"type": "loftrest-product", "blocks": blocks, "block_order": list(blocks),
-                        "settings": {"go_to_checkout": True, "shipping_note": "Free express shipping", "show_trial": False}}},
+                        "settings": {"go_to_checkout": True, "shipping_note": "Free standard shipping in Australia", "returns_label": "30-day returns", "show_trial": False}}},
   "order": ["main"]
 }
 (ROOT / 'templates' / 'product.loftrest.json').write_text(json.dumps(template, indent=2, ensure_ascii=False) + '\n')

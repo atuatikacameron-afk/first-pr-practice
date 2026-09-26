@@ -16,7 +16,10 @@
           "settings": {
             "label": "2 × LoftRest™",
             "note": "One for you, one for someone you love",
-            "quantity": 2
+            "quantity": 2,
+            "discount_code": "LOFTREST2PACK",
+            "discount_percent": 10,
+            "badge": "Save 10%"
           }
         },
         "faq_1": {
@@ -78,8 +81,8 @@
         "faq_9": {
           "type": "faq",
           "settings": {
-            "question": "What are your shipping and returns policies?",
-            "answer": "Shipping options and costs are shown at checkout. Our shipping and refund policies are linked at the bottom of this page, or email us with any questions before you order."
+            "question": "How long does shipping take, and can I return it?",
+            "answer": "Standard shipping is free within Australia and usually takes 7–14 business days. International shipping is A$20 and usually takes 10–25 business days. If you change your mind, you can return LoftRest™ within 30 days, and faulty items are always covered. Full details are in our shipping and refund policies. Both are linked at the bottom of this page."
           }
         }
       },
@@ -98,7 +101,8 @@
       ],
       "settings": {
         "go_to_checkout": true,
-        "shipping_note": "Free express shipping",
+        "shipping_note": "Free standard shipping in Australia",
+        "returns_label": "30-day returns",
         "show_trial": false
       }
     }
