@@ -1,0 +1,488 @@
+{%- comment -%}
+  LoftRest landing page. Generated from index.html by shopify/build.py.
+  Edit reviews, FAQ, product and sale name in Online Store > Themes > Customize.
+{%- endcomment -%}
+{%- assign product = section.settings.product -%}
+{%- assign variant = product.selected_or_first_available_variant -%}
+{%- assign on_sale = false -%}
+{%- if variant.compare_at_price > variant.price -%}{%- assign on_sale = true -%}{%- endif -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  tailwind.config = {
+      important: '.loftrest',
+      corePlugins: { preflight: false },
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0F172A',
+              slate: '#1E293B',
+              blue: '#0284C7',
+              lightBlue: '#E0F2FE',
+              heat: '#F97316',
+              emerald: '#10B981',
+              cream: '#F8FAFC'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    };
+</script>
+<style>
+  /* Minimal reset scoped to this page so the rest of your theme is untouched */
+  .loftrest { font-family: 'Inter', -apple-system, sans-serif; color: #1e293b; background: #F8FAFC; -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  .loftrest *, .loftrest *::before, .loftrest *::after { box-sizing: border-box; border-width: 0; border-style: solid; border-color: #e5e7eb; }
+  .loftrest h1, .loftrest h2, .loftrest h3, .loftrest p, .loftrest figure, .loftrest blockquote, .loftrest ol, .loftrest ul { margin: 0; padding: 0; }
+  .loftrest h1, .loftrest h2, .loftrest h3 { font-family: inherit; font-size: inherit; font-weight: inherit; letter-spacing: inherit; color: inherit; line-height: 1.2; }
+  .loftrest ol, .loftrest ul { list-style: none; }
+  .loftrest a { color: inherit; text-decoration: none; }
+  .loftrest button, .loftrest input { font: inherit; color: inherit; margin: 0; background: transparent; }
+  .loftrest button { cursor: pointer; }
+  .loftrest svg { display: block; }
+  .loftrest summary::-webkit-details-marker { display: none; }
+</style>
+
+<div class="loftrest" id="loftrest-{{ section.id }}">
+  <!-- HERO SECTION -->
+  <section class="relative bg-gradient-to-b from-white via-slate-50 to-brand-cream py-12 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-lightBlue border border-sky-200 text-brand-blue text-xs font-bold uppercase">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          <span>Chiropractor-Approved At-Home Cervical Therapy</span>
+        </div>
+        <h1 class="text-3xl md:text-5xl font-extrabold text-brand-navy tracking-tight leading-tight">
+          Wake Up Pain-Free. <br>
+          <span class="text-brand-blue">Decompress Your Spine</span> In 15 Minutes.
+        </h1>
+        <p class="text-slate-600 text-base md:text-lg max-w-xl">
+          LoftRest™ combines dynamic pneumatic air traction, deep infrared heat, and kinetic vibration to relieve cervical pressure while you lie flat.
+        </p>
+        <div class="pt-4 flex flex-wrap gap-4">
+          <a href="#order" class="bg-brand-blue hover:bg-sky-600 text-white font-extrabold text-lg px-8 py-4 rounded-xl shadow-xl transition-colors">
+            {%- if on_sale -%}Get {{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round }}% Off LoftRest Today{%- else -%}Order LoftRest Today{%- endif -%}
+          </a>
+          <a href="#how" class="inline-flex items-center gap-2 text-brand-navy font-bold text-lg px-4 py-4">
+            See how it works <i data-lucide="arrow-down" class="w-5 h-5"></i>
+          </a>
+        </div>
+        <ul class="flex flex-wrap gap-x-6 gap-y-2 pt-2 text-sm text-slate-600">
+          <li class="flex items-center gap-2"><i data-lucide="truck" class="w-4 h-4 text-brand-emerald"></i> Free express shipping</li>
+          <li class="flex items-center gap-2"><i data-lucide="timer" class="w-4 h-4 text-brand-emerald"></i> 15-minute sessions</li>
+          <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-brand-emerald"></i> Use lying flat</li>
+        </ul>
+      </div>
+
+      <!-- Product visual (swap in a real product photo when you have one) -->
+      <div class="lg:col-span-5">
+        <div class="relative aspect-square rounded-3xl bg-gradient-to-br from-brand-lightBlue via-white to-orange-50 border border-slate-200 shadow-2xl flex items-center justify-center overflow-hidden">
+          <div class="absolute inset-10 rounded-full bg-brand-blue/10 animate-pulse"></div>
+          <div class="relative text-center space-y-3 p-6">
+            <div class="mx-auto w-20 h-20 rounded-2xl bg-brand-blue text-white flex items-center justify-center shadow-lg">
+              <i data-lucide="waves" class="w-10 h-10"></i>
+            </div>
+            <p class="font-extrabold text-2xl text-brand-navy">LoftRest™</p>
+            <p class="text-sm text-slate-500">3-in-1 Cervical Therapy Device</p>
+          </div>
+          <div class="absolute top-6 left-6 bg-white rounded-xl shadow-md px-3 py-2 text-xs font-bold text-brand-blue flex items-center gap-1.5">
+            <i data-lucide="wind" class="w-4 h-4"></i> Air traction
+          </div>
+          <div class="absolute bottom-6 right-6 bg-white rounded-xl shadow-md px-3 py-2 text-xs font-bold text-brand-heat flex items-center gap-1.5">
+            <i data-lucide="flame" class="w-4 h-4"></i> Infrared heat
+          </div>
+          <div class="absolute bottom-6 left-6 bg-white rounded-xl shadow-md px-3 py-2 text-xs font-bold text-brand-emerald flex items-center gap-1.5">
+            <i data-lucide="activity" class="w-4 h-4"></i> Vibration
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS: 3-IN-1 -->
+  <section id="how" class="py-16 md:py-24 scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-brand-blue font-bold text-sm uppercase tracking-wide">3-in-1 Therapy</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">Three therapies. One device.</h2>
+        <p class="mt-4 text-slate-600">Each LoftRest™ session works on your neck in three ways at once.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-brand-lightBlue text-brand-blue flex items-center justify-center">
+            <i data-lucide="wind" class="w-6 h-6"></i>
+          </div>
+          <h3 class="mt-5 text-xl font-bold text-brand-navy">Pneumatic Air Traction</h3>
+          <p class="mt-2 text-slate-600">Air chambers gently inflate to lift and stretch your neck, easing pressure on the cervical spine.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-orange-50 text-brand-heat flex items-center justify-center">
+            <i data-lucide="flame" class="w-6 h-6"></i>
+          </div>
+          <h3 class="mt-5 text-xl font-bold text-brand-navy">Deep Infrared Heat</h3>
+          <p class="mt-2 text-slate-600">Soothing warmth helps tight neck and shoulder muscles relax during each session.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-brand-emerald flex items-center justify-center">
+            <i data-lucide="activity" class="w-6 h-6"></i>
+          </div>
+          <h3 class="mt-5 text-xl font-bold text-brand-navy">Kinetic Vibration</h3>
+          <p class="mt-2 text-slate-600">Gentle vibration massages the muscles around your neck while traction and heat do their work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NECK PAIN & SLEEP -->
+  <section id="sleep" class="py-16 md:py-24 bg-brand-navy text-white scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-sky-400 font-bold text-sm uppercase tracking-wide">Neck pain &amp; sleep</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold tracking-tight">Why a sore neck ruins your sleep, and how to break the cycle</h2>
+        <p class="mt-5 text-slate-300 leading-relaxed">Neck pain and poor sleep feed each other. Hours of looking down at phones and screens, stress, and awkward sleeping positions compress the cervical spine and tighten the surrounding muscles. That tension makes it hard to get comfortable at night. You toss and turn, sleep lightly, and wake up stiffer than you went to bed.</p>
+        <p class="mt-4 text-slate-300 leading-relaxed">LoftRest™ is built to interrupt that cycle. A 15-minute session before bed takes the load off your neck and relaxes tight muscles, so your body is ready to rest.</p>
+      </div>
+      <div class="space-y-4">
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-6 flex gap-4">
+          <div class="w-11 h-11 shrink-0 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center"><i data-lucide="wind" class="w-5 h-5"></i></div>
+          <div>
+            <h3 class="font-bold text-lg">Traction takes the pressure off</h3>
+            <p class="mt-1 text-slate-300">Air chambers gently lift and lengthen the neck, easing compression on the discs and joints that builds up through the day.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-6 flex gap-4">
+          <div class="w-11 h-11 shrink-0 rounded-xl bg-orange-500/15 text-orange-400 flex items-center justify-center"><i data-lucide="flame" class="w-5 h-5"></i></div>
+          <div>
+            <h3 class="font-bold text-lg">Heat loosens tight muscles</h3>
+            <p class="mt-1 text-slate-300">Warmth boosts local blood flow and helps stiff neck and shoulder muscles let go, a classic way to relieve everyday tension.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-white/5 border border-white/10 p-6 flex gap-4">
+          <div class="w-11 h-11 shrink-0 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center"><i data-lucide="activity" class="w-5 h-5"></i></div>
+          <div>
+            <h3 class="font-bold text-lg">Vibration helps you unwind</h3>
+            <p class="mt-1 text-slate-300">Gentle massage-like vibration calms the area and turns the session into a relaxing pre-sleep ritual.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits" class="py-16 md:py-24 scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-brand-blue font-bold text-sm uppercase tracking-wide">Benefits</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">What LoftRest™ does for you</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl border border-slate-200 p-6">
+          <div class="w-11 h-11 rounded-xl bg-brand-lightBlue text-brand-blue flex items-center justify-center"><i data-lucide="moon" class="w-5 h-5"></i></div>
+          <h3 class="mt-4 text-lg font-bold text-brand-navy">Fall asleep more comfortably</h3>
+          <p class="mt-2 text-slate-600">Release neck tension before bed so it is easier to settle in and get comfortable.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-6">
+          <div class="w-11 h-11 rounded-xl bg-orange-50 text-brand-heat flex items-center justify-center"><i data-lucide="sunrise" class="w-5 h-5"></i></div>
+          <h3 class="mt-4 text-lg font-bold text-brand-navy">Wake up less stiff</h3>
+          <p class="mt-2 text-slate-600">An evening session helps loosen the tightness that can leave you sore in the morning.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-6">
+          <div class="w-11 h-11 rounded-xl bg-emerald-50 text-brand-emerald flex items-center justify-center"><i data-lucide="move-vertical" class="w-5 h-5"></i></div>
+          <h3 class="mt-4 text-lg font-bold text-brand-navy">Decompress your neck</h3>
+          <p class="mt-2 text-slate-600">Gentle air traction creates space between the vertebrae to ease built-up pressure.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-6">
+          <div class="w-11 h-11 rounded-xl bg-brand-lightBlue text-brand-blue flex items-center justify-center"><i data-lucide="smartphone" class="w-5 h-5"></i></div>
+          <h3 class="mt-4 text-lg font-bold text-brand-navy">Undo "tech neck"</h3>
+          <p class="mt-2 text-slate-600">Counter hours of looking down at phones and laptops with a gentle upward stretch.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-6">
+          <div class="w-11 h-11 rounded-xl bg-orange-50 text-brand-heat flex items-center justify-center"><i data-lucide="heart-handshake" class="w-5 h-5"></i></div>
+          <h3 class="mt-4 text-lg font-bold text-brand-navy">Relax tight shoulders</h3>
+          <p class="mt-2 text-slate-600">Infrared heat and vibration soothe the muscles where neck tension spreads.</p>
+        </div>
+        <div class="bg-white rounded-2xl border border-slate-200 p-6">
+          <div class="w-11 h-11 rounded-xl bg-emerald-50 text-brand-emerald flex items-center justify-center"><i data-lucide="home" class="w-5 h-5"></i></div>
+          <h3 class="mt-4 text-lg font-bold text-brand-navy">Therapy-style relief at home</h3>
+          <p class="mt-2 text-slate-600">Use it on your bed or sofa, whenever you need it, with no appointments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15-MINUTE ROUTINE -->
+  <section id="steps" class="py-16 md:py-24 bg-white border-y border-slate-200 scroll-mt-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-brand-blue font-bold text-sm uppercase tracking-wide">Your routine</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">Relief in 15 minutes</h2>
+      </div>
+      <ol class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <li class="text-center">
+          <div class="mx-auto w-12 h-12 rounded-full bg-brand-navy text-white font-extrabold text-lg flex items-center justify-center">1</div>
+          <h3 class="mt-4 text-lg font-bold text-brand-navy">Lie flat</h3>
+          <p class="mt-2 text-slate-600">Place LoftRest™ under your neck on a bed, sofa, or floor.</p>
+        </li>
+        <li class="text-center">
+          <div class="mx-auto w-12 h-12 rounded-full bg-brand-navy text-white font-extrabold text-lg flex items-center justify-center">2</div>
+          <h3 class="mt-4 text-lg font-bold text-brand-navy">Choose your mode</h3>
+          <p class="mt-2 text-slate-600">Turn on air traction, heat, and vibration together or one at a time.</p>
+        </li>
+        <li class="text-center">
+          <div class="mx-auto w-12 h-12 rounded-full bg-brand-navy text-white font-extrabold text-lg flex items-center justify-center">3</div>
+          <h3 class="mt-4 text-lg font-bold text-brand-navy">Relax for 15 minutes</h3>
+          <p class="mt-2 text-slate-600">Breathe, unwind, and let your neck decompress before sleep.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  {%- assign review_count = section.blocks | where: 'type', 'review' | size -%}
+  {%- if review_count > 0 -%}
+  <section id="reviews" class="py-16 md:py-24 bg-brand-cream scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <p class="text-brand-blue font-bold text-sm uppercase tracking-wide">Reviews</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">What LoftRest™ customers say</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'review' -%}
+        <figure class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col" {{ block.shopify_attributes }}>
+          {%- if block.settings.topic != blank -%}<p class="text-xs font-bold uppercase tracking-wide text-brand-blue">{{ block.settings.topic | escape }}</p>{%- endif -%}
+          {%- if block.settings.question != blank -%}<h3 class="mt-1 font-bold text-brand-navy">{{ block.settings.question | escape }}</h3>{%- endif -%}
+          <div class="mt-3 flex text-amber-400" aria-label="{{ block.settings.stars }} out of 5 stars">
+            {%- for i in (1..block.settings.stars) -%}<i data-lucide="star" class="w-4 h-4 fill-current"></i>{%- endfor -%}
+          </div>
+          <blockquote class="mt-3 text-slate-600 flex-1">{{ block.settings.review | escape }}</blockquote>
+          <figcaption class="mt-4 text-sm font-semibold text-slate-800">{{ block.settings.name | escape }}{%- if block.settings.verified -%} <span class="font-normal text-slate-500">· Verified buyer</span>{%- endif -%}</figcaption>
+        </figure>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+  {%- endif -%}
+
+  <!-- CHECKOUT & ORDER SECTION -->
+  <section id="order" class="py-16 md:py-24 bg-white border-t border-slate-200 scroll-mt-16">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="bg-slate-900 rounded-3xl text-white p-8 md:p-12 border border-slate-800 shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-extrabold">Claim Your LoftRest™ 3-in-1 Therapy Device</h2>
+          {%- if variant -%}
+          <div class="mt-6 flex flex-wrap items-baseline gap-4">
+            <span class="text-4xl font-extrabold">{{ variant.price | money }}</span>
+            {%- if on_sale -%}
+            <span class="text-xl text-slate-500 line-through">{{ variant.compare_at_price | money }}</span>
+            <span class="text-xs font-bold bg-brand-heat text-white px-2 py-1 rounded">SAVE {{ variant.compare_at_price | minus: variant.price | money_without_trailing_zeros }}</span>
+            {%- endif -%}
+          </div>
+          {%- endif -%}
+          <ul class="mt-6 space-y-3 text-slate-300">
+            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-emerald"></i> Air traction, infrared heat &amp; vibration</li>
+            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-emerald"></i> Free express worldwide shipping</li>
+            {%- if on_sale and section.settings.sale_name != blank -%}<li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-emerald"></i> {{ section.settings.sale_name | escape }} price</li>{%- endif -%}
+          </ul>
+        </div>
+        {%- if variant -%}
+        <form action="{{ routes.cart_add_url }}" method="post" class="bg-white/5 rounded-2xl border border-white/10 p-6 space-y-5">
+          <input type="hidden" name="id" value="{{ variant.id }}">
+          <input type="hidden" name="return_to" value="{% if section.settings.go_to_checkout %}/checkout{% else %}{{ routes.cart_url }}{% endif %}">
+          <div class="flex items-center justify-between">
+            <label for="qty" class="font-semibold">Quantity</label>
+            <div class="flex items-center rounded-lg border border-white/20">
+              <button type="button" id="qty-minus" class="px-3 py-2 hover:bg-white/10" aria-label="Decrease quantity"><i data-lucide="minus" class="w-4 h-4"></i></button>
+              <input id="qty" name="quantity" type="number" min="1" max="10" value="1" class="w-12 bg-transparent text-center font-bold outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none">
+              <button type="button" id="qty-plus" class="px-3 py-2 hover:bg-white/10" aria-label="Increase quantity"><i data-lucide="plus" class="w-4 h-4"></i></button>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-lg">
+            <span class="text-slate-400">Total</span>
+            <span id="total" class="font-extrabold">{{ variant.price | money }}</span>
+          </div>
+          <button type="submit" id="buy" {% unless variant.available %}disabled{% endunless %} class="block w-full disabled:opacity-50 text-center bg-brand-blue hover:bg-sky-600 text-white font-extrabold text-lg px-8 py-4 rounded-xl shadow-xl transition-colors">
+            {% if variant.available %}Buy Now{% else %}Sold out{% endif %}
+          </button>
+          <p class="flex items-center justify-center gap-2 text-xs text-slate-400">
+            <i data-lucide="lock" class="w-3.5 h-3.5"></i> Secure checkout
+          </p>
+        </form>
+        {%- else -%}
+        <div class="bg-white/5 rounded-2xl border border-white/10 p-6 text-slate-300">Choose your LoftRest product in the theme editor: <strong>Customize</strong> &rsaquo; this page &rsaquo; <strong>LoftRest landing page</strong> &rsaquo; <strong>Product</strong>.</div>
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 md:py-24 bg-brand-cream border-t border-slate-200 scroll-mt-16">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <p class="text-brand-blue font-bold text-sm uppercase tracking-wide">FAQ</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">Neck pain &amp; sleep: your questions answered</h2>
+      </div>
+      <div class="space-y-3">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'faq' -%}
+        <details class="group rounded-xl border border-slate-200 p-5" {{ block.shopify_attributes }}>
+          <summary class="flex items-center justify-between gap-4 cursor-pointer font-bold text-brand-navy list-none">
+            <h3>{{ block.settings.question | escape }}</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <p class="mt-3 text-slate-600 leading-relaxed">{{ block.settings.answer | escape }}</p>
+        </details>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  (function () {
+    var root = document.getElementById('loftrest-{{ section.id }}');
+    function icons() { if (window.lucide) lucide.createIcons(); }
+    if (window.lucide) icons(); else document.addEventListener('DOMContentLoaded', icons);
+
+    var qty = root.querySelector('#qty');
+    if (qty) {
+      var price = {{ variant.price | default: 0 | json }};
+      var format = {{ shop.money_format | strip_html | json }};
+      var total = root.querySelector('#total');
+      var money = function (cents) {
+        var amount = (cents / 100).toFixed(2);
+        return format.replace(/\{\{\s*(\w+)\s*\}\}/, function (m, key) {
+          if (key.indexOf('no_decimals') > -1) amount = Math.round(cents / 100).toString();
+          if (key.indexOf('comma') > -1) amount = amount.replace('.', ',');
+          return amount;
+        });
+      };
+      var clamp = function (n) { return Math.min(10, Math.max(1, isFinite(n) ? n : 1)); };
+      var render = function () { qty.value = clamp(parseInt(qty.value, 10)); total.textContent = money(price * qty.value); };
+      root.querySelector('#qty-minus').addEventListener('click', function () { qty.value = parseInt(qty.value, 10) - 1; render(); });
+      root.querySelector('#qty-plus').addEventListener('click', function () { qty.value = parseInt(qty.value, 10) + 1; render(); });
+      qty.addEventListener('change', render);
+    }
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- assign faq_blocks = section.blocks | where: 'type', 'faq' -%}
+    {%- for block in faq_blocks -%}
+    { "@type": "Question", "name": {{ block.settings.question | json }}, "acceptedAnswer": { "@type": "Answer", "text": {{ block.settings.answer | json }} } }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+
+{% schema %}
+{
+  "name": "LoftRest landing page",
+  "tag": "div",
+  "class": "loftrest-section",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product",
+      "info": "Price, sale price and the Buy Now button come from this product. Set a 'Compare-at price' on the product to show the sale."
+    },
+    {
+      "type": "text",
+      "id": "sale_name",
+      "label": "Sale name",
+      "default": "Spring Sleep Sale"
+    },
+    {
+      "type": "checkbox",
+      "id": "go_to_checkout",
+      "label": "Buy Now goes straight to checkout",
+      "default": true,
+      "info": "Turn off to send buyers to the cart instead."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Customer review",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Only add genuine reviews from real customers, with their permission."
+        },
+        {
+          "type": "text",
+          "id": "topic",
+          "label": "Topic",
+          "info": "e.g. Sleep, Neck pain, Tech neck"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Heading",
+          "info": "e.g. Did it help you sleep better?"
+        },
+        {
+          "type": "range",
+          "id": "stars",
+          "label": "Stars",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "review",
+          "label": "Review"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Customer name",
+          "info": "e.g. Sarah, Denver"
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "Verified buyer",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "LoftRest landing page"
+    }
+  ]
+}
+{% endschema %}

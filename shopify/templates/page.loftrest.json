@@ -1,0 +1,90 @@
+{
+  "sections": {
+    "main": {
+      "type": "loftrest-landing",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Does neck traction actually work for neck pain?",
+            "answer": "Cervical traction is a long-standing technique used by physical therapists and chiropractors. It gently stretches the neck to create space between the vertebrae and ease pressure on discs, joints, and nerves. Many people with neck stiffness or tension find it helpful, especially alongside stretching and posture work. Results vary from person to person, so if you have ongoing or severe pain, ask your doctor or physical therapist whether traction suits you."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Can a neck stretcher help me sleep better?",
+            "answer": "Neck pain and poor sleep often feed each other: pain makes it hard to get comfortable, and bad sleep leaves muscles tighter the next day. A 15-minute LoftRest™ session before bed uses traction, heat, and vibration to help your neck and shoulders relax, so it is easier to settle into a comfortable position and stay there."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "How long and how often should I use LoftRest™?",
+            "answer": "Each session takes about 15 minutes. Most people use it once a day, often in the evening before sleep. Start on the gentlest setting, build up gradually, and stop if anything feels painful rather than a comfortable stretch."
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Is it safe to use a neck traction device every day?",
+            "answer": "For most healthy adults, short daily sessions at a comfortable pressure are fine. Never push through sharp pain, numbness, tingling, or dizziness. If you notice any of these, stop and talk to a healthcare professional."
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "Is heat good for neck pain?",
+            "answer": "Warmth increases blood flow and helps tight muscles relax, which is why heat is a common go-to for everyday neck stiffness and tension. For a fresh injury with swelling, cold is usually recommended first; ask a clinician if you are unsure."
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "Can LoftRest™ help with \"tech neck\" from phones and laptops?",
+            "answer": "Looking down at screens for hours puts extra load on the neck and shoulders and can leave them tight and sore. LoftRest™ gently stretches the neck in the opposite direction while heat and vibration relax the surrounding muscles, making it a good end-of-day reset. Pair it with regular screen breaks and a raised monitor for best results."
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "question": "What is the difference between a cervical traction device and a neck pillow?",
+            "answer": "A pillow supports your neck while you sleep. A traction device like LoftRest™ actively lifts and stretches the neck for a short session, then you put it away and sleep on your normal pillow. Many people use both."
+          }
+        },
+        "faq_8": {
+          "type": "faq",
+          "settings": {
+            "question": "Who should not use neck traction?",
+            "answer": "Talk to your doctor before using LoftRest™ if you are pregnant, have had neck or spine surgery, or have osteoporosis, a recent neck injury, rheumatoid arthritis, a known spinal condition, or a circulation disorder. LoftRest™ is a comfort device and is not a substitute for medical diagnosis or treatment."
+          }
+        },
+        "faq_9": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does shipping take, and what does it cost?",
+            "answer": "Express worldwide shipping is free during the <span data-sale-name>Spring Sleep Sale</span>."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8",
+        "faq_9"
+      ],
+      "settings": {
+        "sale_name": "Spring Sleep Sale",
+        "go_to_checkout": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

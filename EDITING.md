@@ -68,3 +68,7 @@ To change any wording, find it in the file and type over it. Leave the parts ins
 **Change the colors.** Near the top of the file, `tailwind.config` lists the brand colors (`navy`, `blue`, `heat` and so on). Change a color code, e.g. `'#0284C7'`, and every place that uses it updates.
 
 **Change the page title Google shows.** Edit the `<title>` and `<meta name="description">` lines near the top.
+
+## Shopify version
+
+The page is also packaged for Shopify in the `shopify/` folder. There, price and sale come from your Shopify product, and reviews and questions can be edited in Shopify's theme editor. See [shopify/README.md](shopify/README.md) for how to install and edit it.
