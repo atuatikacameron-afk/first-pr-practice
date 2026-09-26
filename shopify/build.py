@@ -284,7 +284,7 @@ template = {
   "sections": {"main": {"type": "loftrest-landing",
     "blocks": {f"faq_{i+1}": {"type": "faq", "settings": {"question": q, "answer": a}} for i, (q, a) in enumerate(faqs)},
     "block_order": [f"faq_{i+1}" for i in range(len(faqs))],
-    "settings": {"product": "loftrest-neck-traction-device", "sale_name": "Spring Sleep Sale", "go_to_checkout": True}}},
+    "settings": {"hero_image": "shopify://shop_images/loftrest-hero.webp", "product": "loftrest-neck-traction-device", "sale_name": "Spring Sleep Sale", "go_to_checkout": True}}},
   "order": ["main"]
 }
 (ROOT / 'templates' / 'page.loftrest.json').write_text(json.dumps(template, indent=2, ensure_ascii=False) + '\n')

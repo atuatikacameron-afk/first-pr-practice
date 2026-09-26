@@ -87,6 +87,7 @@
         "faq_10"
       ],
       "settings": {
+        "hero_image": "shopify://shop_images/loftrest-hero.webp",
         "product": "loftrest-neck-traction-device",
         "sale_name": "Spring Sleep Sale",
         "go_to_checkout": true
