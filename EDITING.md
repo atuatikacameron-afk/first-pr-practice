@@ -14,8 +14,8 @@ These live in one place near the top of `index.html`, in the block marked **EASY
 
 ```js
 window.LOFTREST = {
-  price: 119.00,            // current price
-  oldPrice: 169.00,         // crossed-out price (set to 0 to hide it)
+  price: 130.00,            // current price
+  oldPrice: 0,              // crossed-out price: only use a price you really sold at before (0 hides it)
   currencySymbol: '$',
   currencyCode: 'USD',
   saleName: 'Spring Sleep Sale',

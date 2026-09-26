@@ -12,8 +12,8 @@ These two files add the LoftRest landing page to your Shopify store. Your store'
 
 **1. Create the product.** In Shopify admin go to **Products → Add product**:
 - Title: `LoftRest™ 3-in-1 Cervical Therapy Device`
-- Price: `119.00`
-- Compare-at price: `169.00`. This turns on the "SAVE $50" badge and "Get 30% Off" button. Leave it blank for no sale.
+- Price: `130.00`
+- Compare-at price: leave blank. Only set one for a genuine sale, using a price you really sold at for a reasonable period (Australian Consumer Law). It turns on the sale badges and "% off" wording.
 - Add your product photos, then **Save**.
 
 **2. Make a backup of your theme.** Go to **Online Store → Themes**. On your current theme, click **⋯ → Duplicate**. If anything goes wrong, you can switch back to the copy.

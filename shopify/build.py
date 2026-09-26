@@ -81,7 +81,7 @@ order = order_html
 for a, b in [
     ('<div class="mt-6 flex flex-wrap items-baseline gap-4">', '{%- if variant -%}\n          <div class="mt-6 flex flex-wrap items-baseline gap-4">'),
     ('SAVE <span data-savings>$50</span></span>\n          </div>', 'SAVE <span data-savings>$50</span></span>\n          </div>\n          {%- endif -%}'),
-    ('<span class="text-4xl font-extrabold" data-price>$119.00</span>', '<span class="text-4xl font-extrabold">{{ variant.price | money }}</span>'),
+    ('<span class="text-4xl font-extrabold" data-price>$130.00</span>', '<span class="text-4xl font-extrabold">{{ variant.price | money }}</span>'),
     ('<span class="text-xl text-slate-500 line-through" data-old-price>$169.00</span>\n            <span class="text-xs font-bold bg-brand-heat text-white px-2 py-1 rounded" data-savings-badge>SAVE <span data-savings>$50</span></span>',
      '{%- if on_sale -%}\n            <span class="text-xl text-slate-500 line-through">{{ variant.compare_at_price | money }}</span>\n            <span class="text-xs font-bold bg-brand-heat text-white px-2 py-1 rounded">SAVE {{ variant.compare_at_price | minus: variant.price | money_without_trailing_zeros }}</span>\n            {%- endif -%}'),
     ('<li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-emerald"></i> <span data-sale-name>Spring Sleep Sale</span> price</li>',
@@ -89,7 +89,7 @@ for a, b in [
     ('<div class="bg-white/5 rounded-2xl border border-white/10 p-6 space-y-5">',
      '{%- if variant -%}\n        <form action="{{ routes.cart_add_url }}" method="post" class="bg-white/5 rounded-2xl border border-white/10 p-6 space-y-5">\n          <input type="hidden" name="id" value="{{ variant.id }}">\n          <input type="hidden" name="return_to" value="{% if section.settings.go_to_checkout %}/checkout{% else %}{{ routes.cart_url }}{% endif %}">'),
     ('<input id="qty" type="number"', '<input id="qty" name="quantity" type="number"'),
-    ('<span id="total" class="font-extrabold">$119.00</span>', '<span id="total" class="font-extrabold">{{ variant.price | money }}</span>'),
+    ('<span id="total" class="font-extrabold">$130.00</span>', '<span id="total" class="font-extrabold">{{ variant.price | money }}</span>'),
     ('          <!-- The checkout link is set in EASY SETTINGS at the top of this file (checkoutUrl). -->\n          <a href="#" id="buy" class="block w-full', '          <button type="submit" id="buy" {% unless variant.available %}disabled{% endunless %} class="block w-full disabled:opacity-50'),
     ('            Buy Now\n          </a>', '            {% if variant.available %}Buy Now{% else %}Sold out{% endif %}\n          </button>'),
     ('            <i data-lucide="lock" class="w-3.5 h-3.5"></i> Secure checkout\n          </p>\n        </div>',

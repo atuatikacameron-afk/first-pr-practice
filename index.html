@@ -17,8 +17,8 @@
        ================================================================ -->
   <script>
     window.LOFTREST = {
-      price: 119.00,            // current price
-      oldPrice: 169.00,         // crossed-out price (set to 0 to hide it)
+      price: 130.00,            // current price
+      oldPrice: 0,              // crossed-out price: only use a price you really sold at before (0 hides it)
       currencySymbol: '$',
       currencyCode: 'USD',
       saleName: 'Spring Sleep Sale',
@@ -440,7 +440,7 @@
         <div>
           <h2 class="text-3xl font-extrabold">Claim Your LoftRest™ 3-in-1 Cervical Traction Pillow</h2>
           <div class="mt-6 flex flex-wrap items-baseline gap-4">
-            <span class="text-4xl font-extrabold" data-price>$119.00</span>
+            <span class="text-4xl font-extrabold" data-price>$130.00</span>
             <span class="text-xl text-slate-500 line-through" data-old-price>$169.00</span>
             <span class="text-xs font-bold bg-brand-heat text-white px-2 py-1 rounded" data-savings-badge>SAVE <span data-savings>$50</span></span>
           </div>
@@ -463,7 +463,7 @@
           </div>
           <div class="flex items-center justify-between text-lg">
             <span class="text-slate-400">Total</span>
-            <span id="total" class="font-extrabold">$119.00</span>
+            <span id="total" class="font-extrabold">$130.00</span>
           </div>
           <!-- The checkout link is set in EASY SETTINGS at the top of this file (checkoutUrl). -->
           <a href="#" id="buy" class="block w-full text-center bg-brand-blue hover:bg-sky-600 text-white font-extrabold text-lg px-8 py-4 rounded-xl shadow-xl transition-colors">
