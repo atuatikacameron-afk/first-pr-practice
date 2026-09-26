@@ -60,6 +60,10 @@ After editing `src/loftrest-product.liquid`, run `python3 build_product.py` in t
 - **FAQ:** each **Question** block has a **Topic**. Questions with the same topic are grouped, and topic buttons at the top jump to each group. Google's FAQ data updates automatically.
 - **Reviews:** add genuine reviews with **Add block → Customer review** (stars, title, text, name, date, optional photo and your reply), or add a review app's block. The star summary appears once there's a review. Until then the page says honestly that there are no reviews yet.
 
+## Footer
+
+`sections/loftrest-footer.liquid` (source `src/loftrest-footer.liquid`, built with `python3 build_pages.py`) replaces the theme footer through `sections/footer-group.json`. Edit it in **Customize → Footer → LoftRest footer**: tagline, email signup, contact details, ABN, social links (they only show once you add real URLs), and optional Shop and Help menus. The Legal column lists every policy you've saved under **Settings → Policies** automatically.
+
 ## Editing on Shopify
 
 Most changes can be made in **Online Store → Themes → Customize → Pages → LoftRest → LoftRest landing page**. You don't need to touch any code.

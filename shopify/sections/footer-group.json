@@ -1,0 +1,18 @@
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "loftrest_footer": {
+      "type": "loftrest-footer",
+      "settings": {
+        "product": "loftrest-neck-traction-device",
+        "phone": "+61 450 213 111",
+        "location": "Melbourne, Australia",
+        "show_newsletter": true
+      }
+    }
+  },
+  "order": [
+    "loftrest_footer"
+  ]
+}

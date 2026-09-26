@@ -1,0 +1,125 @@
+{%- comment -%}
+  SOURCE for sections/loftrest-footer.liquid. Edit this file, then run
+  `python3 build_pages.py` in the shopify folder.
+{%- endcomment -%}
+{%- assign support_email = section.settings.support_email | default: shop.email -%}
+{%- assign product = section.settings.product -%}
+
+<footer class="bg-brand-navy text-slate-300">
+
+  <!-- TRUST STRIP -->
+  <div class="border-b border-white/10">
+    <ul class="max-w-7xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+      <li class="flex items-center gap-3"><i data-lucide="truck" class="w-6 h-6 shrink-0 text-sky-400"></i> <span><strong class="block text-white">Free shipping</strong>Standard, within Australia</span></li>
+      <li class="flex items-center gap-3"><i data-lucide="undo-2" class="w-6 h-6 shrink-0 text-sky-400"></i> <span><strong class="block text-white">30-day returns</strong>Change-of-mind returns</span></li>
+      <li class="flex items-center gap-3"><i data-lucide="lock" class="w-6 h-6 shrink-0 text-sky-400"></i> <span><strong class="block text-white">Secure checkout</strong>Processed by Shopify</span></li>
+      <li class="flex items-center gap-3"><i data-lucide="timer-off" class="w-6 h-6 shrink-0 text-sky-400"></i> <span><strong class="block text-white">Auto shut-off</strong>Built-in safety timer</span></li>
+    </ul>
+  </div>
+
+  <!-- MAIN -->
+  <div class="max-w-7xl mx-auto px-4 py-12 md:py-16 grid grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-10">
+
+    <!-- Brand + newsletter -->
+    <div class="col-span-2 lg:col-span-5">
+      <a href="{{ routes.root_url }}" class="inline-flex items-center gap-2" aria-label="{{ shop.name | escape }} home">
+        <span class="bg-brand-blue text-white p-2 rounded-lg"><i data-lucide="waves" class="w-6 h-6"></i></span>
+        <span class="font-extrabold text-2xl tracking-tight text-white">LOFTREST<span class="text-sky-400">.</span></span>
+      </a>
+      <p class="mt-4 max-w-sm">{{ section.settings.tagline | escape }}</p>
+
+      {%- if section.settings.show_newsletter -%}
+      <div class="mt-8 max-w-md">
+        <p class="font-bold text-white">{{ section.settings.newsletter_heading | escape }}</p>
+        {%- form 'customer', id: 'lr-newsletter', class: 'lr-mt-3' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          {%- if form.posted_successfully? -%}
+            <p class="rounded-xl bg-white/10 px-4 py-3 text-white" role="status">Thanks for signing up. Check your inbox soon.</p>
+          {%- else -%}
+            <div class="flex gap-2">
+              <label for="lr-newsletter-email" class="sr-only">Email address</label>
+              <input id="lr-newsletter-email" type="email" name="contact[email]" required autocomplete="email" placeholder="Your email address" class="flex-1 min-w-0 rounded-xl bg-white text-brand-navy px-4 py-3 outline-none focus:ring-2 focus:ring-sky-400">
+              <button type="submit" class="shrink-0 bg-brand-blue hover:bg-sky-600 text-white font-bold px-5 py-3 rounded-xl transition-colors">Sign up</button>
+            </div>
+            {%- if form.errors -%}<div class="mt-2 text-sm text-orange-300" role="alert">{{ form.errors | default_errors }}</div>{%- endif -%}
+            <p class="mt-2 text-xs text-slate-400">By signing up you agree to receive emails from LoftRest™. Unsubscribe anytime. See our {% if shop.privacy_policy.url != blank %}<a href="{{ shop.privacy_policy.url }}" class="underline">privacy policy</a>{% else %}privacy policy{% endif %}.</p>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+      {%- endif -%}
+    </div>
+
+    <!-- Shop -->
+    <nav class="lg:col-span-2" aria-label="Shop">
+      <p class="font-bold text-white">Shop</p>
+      <ul class="mt-4 space-y-3">
+        {%- if product != blank -%}
+        <li><a href="{{ product.url }}" class="hover:text-white">LoftRest™ Pillow</a></li>
+        <li><a href="{{ product.url }}" class="hover:text-white">2-Pack (save 10%)</a></li>
+        {%- endif -%}
+        {%- for link in section.settings.shop_menu.links -%}<li><a href="{{ link.url }}" class="hover:text-white">{{ link.title | escape }}</a></li>{%- endfor -%}
+        {%- if section.settings.shop_menu == blank -%}
+        <li><a href="/pages/5-reasons-loftrest" class="hover:text-white">Why LoftRest™</a></li>
+        <li><a href="/pages/reviews" class="hover:text-white">Reviews</a></li>
+        {%- endif -%}
+      </ul>
+    </nav>
+
+    <!-- Help -->
+    <nav class="lg:col-span-2" aria-label="Help">
+      <p class="font-bold text-white">Help</p>
+      <ul class="mt-4 space-y-3">
+        {%- for link in section.settings.help_menu.links -%}<li><a href="{{ link.url }}" class="hover:text-white">{{ link.title | escape }}</a></li>{%- endfor -%}
+        {%- if section.settings.help_menu == blank -%}
+        <li><a href="/pages/faq" class="hover:text-white">FAQ</a></li>
+        {%- if shop.shipping_policy.url != blank -%}<li><a href="{{ shop.shipping_policy.url }}" class="hover:text-white">Shipping</a></li>{%- endif -%}
+        {%- if shop.refund_policy.url != blank -%}<li><a href="{{ shop.refund_policy.url }}" class="hover:text-white">Returns &amp; refunds</a></li>{%- endif -%}
+        <li><a href="/pages/contact" class="hover:text-white">Contact us</a></li>
+        {%- endif -%}
+      </ul>
+    </nav>
+
+    <!-- Contact + legal -->
+    <div class="col-span-2 lg:col-span-3">
+      <p class="font-bold text-white">Get in touch</p>
+      <ul class="mt-4 space-y-3">
+        {%- if support_email != blank -%}<li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 shrink-0 text-sky-400"></i> <a href="mailto:{{ support_email }}" class="hover:text-white break-all">{{ support_email }}</a></li>{%- endif -%}
+        {%- if section.settings.phone != blank -%}<li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 shrink-0 text-sky-400"></i> <a href="tel:{{ section.settings.phone | remove: ' ' }}" class="hover:text-white">{{ section.settings.phone | escape }}</a></li>{%- endif -%}
+        {%- if section.settings.location != blank -%}<li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 shrink-0 text-sky-400"></i> {{ section.settings.location | escape }}</li>{%- endif -%}
+      </ul>
+      {%- if shop.policies.size > 0 -%}
+      <p class="mt-8 font-bold text-white">Legal</p>
+      <ul class="mt-4 space-y-2 text-sm">
+        {%- for policy in shop.policies -%}<li><a href="{{ policy.url }}" class="hover:text-white">{{ policy.title | escape }}</a></li>{%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-5 text-sm">
+      <div class="space-y-1">
+        <p>&copy; {{ 'now' | date: '%Y' }} LoftRest™. All rights reserved.{% if section.settings.abn != blank %} ABN {{ section.settings.abn | escape }}.{% endif %}</p>
+        <p class="text-xs text-slate-400">LoftRest™ is a comfort and relaxation product, not a medical device.</p>
+      </div>
+      <div class="flex flex-col md:items-end gap-4">
+        {%- assign has_social = false -%}
+        {%- if section.settings.instagram != blank or section.settings.tiktok != blank or section.settings.facebook != blank or section.settings.youtube != blank -%}{%- assign has_social = true -%}{%- endif -%}
+        {%- if has_social -%}
+        <ul class="flex flex-wrap gap-2" aria-label="Follow LoftRest">
+          {%- if section.settings.instagram != blank -%}<li><a href="{{ section.settings.instagram }}" target="_blank" rel="noopener" class="inline-block rounded-full border border-white/20 px-4 py-1.5 hover:bg-white/10">Instagram</a></li>{%- endif -%}
+          {%- if section.settings.tiktok != blank -%}<li><a href="{{ section.settings.tiktok }}" target="_blank" rel="noopener" class="inline-block rounded-full border border-white/20 px-4 py-1.5 hover:bg-white/10">TikTok</a></li>{%- endif -%}
+          {%- if section.settings.facebook != blank -%}<li><a href="{{ section.settings.facebook }}" target="_blank" rel="noopener" class="inline-block rounded-full border border-white/20 px-4 py-1.5 hover:bg-white/10">Facebook</a></li>{%- endif -%}
+          {%- if section.settings.youtube != blank -%}<li><a href="{{ section.settings.youtube }}" target="_blank" rel="noopener" class="inline-block rounded-full border border-white/20 px-4 py-1.5 hover:bg-white/10">YouTube</a></li>{%- endif -%}
+        </ul>
+        {%- endif -%}
+        {%- if shop.enabled_payment_types.size > 0 -%}
+        <ul class="flex flex-wrap gap-2" aria-label="Accepted payment methods">
+          {%- for type in shop.enabled_payment_types -%}<li>{{ type | payment_type_svg_tag: class: 'lr-h-6 lr-w-auto' }}</li>{%- endfor -%}
+        </ul>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</footer>

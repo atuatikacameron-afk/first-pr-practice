@@ -139,4 +139,37 @@ build('loftrest-reviews', reviews_schema, 'LoftRest reviews page')
 (ROOT / 'templates' / 'page.reviews.json').write_text(json.dumps({"sections": {"main": {
     "type": "loftrest-reviews", "settings": {"product": PRODUCT}}}, "order": ["main"]}, indent=2, ensure_ascii=False) + '\n')
 
-print(f'Wrote FAQ page ({len(FAQ)} questions) and reviews page.')
+# ---------------- Footer ----------------
+footer_schema = {
+  "name": "LoftRest footer", "tag": "div", "class": "loftrest-section",
+  "enabled_on": {"groups": ["footer"]},
+  "settings": [
+    {"type": "textarea", "id": "tagline", "label": "Tagline", "default": "Relax first, then sleep. The 3-in-1 cervical traction pillow with air traction, heat, massage and all-night memory foam support."},
+    PRODUCT_SETTING,
+    {"type": "header", "content": "Newsletter"},
+    {"type": "checkbox", "id": "show_newsletter", "label": "Show email signup", "default": True},
+    {"type": "text", "id": "newsletter_heading", "label": "Signup heading", "default": "Get tips for better wind-downs and first access to offers"},
+    {"type": "header", "content": "Links"},
+    {"type": "link_list", "id": "shop_menu", "label": "Shop menu (optional)", "info": "Leave empty to show Why LoftRest and Reviews."},
+    {"type": "link_list", "id": "help_menu", "label": "Help menu (optional)", "info": "Leave empty to show FAQ, Shipping, Returns and Contact."},
+    {"type": "header", "content": "Contact"},
+    *CONTACT,
+    {"type": "text", "id": "phone", "label": "Phone"},
+    {"type": "text", "id": "location", "label": "Location", "info": "e.g. Melbourne, Australia. Leave empty to hide."},
+    {"type": "text", "id": "abn", "label": "ABN", "info": "Shown next to the copyright. Leave empty to hide."},
+    {"type": "header", "content": "Social"},
+    {"type": "url", "id": "instagram", "label": "Instagram"},
+    {"type": "url", "id": "tiktok", "label": "TikTok"},
+    {"type": "url", "id": "facebook", "label": "Facebook"},
+    {"type": "url", "id": "youtube", "label": "YouTube"},
+  ],
+  "presets": [{"name": "LoftRest footer"}],
+}
+build('loftrest-footer', footer_schema, 'LoftRest footer')
+(ROOT / 'sections' / 'footer-group.json').write_text(json.dumps({
+    "type": "footer", "name": "Footer",
+    "sections": {"loftrest_footer": {"type": "loftrest-footer",
+                 "settings": {"product": PRODUCT, "phone": "+61 450 213 111", "location": "Melbourne, Australia", "show_newsletter": True}}},
+    "order": ["loftrest_footer"]}, indent=2, ensure_ascii=False) + '\n')
+
+print(f'Wrote FAQ page ({len(FAQ)} questions), reviews page and footer.')
