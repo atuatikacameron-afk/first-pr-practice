@@ -138,6 +138,7 @@ template = {
     "settings": {"product": "loftrest-neck-traction-device",
                  "image_top": "shopify://shop_images/neck-pain.jpg", "caption_top": cap_text['image_top'],
                  "image_middle": "shopify://shop_images/loftrest-hero.webp", "caption_middle": cap_text['image_middle'],
+                 "image_bottom": "shopify://shop_images/waking-up.webp", "caption_bottom": "The goal: waking up ready for the day, not stiff and sore.",
                  "show_trial": False}}},
   "order": ["main"]
 }
