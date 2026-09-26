@@ -44,14 +44,18 @@ Most changes can be made in **Online Store → Themes → Customize → Pages �
 | Add a review | **Add block → Customer review**. Only use genuine reviews from real customers, with their permission. The reviews section stays hidden until you add one. |
 | Add, edit or reorder a question | Each **FAQ question** block is one question. Drag to reorder. Google's FAQ data updates automatically. |
 
-Other wording, like headlines and benefits, is in the section file: **Edit code → Sections → loftrest-landing.liquid**. Find the text and type over it.
+Other wording, like headlines and benefits, is in the section file: **Edit code → Sections → loftrest-landing.liquid**. Find the text and type over it. Don't change the `class="..."` parts. The page only includes the styles it already uses, so new style classes won't work without a rebuild.
 
 ## If you edit `index.html` instead
 
-`index.html` in this repo is the standalone version of the page. After changing it, run:
+`index.html` in this repo is the standalone version of the page. After changing it, rebuild the Shopify files (you need [Node.js](https://nodejs.org) and Python installed):
 
 ```
-python3 shopify/build.py
+cd shopify
+npm install        # first time only
+python3 build.py
 ```
+
+The build turns the page's styles and icons into plain CSS and SVG inside the section, so nothing loads from outside at runtime. It also adds an `lr-` prefix to every style class so none can clash with your theme's own classes.
 
 Then paste the new `sections/loftrest-landing.liquid` into your theme again. Pasting the template again resets the FAQ to what's in `index.html`, so skip that step if you've edited questions in Shopify.

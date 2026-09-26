@@ -10,32 +10,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  tailwind.config = {
-      important: '.loftrest',
-      corePlugins: { preflight: false },
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              navy: '#0F172A',
-              slate: '#1E293B',
-              blue: '#0284C7',
-              lightBlue: '#E0F2FE',
-              heat: '#F97316',
-              emerald: '#10B981',
-              cream: '#F8FAFC'
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', '-apple-system', 'sans-serif']
-          }
-        }
-      }
-    };
-</script>
 <style>
   /* Minimal reset scoped to this page so the rest of your theme is untouched */
   .loftrest { font-family: 'Inter', -apple-system, sans-serif; color: #1e293b; background: #F8FAFC; -webkit-font-smoothing: antialiased; line-height: 1.5; }
@@ -47,59 +21,62 @@
   .loftrest button, .loftrest input { font: inherit; color: inherit; margin: 0; background: transparent; }
   .loftrest button { cursor: pointer; }
   .loftrest svg { display: block; }
+  .loftrest summary { padding: 0; }
   .loftrest summary::-webkit-details-marker { display: none; }
+  /* Page styles (Tailwind, compiled by build.py) */
+  .loftrest,.loftrest *,.loftrest :after,.loftrest :before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.loftrest ::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }.loftrest .lr-absolute{position:absolute}.loftrest .lr-relative{position:relative}.loftrest .lr-inset-10{inset:2.5rem}.loftrest .lr-bottom-6{bottom:1.5rem}.loftrest .lr-left-6{left:1.5rem}.loftrest .lr-right-6{right:1.5rem}.loftrest .lr-top-6{top:1.5rem}.loftrest .lr-mx-auto{margin-left:auto;margin-right:auto}.loftrest .lr-mb-10{margin-bottom:2.5rem}.loftrest .lr-mb-12{margin-bottom:3rem}.loftrest .lr-mt-1{margin-top:.25rem}.loftrest .lr-mt-2{margin-top:.5rem}.loftrest .lr-mt-3{margin-top:.75rem}.loftrest .lr-mt-4{margin-top:1rem}.loftrest .lr-mt-5{margin-top:1.25rem}.loftrest .lr-mt-6{margin-top:1.5rem}.loftrest .lr-block{display:block}.loftrest .lr-flex{display:flex}.loftrest .lr-inline-flex{display:inline-flex}.loftrest .lr-grid{display:grid}.loftrest .lr-aspect-square{aspect-ratio:1/1}.loftrest .lr-h-10{height:2.5rem}.loftrest .lr-h-11{height:2.75rem}.loftrest .lr-h-12{height:3rem}.loftrest .lr-h-20{height:5rem}.loftrest .lr-h-3\.5{height:.875rem}.loftrest .lr-h-4{height:1rem}.loftrest .lr-h-5{height:1.25rem}.loftrest .lr-h-6{height:1.5rem}.loftrest .lr-w-10{width:2.5rem}.loftrest .lr-w-11{width:2.75rem}.loftrest .lr-w-12{width:3rem}.loftrest .lr-w-20{width:5rem}.loftrest .lr-w-3\.5{width:.875rem}.loftrest .lr-w-4{width:1rem}.loftrest .lr-w-5{width:1.25rem}.loftrest .lr-w-6{width:1.5rem}.loftrest .lr-w-full{width:100%}.loftrest .lr-max-w-2xl{max-width:42rem}.loftrest .lr-max-w-3xl{max-width:48rem}.loftrest .lr-max-w-5xl{max-width:64rem}.loftrest .lr-max-w-7xl{max-width:80rem}.loftrest .lr-max-w-xl{max-width:36rem}.loftrest .lr-flex-1{flex:1 1 0%}.loftrest .lr-shrink-0{flex-shrink:0}@keyframes lr-pulse{50%{opacity:.5}}.loftrest .lr-animate-pulse{animation:lr-pulse 2s cubic-bezier(.4,0,.6,1) infinite}.loftrest .lr-cursor-pointer{cursor:pointer}.loftrest .lr-scroll-mt-16{scroll-margin-top:4rem}.loftrest .lr-list-none{list-style-type:none}.loftrest .lr-grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.loftrest .lr-flex-col{flex-direction:column}.loftrest .lr-flex-wrap{flex-wrap:wrap}.loftrest .lr-items-center{align-items:center}.loftrest .lr-items-baseline{align-items:baseline}.loftrest .lr-justify-center{justify-content:center}.loftrest .lr-justify-between{justify-content:space-between}.loftrest .lr-gap-1\.5{gap:.375rem}.loftrest .lr-gap-10{gap:2.5rem}.loftrest .lr-gap-12{gap:3rem}.loftrest .lr-gap-2{gap:.5rem}.loftrest .lr-gap-3{gap:.75rem}.loftrest .lr-gap-4{gap:1rem}.loftrest .lr-gap-6{gap:1.5rem}.loftrest .lr-gap-8{gap:2rem}.loftrest .lr-gap-x-6{-moz-column-gap:1.5rem;column-gap:1.5rem}.loftrest .lr-gap-y-2{row-gap:.5rem}.loftrest :is(.lr-space-y-3>:not([hidden])~:not([hidden])){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.loftrest :is(.lr-space-y-4>:not([hidden])~:not([hidden])){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.loftrest :is(.lr-space-y-5>:not([hidden])~:not([hidden])){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.loftrest :is(.lr-space-y-6>:not([hidden])~:not([hidden])){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.loftrest .lr-overflow-hidden{overflow:hidden}.loftrest .lr-rounded{border-radius:.25rem}.loftrest .lr-rounded-2xl{border-radius:1rem}.loftrest .lr-rounded-3xl{border-radius:1.5rem}.loftrest .lr-rounded-full{border-radius:9999px}.loftrest .lr-rounded-lg{border-radius:.5rem}.loftrest .lr-rounded-xl{border-radius:.75rem}.loftrest .lr-border{border-width:1px}.loftrest .lr-border-y{border-top-width:1px;border-bottom-width:1px}.loftrest .lr-border-t{border-top-width:1px}.loftrest .lr-border-sky-200{--tw-border-opacity:1;border-color:rgb(186 230 253/var(--tw-border-opacity,1))}.loftrest .lr-border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.loftrest .lr-border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59/var(--tw-border-opacity,1))}.loftrest .lr-border-white\/10{border-color:hsla(0,0%,100%,.1)}.loftrest .lr-border-white\/20{border-color:hsla(0,0%,100%,.2)}.loftrest .lr-bg-brand-blue{--tw-bg-opacity:1;background-color:rgb(2 132 199/var(--tw-bg-opacity,1))}.loftrest .lr-bg-brand-blue\/10{background-color:rgba(2,132,199,.1)}.loftrest .lr-bg-brand-cream{--tw-bg-opacity:1;background-color:rgb(248 250 252/var(--tw-bg-opacity,1))}.loftrest .lr-bg-brand-heat{--tw-bg-opacity:1;background-color:rgb(249 115 22/var(--tw-bg-opacity,1))}.loftrest .lr-bg-brand-lightBlue{--tw-bg-opacity:1;background-color:rgb(224 242 254/var(--tw-bg-opacity,1))}.loftrest .lr-bg-brand-navy{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.loftrest .lr-bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245/var(--tw-bg-opacity,1))}.loftrest .lr-bg-emerald-500\/15{background-color:rgba(16,185,129,.15)}.loftrest .lr-bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237/var(--tw-bg-opacity,1))}.loftrest .lr-bg-orange-500\/15{background-color:rgba(249,115,22,.15)}.loftrest .lr-bg-sky-500\/15{background-color:rgba(14,165,233,.15)}.loftrest .lr-bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42/var(--tw-bg-opacity,1))}.loftrest .lr-bg-transparent{background-color:transparent}.loftrest .lr-bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1))}.loftrest .lr-bg-white\/5{background-color:hsla(0,0%,100%,.05)}.loftrest .lr-bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.loftrest .lr-bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.loftrest .lr-from-brand-lightBlue{--tw-gradient-from:#e0f2fe var(--tw-gradient-from-position);--tw-gradient-to:rgba(224,242,254,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.loftrest .lr-from-white{--tw-gradient-from:#fff var(--tw-gradient-from-position);--tw-gradient-to:hsla(0,0%,100%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.loftrest .lr-via-slate-50{--tw-gradient-to:rgba(248,250,252,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#f8fafc var(--tw-gradient-via-position),var(--tw-gradient-to)}.loftrest .lr-via-white{--tw-gradient-to:hsla(0,0%,100%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#fff var(--tw-gradient-via-position),var(--tw-gradient-to)}.loftrest .lr-to-brand-cream{--tw-gradient-to:#f8fafc var(--tw-gradient-to-position)}.loftrest .lr-to-orange-50{--tw-gradient-to:#fff7ed var(--tw-gradient-to-position)}.loftrest .lr-fill-current{fill:currentColor}.loftrest .lr-p-5{padding:1.25rem}.loftrest .lr-p-6{padding:1.5rem}.loftrest .lr-p-8{padding:2rem}.loftrest .lr-px-2{padding-left:.5rem;padding-right:.5rem}.loftrest .lr-px-3{padding-left:.75rem;padding-right:.75rem}.loftrest .lr-px-4{padding-left:1rem;padding-right:1rem}.loftrest .lr-px-8{padding-left:2rem;padding-right:2rem}.loftrest .lr-py-1{padding-top:.25rem;padding-bottom:.25rem}.loftrest .lr-py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.loftrest .lr-py-12{padding-top:3rem;padding-bottom:3rem}.loftrest .lr-py-16{padding-top:4rem;padding-bottom:4rem}.loftrest .lr-py-2{padding-top:.5rem;padding-bottom:.5rem}.loftrest .lr-py-4{padding-top:1rem;padding-bottom:1rem}.loftrest .lr-pt-2{padding-top:.5rem}.loftrest .lr-pt-4{padding-top:1rem}.loftrest .lr-text-center{text-align:center}.loftrest .lr-text-2xl{font-size:1.5rem;line-height:2rem}.loftrest .lr-text-3xl{font-size:1.875rem;line-height:2.25rem}.loftrest .lr-text-4xl{font-size:2.25rem;line-height:2.5rem}.loftrest .lr-text-base{font-size:1rem;line-height:1.5rem}.loftrest .lr-text-lg{font-size:1.125rem;line-height:1.75rem}.loftrest .lr-text-sm{font-size:.875rem;line-height:1.25rem}.loftrest .lr-text-xl{font-size:1.25rem;line-height:1.75rem}.loftrest .lr-text-xs{font-size:.75rem;line-height:1rem}.loftrest .lr-font-bold{font-weight:700}.loftrest .lr-font-extrabold{font-weight:800}.loftrest .lr-font-normal{font-weight:400}.loftrest .lr-font-semibold{font-weight:600}.loftrest .lr-uppercase{text-transform:uppercase}.loftrest .lr-leading-relaxed{line-height:1.625}.loftrest .lr-leading-tight{line-height:1.25}.loftrest .lr-tracking-tight{letter-spacing:-.025em}.loftrest .lr-tracking-wide{letter-spacing:.025em}.loftrest .lr-text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36/var(--tw-text-opacity,1))}.loftrest .lr-text-brand-blue{--tw-text-opacity:1;color:rgb(2 132 199/var(--tw-text-opacity,1))}.loftrest .lr-text-brand-emerald{--tw-text-opacity:1;color:rgb(16 185 129/var(--tw-text-opacity,1))}.loftrest .lr-text-brand-heat{--tw-text-opacity:1;color:rgb(249 115 22/var(--tw-text-opacity,1))}.loftrest .lr-text-brand-navy{--tw-text-opacity:1;color:rgb(15 23 42/var(--tw-text-opacity,1))}.loftrest .lr-text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.loftrest .lr-text-orange-400{--tw-text-opacity:1;color:rgb(251 146 60/var(--tw-text-opacity,1))}.loftrest .lr-text-sky-400{--tw-text-opacity:1;color:rgb(56 189 248/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105/var(--tw-text-opacity,1))}.loftrest .lr-text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59/var(--tw-text-opacity,1))}.loftrest .lr-text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.loftrest .lr-line-through{text-decoration-line:line-through}.loftrest .lr-shadow-2xl{--tw-shadow:0 25px 50px -12px rgba(0,0,0,.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color)}.loftrest .lr-shadow-2xl,.loftrest .lr-shadow-lg{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.loftrest .lr-shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color)}.loftrest .lr-shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.loftrest .lr-shadow-md,.loftrest .lr-shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.loftrest .lr-shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}.loftrest .lr-shadow-xl{--tw-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.loftrest .lr-outline-none{outline:2px solid transparent;outline-offset:2px}.loftrest .lr-transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.loftrest .lr-transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.loftrest .\[appearance\:textfield\]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield}.loftrest .hover\:lr-bg-sky-600:hover{--tw-bg-opacity:1;background-color:rgb(2 132 199/var(--tw-bg-opacity,1))}.loftrest .hover\:lr-bg-white\/10:hover{background-color:hsla(0,0%,100%,.1)}.loftrest .disabled\:lr-opacity-50:disabled{opacity:.5}.loftrest :is(.lr-group[open] .group-open\:lr-rotate-180){--tw-rotate:180deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width:640px){.loftrest .sm\:lr-grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:768px){.loftrest .md\:lr-grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.loftrest .md\:lr-grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.loftrest .md\:lr-p-12{padding:3rem}.loftrest .md\:lr-py-20{padding-top:5rem;padding-bottom:5rem}.loftrest .md\:lr-py-24{padding-top:6rem;padding-bottom:6rem}.loftrest .md\:lr-text-4xl{font-size:2.25rem;line-height:2.5rem}.loftrest .md\:lr-text-5xl{font-size:3rem;line-height:1}.loftrest .md\:lr-text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width:1024px){.loftrest .lg\:lr-col-span-5{grid-column:span 5/span 5}.loftrest .lg\:lr-col-span-7{grid-column:span 7/span 7}.loftrest .lg\:lr-grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.loftrest .lg\:lr-grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.loftrest .lg\:lr-grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}.loftrest .\[\&\:\:-webkit-inner-spin-button\]\:lr-appearance-none::-webkit-inner-spin-button{-webkit-appearance:none;appearance:none}
 </style>
 
 <div class="loftrest" id="loftrest-{{ section.id }}">
   <!-- HERO SECTION -->
-  <section class="relative bg-gradient-to-b from-white via-slate-50 to-brand-cream py-12 md:py-20">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-      <div class="lg:col-span-7 space-y-6">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-lightBlue border border-sky-200 text-brand-blue text-xs font-bold uppercase">
-          <i data-lucide="shield-check" class="w-4 h-4"></i>
+  <section class="lr-relative lr-bg-gradient-to-b lr-from-white lr-via-slate-50 lr-to-brand-cream lr-py-12 md:lr-py-20">
+    <div class="lr-max-w-7xl lr-mx-auto lr-px-4 lr-grid lr-grid-cols-1 lg:lr-grid-cols-12 lr-gap-12 lr-items-center">
+      <div class="lg:lr-col-span-7 lr-space-y-6">
+        <div class="lr-inline-flex lr-items-center lr-gap-2 lr-px-3 lr-py-1.5 lr-rounded-full lr-bg-brand-lightBlue lr-border lr-border-sky-200 lr-text-brand-blue lr-text-xs lr-font-bold lr-uppercase">
+          <svg class="lr-w-4 lr-h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg>
           <span>Chiropractor-Approved At-Home Cervical Therapy</span>
         </div>
-        <h1 class="text-3xl md:text-5xl font-extrabold text-brand-navy tracking-tight leading-tight">
+        <h1 class="lr-text-3xl md:lr-text-5xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight lr-leading-tight">
           Wake Up Pain-Free. <br>
-          <span class="text-brand-blue">Decompress Your Spine</span> In 15 Minutes.
+          <span class="lr-text-brand-blue">Decompress Your Spine</span> In 15 Minutes.
         </h1>
-        <p class="text-slate-600 text-base md:text-lg max-w-xl">
+        <p class="lr-text-slate-600 lr-text-base md:lr-text-lg lr-max-w-xl">
           LoftRest™ combines dynamic pneumatic air traction, deep infrared heat, and kinetic vibration to relieve cervical pressure while you lie flat.
         </p>
-        <div class="pt-4 flex flex-wrap gap-4">
-          <a href="#order" class="bg-brand-blue hover:bg-sky-600 text-white font-extrabold text-lg px-8 py-4 rounded-xl shadow-xl transition-colors">
+        <div class="lr-pt-4 lr-flex lr-flex-wrap lr-gap-4">
+          <a href="#order" class="lr-bg-brand-blue hover:lr-bg-sky-600 lr-text-white lr-font-extrabold lr-text-lg lr-px-8 lr-py-4 lr-rounded-xl lr-shadow-xl lr-transition-colors">
             {%- if on_sale -%}Get {{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round }}% Off LoftRest Today{%- else -%}Order LoftRest Today{%- endif -%}
           </a>
-          <a href="#how" class="inline-flex items-center gap-2 text-brand-navy font-bold text-lg px-4 py-4">
-            See how it works <i data-lucide="arrow-down" class="w-5 h-5"></i>
+          <a href="#how" class="lr-inline-flex lr-items-center lr-gap-2 lr-text-brand-navy lr-font-bold lr-text-lg lr-px-4 lr-py-4">
+            See how it works <svg class="lr-w-5 lr-h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></svg>
           </a>
         </div>
-        <ul class="flex flex-wrap gap-x-6 gap-y-2 pt-2 text-sm text-slate-600">
-          <li class="flex items-center gap-2"><i data-lucide="truck" class="w-4 h-4 text-brand-emerald"></i> Free express shipping</li>
-          <li class="flex items-center gap-2"><i data-lucide="timer" class="w-4 h-4 text-brand-emerald"></i> 15-minute sessions</li>
-          <li class="flex items-center gap-2"><i data-lucide="bed" class="w-4 h-4 text-brand-emerald"></i> Use lying flat</li>
+        <ul class="lr-flex lr-flex-wrap lr-gap-x-6 lr-gap-y-2 lr-pt-2 lr-text-sm lr-text-slate-600">
+          <li class="lr-flex lr-items-center lr-gap-2"><svg class="lr-w-4 lr-h-4 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" /><path d="M15 18H9" /><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" /><circle cx="17" cy="18" r="2" /><circle cx="7" cy="18" r="2" /></svg> Free express shipping</li>
+          <li class="lr-flex lr-items-center lr-gap-2"><svg class="lr-w-4 lr-h-4 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><line x1="10" x2="14" y1="2" y2="2" /><line x1="12" x2="15" y1="14" y2="11" /><circle cx="12" cy="14" r="8" /></svg> 15-minute sessions</li>
+          <li class="lr-flex lr-items-center lr-gap-2"><svg class="lr-w-4 lr-h-4 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M2 4v16" /><path d="M2 8h18a2 2 0 0 1 2 2v10" /><path d="M2 17h20" /><path d="M6 8v9" /></svg> Use lying flat</li>
         </ul>
       </div>
 
       <!-- Product visual (swap in a real product photo when you have one) -->
-      <div class="lg:col-span-5">
-        <div class="relative aspect-square rounded-3xl bg-gradient-to-br from-brand-lightBlue via-white to-orange-50 border border-slate-200 shadow-2xl flex items-center justify-center overflow-hidden">
-          <div class="absolute inset-10 rounded-full bg-brand-blue/10 animate-pulse"></div>
-          <div class="relative text-center space-y-3 p-6">
-            <div class="mx-auto w-20 h-20 rounded-2xl bg-brand-blue text-white flex items-center justify-center shadow-lg">
-              <i data-lucide="waves" class="w-10 h-10"></i>
+      <div class="lg:lr-col-span-5">
+        <div class="lr-relative lr-aspect-square lr-rounded-3xl lr-bg-gradient-to-br lr-from-brand-lightBlue lr-via-white lr-to-orange-50 lr-border lr-border-slate-200 lr-shadow-2xl lr-flex lr-items-center lr-justify-center lr-overflow-hidden">
+          <div class="lr-absolute lr-inset-10 lr-rounded-full lr-bg-brand-blue/10 lr-animate-pulse"></div>
+          <div class="lr-relative lr-text-center lr-space-y-3 lr-p-6">
+            <div class="lr-mx-auto lr-w-20 lr-h-20 lr-rounded-2xl lr-bg-brand-blue lr-text-white lr-flex lr-items-center lr-justify-center lr-shadow-lg">
+              <svg class="lr-w-10 lr-h-10" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M2 12q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 19q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 5q2.5 2 5 0t5 0 5 0 5 0" /></svg>
             </div>
-            <p class="font-extrabold text-2xl text-brand-navy">LoftRest™</p>
-            <p class="text-sm text-slate-500">3-in-1 Cervical Therapy Device</p>
+            <p class="lr-font-extrabold lr-text-2xl lr-text-brand-navy">LoftRest™</p>
+            <p class="lr-text-sm lr-text-slate-500">3-in-1 Cervical Therapy Device</p>
           </div>
-          <div class="absolute top-6 left-6 bg-white rounded-xl shadow-md px-3 py-2 text-xs font-bold text-brand-blue flex items-center gap-1.5">
-            <i data-lucide="wind" class="w-4 h-4"></i> Air traction
+          <div class="lr-absolute lr-top-6 lr-left-6 lr-bg-white lr-rounded-xl lr-shadow-md lr-px-3 lr-py-2 lr-text-xs lr-font-bold lr-text-brand-blue lr-flex lr-items-center lr-gap-1.5">
+            <svg class="lr-w-4 lr-h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12.8 19.6A2 2 0 1 0 14 16H2" /><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" /><path d="M9.8 4.4A2 2 0 1 1 11 8H2" /></svg> Air traction
           </div>
-          <div class="absolute bottom-6 right-6 bg-white rounded-xl shadow-md px-3 py-2 text-xs font-bold text-brand-heat flex items-center gap-1.5">
-            <i data-lucide="flame" class="w-4 h-4"></i> Infrared heat
+          <div class="lr-absolute lr-bottom-6 lr-right-6 lr-bg-white lr-rounded-xl lr-shadow-md lr-px-3 lr-py-2 lr-text-xs lr-font-bold lr-text-brand-heat lr-flex lr-items-center lr-gap-1.5">
+            <svg class="lr-w-4 lr-h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" /></svg> Infrared heat
           </div>
-          <div class="absolute bottom-6 left-6 bg-white rounded-xl shadow-md px-3 py-2 text-xs font-bold text-brand-emerald flex items-center gap-1.5">
-            <i data-lucide="activity" class="w-4 h-4"></i> Vibration
+          <div class="lr-absolute lr-bottom-6 lr-left-6 lr-bg-white lr-rounded-xl lr-shadow-md lr-px-3 lr-py-2 lr-text-xs lr-font-bold lr-text-brand-emerald lr-flex lr-items-center lr-gap-1.5">
+            <svg class="lr-w-4 lr-h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg> Vibration
           </div>
         </div>
       </div>
@@ -107,68 +84,68 @@
   </section>
 
   <!-- HOW IT WORKS: 3-IN-1 -->
-  <section id="how" class="py-16 md:py-24 scroll-mt-16">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <p class="text-brand-blue font-bold text-sm uppercase tracking-wide">3-in-1 Therapy</p>
-        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">Three therapies. One device.</h2>
-        <p class="mt-4 text-slate-600">Each LoftRest™ session works on your neck in three ways at once.</p>
+  <section id="how" class="lr-py-16 md:lr-py-24 lr-scroll-mt-16">
+    <div class="lr-max-w-7xl lr-mx-auto lr-px-4">
+      <div class="lr-text-center lr-max-w-2xl lr-mx-auto lr-mb-12">
+        <p class="lr-text-brand-blue lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">3-in-1 Therapy</p>
+        <h2 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">Three therapies. One device.</h2>
+        <p class="lr-mt-4 lr-text-slate-600">Each LoftRest™ session works on your neck in three ways at once.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-brand-lightBlue text-brand-blue flex items-center justify-center">
-            <i data-lucide="wind" class="w-6 h-6"></i>
+      <div class="lr-grid lr-grid-cols-1 md:lr-grid-cols-3 lr-gap-6">
+        <div class="lr-bg-white lr-rounded-2xl lr-border lr-border-slate-200 lr-p-8 lr-shadow-sm">
+          <div class="lr-w-12 lr-h-12 lr-rounded-xl lr-bg-brand-lightBlue lr-text-brand-blue lr-flex lr-items-center lr-justify-center">
+            <svg class="lr-w-6 lr-h-6" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12.8 19.6A2 2 0 1 0 14 16H2" /><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" /><path d="M9.8 4.4A2 2 0 1 1 11 8H2" /></svg>
           </div>
-          <h3 class="mt-5 text-xl font-bold text-brand-navy">Pneumatic Air Traction</h3>
-          <p class="mt-2 text-slate-600">Air chambers gently inflate to lift and stretch your neck, easing pressure on the cervical spine.</p>
+          <h3 class="lr-mt-5 lr-text-xl lr-font-bold lr-text-brand-navy">Pneumatic Air Traction</h3>
+          <p class="lr-mt-2 lr-text-slate-600">Air chambers gently inflate to lift and stretch your neck, easing pressure on the cervical spine.</p>
         </div>
-        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-orange-50 text-brand-heat flex items-center justify-center">
-            <i data-lucide="flame" class="w-6 h-6"></i>
+        <div class="lr-bg-white lr-rounded-2xl lr-border lr-border-slate-200 lr-p-8 lr-shadow-sm">
+          <div class="lr-w-12 lr-h-12 lr-rounded-xl lr-bg-orange-50 lr-text-brand-heat lr-flex lr-items-center lr-justify-center">
+            <svg class="lr-w-6 lr-h-6" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" /></svg>
           </div>
-          <h3 class="mt-5 text-xl font-bold text-brand-navy">Deep Infrared Heat</h3>
-          <p class="mt-2 text-slate-600">Soothing warmth helps tight neck and shoulder muscles relax during each session.</p>
+          <h3 class="lr-mt-5 lr-text-xl lr-font-bold lr-text-brand-navy">Deep Infrared Heat</h3>
+          <p class="lr-mt-2 lr-text-slate-600">Soothing warmth helps tight neck and shoulder muscles relax during each session.</p>
         </div>
-        <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-brand-emerald flex items-center justify-center">
-            <i data-lucide="activity" class="w-6 h-6"></i>
+        <div class="lr-bg-white lr-rounded-2xl lr-border lr-border-slate-200 lr-p-8 lr-shadow-sm">
+          <div class="lr-w-12 lr-h-12 lr-rounded-xl lr-bg-emerald-50 lr-text-brand-emerald lr-flex lr-items-center lr-justify-center">
+            <svg class="lr-w-6 lr-h-6" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg>
           </div>
-          <h3 class="mt-5 text-xl font-bold text-brand-navy">Kinetic Vibration</h3>
-          <p class="mt-2 text-slate-600">Gentle vibration massages the muscles around your neck while traction and heat do their work.</p>
+          <h3 class="lr-mt-5 lr-text-xl lr-font-bold lr-text-brand-navy">Kinetic Vibration</h3>
+          <p class="lr-mt-2 lr-text-slate-600">Gentle vibration massages the muscles around your neck while traction and heat do their work.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- NECK PAIN & SLEEP -->
-  <section id="sleep" class="py-16 md:py-24 bg-brand-navy text-white scroll-mt-16">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <section id="sleep" class="lr-py-16 md:lr-py-24 lr-bg-brand-navy lr-text-white lr-scroll-mt-16">
+    <div class="lr-max-w-7xl lr-mx-auto lr-px-4 lr-grid lr-grid-cols-1 lg:lr-grid-cols-2 lr-gap-12 lr-items-center">
       <div>
-        <p class="text-sky-400 font-bold text-sm uppercase tracking-wide">Neck pain &amp; sleep</p>
-        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold tracking-tight">Why a sore neck ruins your sleep, and how to break the cycle</h2>
-        <p class="mt-5 text-slate-300 leading-relaxed">Neck pain and poor sleep feed each other. Hours of looking down at phones and screens, stress, and awkward sleeping positions compress the cervical spine and tighten the surrounding muscles. That tension makes it hard to get comfortable at night. You toss and turn, sleep lightly, and wake up stiffer than you went to bed.</p>
-        <p class="mt-4 text-slate-300 leading-relaxed">LoftRest™ is built to interrupt that cycle. A 15-minute session before bed takes the load off your neck and relaxes tight muscles, so your body is ready to rest.</p>
+        <p class="lr-text-sky-400 lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">Neck pain &amp; sleep</p>
+        <h2 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-tracking-tight">Why a sore neck ruins your sleep, and how to break the cycle</h2>
+        <p class="lr-mt-5 lr-text-slate-300 lr-leading-relaxed">Neck pain and poor sleep feed each other. Hours of looking down at phones and screens, stress, and awkward sleeping positions compress the cervical spine and tighten the surrounding muscles. That tension makes it hard to get comfortable at night. You toss and turn, sleep lightly, and wake up stiffer than you went to bed.</p>
+        <p class="lr-mt-4 lr-text-slate-300 lr-leading-relaxed">LoftRest™ is built to interrupt that cycle. A 15-minute session before bed takes the load off your neck and relaxes tight muscles, so your body is ready to rest.</p>
       </div>
-      <div class="space-y-4">
-        <div class="rounded-2xl bg-white/5 border border-white/10 p-6 flex gap-4">
-          <div class="w-11 h-11 shrink-0 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center"><i data-lucide="wind" class="w-5 h-5"></i></div>
+      <div class="lr-space-y-4">
+        <div class="lr-rounded-2xl lr-bg-white/5 lr-border lr-border-white/10 lr-p-6 lr-flex lr-gap-4">
+          <div class="lr-w-11 lr-h-11 lr-shrink-0 lr-rounded-xl lr-bg-sky-500/15 lr-text-sky-400 lr-flex lr-items-center lr-justify-center"><svg class="lr-w-5 lr-h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12.8 19.6A2 2 0 1 0 14 16H2" /><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" /><path d="M9.8 4.4A2 2 0 1 1 11 8H2" /></svg></div>
           <div>
-            <h3 class="font-bold text-lg">Traction takes the pressure off</h3>
-            <p class="mt-1 text-slate-300">Air chambers gently lift and lengthen the neck, easing compression on the discs and joints that builds up through the day.</p>
+            <h3 class="lr-font-bold lr-text-lg">Traction takes the pressure off</h3>
+            <p class="lr-mt-1 lr-text-slate-300">Air chambers gently lift and lengthen the neck, easing compression on the discs and joints that builds up through the day.</p>
           </div>
         </div>
-        <div class="rounded-2xl bg-white/5 border border-white/10 p-6 flex gap-4">
-          <div class="w-11 h-11 shrink-0 rounded-xl bg-orange-500/15 text-orange-400 flex items-center justify-center"><i data-lucide="flame" class="w-5 h-5"></i></div>
+        <div class="lr-rounded-2xl lr-bg-white/5 lr-border lr-border-white/10 lr-p-6 lr-flex lr-gap-4">
+          <div class="lr-w-11 lr-h-11 lr-shrink-0 lr-rounded-xl lr-bg-orange-500/15 lr-text-orange-400 lr-flex lr-items-center lr-justify-center"><svg class="lr-w-5 lr-h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4" /></svg></div>
           <div>
-            <h3 class="font-bold text-lg">Heat loosens tight muscles</h3>
-            <p class="mt-1 text-slate-300">Warmth boosts local blood flow and helps stiff neck and shoulder muscles let go, a classic way to relieve everyday tension.</p>
+            <h3 class="lr-font-bold lr-text-lg">Heat loosens tight muscles</h3>
+            <p class="lr-mt-1 lr-text-slate-300">Warmth boosts local blood flow and helps stiff neck and shoulder muscles let go, a classic way to relieve everyday tension.</p>
           </div>
         </div>
-        <div class="rounded-2xl bg-white/5 border border-white/10 p-6 flex gap-4">
-          <div class="w-11 h-11 shrink-0 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center"><i data-lucide="activity" class="w-5 h-5"></i></div>
+        <div class="lr-rounded-2xl lr-bg-white/5 lr-border lr-border-white/10 lr-p-6 lr-flex lr-gap-4">
+          <div class="lr-w-11 lr-h-11 lr-shrink-0 lr-rounded-xl lr-bg-emerald-500/15 lr-text-emerald-400 lr-flex lr-items-center lr-justify-center"><svg class="lr-w-5 lr-h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg></div>
           <div>
-            <h3 class="font-bold text-lg">Vibration helps you unwind</h3>
-            <p class="mt-1 text-slate-300">Gentle massage-like vibration calms the area and turns the session into a relaxing pre-sleep ritual.</p>
+            <h3 class="lr-font-bold lr-text-lg">Vibration helps you unwind</h3>
+            <p class="lr-mt-1 lr-text-slate-300">Gentle massage-like vibration calms the area and turns the session into a relaxing pre-sleep ritual.</p>
           </div>
         </div>
       </div>
@@ -176,69 +153,69 @@
   </section>
 
   <!-- BENEFITS -->
-  <section id="benefits" class="py-16 md:py-24 scroll-mt-16">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <p class="text-brand-blue font-bold text-sm uppercase tracking-wide">Benefits</p>
-        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">What LoftRest™ does for you</h2>
+  <section id="benefits" class="lr-py-16 md:lr-py-24 lr-scroll-mt-16">
+    <div class="lr-max-w-7xl lr-mx-auto lr-px-4">
+      <div class="lr-text-center lr-max-w-2xl lr-mx-auto lr-mb-12">
+        <p class="lr-text-brand-blue lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">Benefits</p>
+        <h2 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">What LoftRest™ does for you</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl border border-slate-200 p-6">
-          <div class="w-11 h-11 rounded-xl bg-brand-lightBlue text-brand-blue flex items-center justify-center"><i data-lucide="moon" class="w-5 h-5"></i></div>
-          <h3 class="mt-4 text-lg font-bold text-brand-navy">Fall asleep more comfortably</h3>
-          <p class="mt-2 text-slate-600">Release neck tension before bed so it is easier to settle in and get comfortable.</p>
+      <div class="lr-grid lr-grid-cols-1 sm:lr-grid-cols-2 lg:lr-grid-cols-3 lr-gap-6">
+        <div class="lr-bg-white lr-rounded-2xl lr-border lr-border-slate-200 lr-p-6">
+          <div class="lr-w-11 lr-h-11 lr-rounded-xl lr-bg-brand-lightBlue lr-text-brand-blue lr-flex lr-items-center lr-justify-center"><svg class="lr-w-5 lr-h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" /></svg></div>
+          <h3 class="lr-mt-4 lr-text-lg lr-font-bold lr-text-brand-navy">Fall asleep more comfortably</h3>
+          <p class="lr-mt-2 lr-text-slate-600">Release neck tension before bed so it is easier to settle in and get comfortable.</p>
         </div>
-        <div class="bg-white rounded-2xl border border-slate-200 p-6">
-          <div class="w-11 h-11 rounded-xl bg-orange-50 text-brand-heat flex items-center justify-center"><i data-lucide="sunrise" class="w-5 h-5"></i></div>
-          <h3 class="mt-4 text-lg font-bold text-brand-navy">Wake up less stiff</h3>
-          <p class="mt-2 text-slate-600">An evening session helps loosen the tightness that can leave you sore in the morning.</p>
+        <div class="lr-bg-white lr-rounded-2xl lr-border lr-border-slate-200 lr-p-6">
+          <div class="lr-w-11 lr-h-11 lr-rounded-xl lr-bg-orange-50 lr-text-brand-heat lr-flex lr-items-center lr-justify-center"><svg class="lr-w-5 lr-h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 2v8" /><path d="m4.93 10.93 1.41 1.41" /><path d="M2 18h2" /><path d="M20 18h2" /><path d="m19.07 10.93-1.41 1.41" /><path d="M22 22H2" /><path d="m8 6 4-4 4 4" /><path d="M16 18a4 4 0 0 0-8 0" /></svg></div>
+          <h3 class="lr-mt-4 lr-text-lg lr-font-bold lr-text-brand-navy">Wake up less stiff</h3>
+          <p class="lr-mt-2 lr-text-slate-600">An evening session helps loosen the tightness that can leave you sore in the morning.</p>
         </div>
-        <div class="bg-white rounded-2xl border border-slate-200 p-6">
-          <div class="w-11 h-11 rounded-xl bg-emerald-50 text-brand-emerald flex items-center justify-center"><i data-lucide="move-vertical" class="w-5 h-5"></i></div>
-          <h3 class="mt-4 text-lg font-bold text-brand-navy">Decompress your neck</h3>
-          <p class="mt-2 text-slate-600">Gentle air traction creates space between the vertebrae to ease built-up pressure.</p>
+        <div class="lr-bg-white lr-rounded-2xl lr-border lr-border-slate-200 lr-p-6">
+          <div class="lr-w-11 lr-h-11 lr-rounded-xl lr-bg-emerald-50 lr-text-brand-emerald lr-flex lr-items-center lr-justify-center"><svg class="lr-w-5 lr-h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M12 2v20" /><path d="m8 18 4 4 4-4" /><path d="m8 6 4-4 4 4" /></svg></div>
+          <h3 class="lr-mt-4 lr-text-lg lr-font-bold lr-text-brand-navy">Decompress your neck</h3>
+          <p class="lr-mt-2 lr-text-slate-600">Gentle air traction creates space between the vertebrae to ease built-up pressure.</p>
         </div>
-        <div class="bg-white rounded-2xl border border-slate-200 p-6">
-          <div class="w-11 h-11 rounded-xl bg-brand-lightBlue text-brand-blue flex items-center justify-center"><i data-lucide="smartphone" class="w-5 h-5"></i></div>
-          <h3 class="mt-4 text-lg font-bold text-brand-navy">Undo "tech neck"</h3>
-          <p class="mt-2 text-slate-600">Counter hours of looking down at phones and laptops with a gentle upward stretch.</p>
+        <div class="lr-bg-white lr-rounded-2xl lr-border lr-border-slate-200 lr-p-6">
+          <div class="lr-w-11 lr-h-11 lr-rounded-xl lr-bg-brand-lightBlue lr-text-brand-blue lr-flex lr-items-center lr-justify-center"><svg class="lr-w-5 lr-h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><rect width="14" height="20" x="5" y="2" rx="2" ry="2" /><path d="M12 18h.01" /></svg></div>
+          <h3 class="lr-mt-4 lr-text-lg lr-font-bold lr-text-brand-navy">Undo "tech neck"</h3>
+          <p class="lr-mt-2 lr-text-slate-600">Counter hours of looking down at phones and laptops with a gentle upward stretch.</p>
         </div>
-        <div class="bg-white rounded-2xl border border-slate-200 p-6">
-          <div class="w-11 h-11 rounded-xl bg-orange-50 text-brand-heat flex items-center justify-center"><i data-lucide="heart-handshake" class="w-5 h-5"></i></div>
-          <h3 class="mt-4 text-lg font-bold text-brand-navy">Relax tight shoulders</h3>
-          <p class="mt-2 text-slate-600">Infrared heat and vibration soothe the muscles where neck tension spreads.</p>
+        <div class="lr-bg-white lr-rounded-2xl lr-border lr-border-slate-200 lr-p-6">
+          <div class="lr-w-11 lr-h-11 lr-rounded-xl lr-bg-orange-50 lr-text-brand-heat lr-flex lr-items-center lr-justify-center"><svg class="lr-w-5 lr-h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762" /></svg></div>
+          <h3 class="lr-mt-4 lr-text-lg lr-font-bold lr-text-brand-navy">Relax tight shoulders</h3>
+          <p class="lr-mt-2 lr-text-slate-600">Infrared heat and vibration soothe the muscles where neck tension spreads.</p>
         </div>
-        <div class="bg-white rounded-2xl border border-slate-200 p-6">
-          <div class="w-11 h-11 rounded-xl bg-emerald-50 text-brand-emerald flex items-center justify-center"><i data-lucide="home" class="w-5 h-5"></i></div>
-          <h3 class="mt-4 text-lg font-bold text-brand-navy">Therapy-style relief at home</h3>
-          <p class="mt-2 text-slate-600">Use it on your bed or sofa, whenever you need it, with no appointments.</p>
+        <div class="lr-bg-white lr-rounded-2xl lr-border lr-border-slate-200 lr-p-6">
+          <div class="lr-w-11 lr-h-11 lr-rounded-xl lr-bg-emerald-50 lr-text-brand-emerald lr-flex lr-items-center lr-justify-center"><svg class="lr-w-5 lr-h-5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></div>
+          <h3 class="lr-mt-4 lr-text-lg lr-font-bold lr-text-brand-navy">Therapy-style relief at home</h3>
+          <p class="lr-mt-2 lr-text-slate-600">Use it on your bed or sofa, whenever you need it, with no appointments.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 15-MINUTE ROUTINE -->
-  <section id="steps" class="py-16 md:py-24 bg-white border-y border-slate-200 scroll-mt-16">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <p class="text-brand-blue font-bold text-sm uppercase tracking-wide">Your routine</p>
-        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">Relief in 15 minutes</h2>
+  <section id="steps" class="lr-py-16 md:lr-py-24 lr-bg-white lr-border-y lr-border-slate-200 lr-scroll-mt-16">
+    <div class="lr-max-w-5xl lr-mx-auto lr-px-4">
+      <div class="lr-text-center lr-max-w-2xl lr-mx-auto lr-mb-12">
+        <p class="lr-text-brand-blue lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">Your routine</p>
+        <h2 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">Relief in 15 minutes</h2>
       </div>
-      <ol class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <li class="text-center">
-          <div class="mx-auto w-12 h-12 rounded-full bg-brand-navy text-white font-extrabold text-lg flex items-center justify-center">1</div>
-          <h3 class="mt-4 text-lg font-bold text-brand-navy">Lie flat</h3>
-          <p class="mt-2 text-slate-600">Place LoftRest™ under your neck on a bed, sofa, or floor.</p>
+      <ol class="lr-grid lr-grid-cols-1 md:lr-grid-cols-3 lr-gap-8">
+        <li class="lr-text-center">
+          <div class="lr-mx-auto lr-w-12 lr-h-12 lr-rounded-full lr-bg-brand-navy lr-text-white lr-font-extrabold lr-text-lg lr-flex lr-items-center lr-justify-center">1</div>
+          <h3 class="lr-mt-4 lr-text-lg lr-font-bold lr-text-brand-navy">Lie flat</h3>
+          <p class="lr-mt-2 lr-text-slate-600">Place LoftRest™ under your neck on a bed, sofa, or floor.</p>
         </li>
-        <li class="text-center">
-          <div class="mx-auto w-12 h-12 rounded-full bg-brand-navy text-white font-extrabold text-lg flex items-center justify-center">2</div>
-          <h3 class="mt-4 text-lg font-bold text-brand-navy">Choose your mode</h3>
-          <p class="mt-2 text-slate-600">Turn on air traction, heat, and vibration together or one at a time.</p>
+        <li class="lr-text-center">
+          <div class="lr-mx-auto lr-w-12 lr-h-12 lr-rounded-full lr-bg-brand-navy lr-text-white lr-font-extrabold lr-text-lg lr-flex lr-items-center lr-justify-center">2</div>
+          <h3 class="lr-mt-4 lr-text-lg lr-font-bold lr-text-brand-navy">Choose your mode</h3>
+          <p class="lr-mt-2 lr-text-slate-600">Turn on air traction, heat, and vibration together or one at a time.</p>
         </li>
-        <li class="text-center">
-          <div class="mx-auto w-12 h-12 rounded-full bg-brand-navy text-white font-extrabold text-lg flex items-center justify-center">3</div>
-          <h3 class="mt-4 text-lg font-bold text-brand-navy">Relax for 15 minutes</h3>
-          <p class="mt-2 text-slate-600">Breathe, unwind, and let your neck decompress before sleep.</p>
+        <li class="lr-text-center">
+          <div class="lr-mx-auto lr-w-12 lr-h-12 lr-rounded-full lr-bg-brand-navy lr-text-white lr-font-extrabold lr-text-lg lr-flex lr-items-center lr-justify-center">3</div>
+          <h3 class="lr-mt-4 lr-text-lg lr-font-bold lr-text-brand-navy">Relax for 15 minutes</h3>
+          <p class="lr-mt-2 lr-text-slate-600">Breathe, unwind, and let your neck decompress before sleep.</p>
         </li>
       </ol>
     </div>
@@ -246,23 +223,23 @@
 
   {%- assign review_count = section.blocks | where: 'type', 'review' | size -%}
   {%- if review_count > 0 -%}
-  <section id="reviews" class="py-16 md:py-24 bg-brand-cream scroll-mt-16">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <p class="text-brand-blue font-bold text-sm uppercase tracking-wide">Reviews</p>
-        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">What LoftRest™ customers say</h2>
+  <section id="reviews" class="lr-py-16 md:lr-py-24 lr-bg-brand-cream lr-scroll-mt-16">
+    <div class="lr-max-w-7xl lr-mx-auto lr-px-4">
+      <div class="lr-text-center lr-max-w-2xl lr-mx-auto lr-mb-12">
+        <p class="lr-text-brand-blue lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">Reviews</p>
+        <h2 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">What LoftRest™ customers say</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="lr-grid lr-grid-cols-1 sm:lr-grid-cols-2 lg:lr-grid-cols-3 lr-gap-6">
         {%- for block in section.blocks -%}
           {%- if block.type == 'review' -%}
-        <figure class="bg-white rounded-2xl border border-slate-200 p-6 flex flex-col" {{ block.shopify_attributes }}>
-          {%- if block.settings.topic != blank -%}<p class="text-xs font-bold uppercase tracking-wide text-brand-blue">{{ block.settings.topic | escape }}</p>{%- endif -%}
-          {%- if block.settings.question != blank -%}<h3 class="mt-1 font-bold text-brand-navy">{{ block.settings.question | escape }}</h3>{%- endif -%}
-          <div class="mt-3 flex text-amber-400" aria-label="{{ block.settings.stars }} out of 5 stars">
-            {%- for i in (1..block.settings.stars) -%}<i data-lucide="star" class="w-4 h-4 fill-current"></i>{%- endfor -%}
+        <figure class="lr-bg-white lr-rounded-2xl lr-border lr-border-slate-200 lr-p-6 lr-flex lr-flex-col" {{ block.shopify_attributes }}>
+          {%- if block.settings.topic != blank -%}<p class="lr-text-xs lr-font-bold lr-uppercase lr-tracking-wide lr-text-brand-blue">{{ block.settings.topic | escape }}</p>{%- endif -%}
+          {%- if block.settings.question != blank -%}<h3 class="lr-mt-1 lr-font-bold lr-text-brand-navy">{{ block.settings.question | escape }}</h3>{%- endif -%}
+          <div class="lr-mt-3 lr-flex lr-text-amber-400" aria-label="{{ block.settings.stars }} out of 5 stars">
+            {%- for i in (1..block.settings.stars) -%}<svg class="lr-w-4 lr-h-4 lr-fill-current" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>{%- endfor -%}
           </div>
-          <blockquote class="mt-3 text-slate-600 flex-1">{{ block.settings.review | escape }}</blockquote>
-          <figcaption class="mt-4 text-sm font-semibold text-slate-800">{{ block.settings.name | escape }}{%- if block.settings.verified -%} <span class="font-normal text-slate-500">· Verified buyer</span>{%- endif -%}</figcaption>
+          <blockquote class="lr-mt-3 lr-text-slate-600 lr-flex-1">{{ block.settings.review | escape }}</blockquote>
+          <figcaption class="lr-mt-4 lr-text-sm lr-font-semibold lr-text-slate-800">{{ block.settings.name | escape }}{%- if block.settings.verified -%} <span class="lr-font-normal lr-text-slate-500">· Verified buyer</span>{%- endif -%}</figcaption>
         </figure>
           {%- endif -%}
         {%- endfor -%}
@@ -272,72 +249,72 @@
   {%- endif -%}
 
   <!-- CHECKOUT & ORDER SECTION -->
-  <section id="order" class="py-16 md:py-24 bg-white border-t border-slate-200 scroll-mt-16">
-    <div class="max-w-5xl mx-auto px-4">
-      <div class="bg-slate-900 rounded-3xl text-white p-8 md:p-12 border border-slate-800 shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+  <section id="order" class="lr-py-16 md:lr-py-24 lr-bg-white lr-border-t lr-border-slate-200 lr-scroll-mt-16">
+    <div class="lr-max-w-5xl lr-mx-auto lr-px-4">
+      <div class="lr-bg-slate-900 lr-rounded-3xl lr-text-white lr-p-8 md:lr-p-12 lr-border lr-border-slate-800 lr-shadow-2xl lr-grid lr-grid-cols-1 md:lr-grid-cols-2 lr-gap-10 lr-items-center">
         <div>
-          <h2 class="text-3xl font-extrabold">Claim Your LoftRest™ 3-in-1 Therapy Device</h2>
+          <h2 class="lr-text-3xl lr-font-extrabold">Claim Your LoftRest™ 3-in-1 Therapy Device</h2>
           {%- if variant -%}
-          <div class="mt-6 flex flex-wrap items-baseline gap-4">
-            <span class="text-4xl font-extrabold">{{ variant.price | money }}</span>
+          <div class="lr-mt-6 lr-flex lr-flex-wrap lr-items-baseline lr-gap-4">
+            <span class="lr-text-4xl lr-font-extrabold">{{ variant.price | money }}</span>
             {%- if on_sale -%}
-            <span class="text-xl text-slate-500 line-through">{{ variant.compare_at_price | money }}</span>
-            <span class="text-xs font-bold bg-brand-heat text-white px-2 py-1 rounded">SAVE {{ variant.compare_at_price | minus: variant.price | money_without_trailing_zeros }}</span>
+            <span class="lr-text-xl lr-text-slate-500 lr-line-through">{{ variant.compare_at_price | money }}</span>
+            <span class="lr-text-xs lr-font-bold lr-bg-brand-heat lr-text-white lr-px-2 lr-py-1 lr-rounded">SAVE {{ variant.compare_at_price | minus: variant.price | money_without_trailing_zeros }}</span>
             {%- endif -%}
           </div>
           {%- endif -%}
-          <ul class="mt-6 space-y-3 text-slate-300">
-            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-emerald"></i> Air traction, infrared heat &amp; vibration</li>
-            <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-emerald"></i> Free express worldwide shipping</li>
-            {%- if on_sale and section.settings.sale_name != blank -%}<li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-brand-emerald"></i> {{ section.settings.sale_name | escape }} price</li>{%- endif -%}
+          <ul class="lr-mt-6 lr-space-y-3 lr-text-slate-300">
+            <li class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="m16 9-5.5 5.5L8 12" /></svg> Air traction, infrared heat &amp; vibration</li>
+            <li class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="m16 9-5.5 5.5L8 12" /></svg> Free express worldwide shipping</li>
+            {%- if on_sale and section.settings.sale_name != blank -%}<li class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="m16 9-5.5 5.5L8 12" /></svg> {{ section.settings.sale_name | escape }} price</li>{%- endif -%}
           </ul>
         </div>
         {%- if variant -%}
-        <form action="{{ routes.cart_add_url }}" method="post" class="bg-white/5 rounded-2xl border border-white/10 p-6 space-y-5">
+        <form action="{{ routes.cart_add_url }}" method="post" class="lr-bg-white/5 lr-rounded-2xl lr-border lr-border-white/10 lr-p-6 lr-space-y-5">
           <input type="hidden" name="id" value="{{ variant.id }}">
           <input type="hidden" name="return_to" value="{% if section.settings.go_to_checkout %}/checkout{% else %}{{ routes.cart_url }}{% endif %}">
-          <div class="flex items-center justify-between">
-            <label for="qty" class="font-semibold">Quantity</label>
-            <div class="flex items-center rounded-lg border border-white/20">
-              <button type="button" id="qty-minus" class="px-3 py-2 hover:bg-white/10" aria-label="Decrease quantity"><i data-lucide="minus" class="w-4 h-4"></i></button>
-              <input id="qty" name="quantity" type="number" min="1" max="10" value="1" class="w-12 bg-transparent text-center font-bold outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none">
-              <button type="button" id="qty-plus" class="px-3 py-2 hover:bg-white/10" aria-label="Increase quantity"><i data-lucide="plus" class="w-4 h-4"></i></button>
+          <div class="lr-flex lr-items-center lr-justify-between">
+            <label for="qty" class="lr-font-semibold">Quantity</label>
+            <div class="lr-flex lr-items-center lr-rounded-lg lr-border lr-border-white/20">
+              <button type="button" id="qty-minus" class="lr-px-3 lr-py-2 hover:lr-bg-white/10" aria-label="Decrease quantity"><svg class="lr-w-4 lr-h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14" /></svg></button>
+              <input id="qty" name="quantity" type="number" min="1" max="10" value="1" class="lr-w-12 lr-bg-transparent lr-text-center lr-font-bold lr-outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:lr-appearance-none">
+              <button type="button" id="qty-plus" class="lr-px-3 lr-py-2 hover:lr-bg-white/10" aria-label="Increase quantity"><svg class="lr-w-4 lr-h-4" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M5 12h14" /><path d="M12 5v14" /></svg></button>
             </div>
           </div>
-          <div class="flex items-center justify-between text-lg">
-            <span class="text-slate-400">Total</span>
-            <span id="total" class="font-extrabold">{{ variant.price | money }}</span>
+          <div class="lr-flex lr-items-center lr-justify-between lr-text-lg">
+            <span class="lr-text-slate-400">Total</span>
+            <span id="total" class="lr-font-extrabold">{{ variant.price | money }}</span>
           </div>
-          <button type="submit" id="buy" {% unless variant.available %}disabled{% endunless %} class="block w-full disabled:opacity-50 text-center bg-brand-blue hover:bg-sky-600 text-white font-extrabold text-lg px-8 py-4 rounded-xl shadow-xl transition-colors">
+          <button type="submit" id="buy" {% unless variant.available %}disabled{% endunless %} class="lr-block lr-w-full disabled:lr-opacity-50 lr-text-center lr-bg-brand-blue hover:lr-bg-sky-600 lr-text-white lr-font-extrabold lr-text-lg lr-px-8 lr-py-4 lr-rounded-xl lr-shadow-xl lr-transition-colors">
             {% if variant.available %}Buy Now{% else %}Sold out{% endif %}
           </button>
-          <p class="flex items-center justify-center gap-2 text-xs text-slate-400">
-            <i data-lucide="lock" class="w-3.5 h-3.5"></i> Secure checkout
+          <p class="lr-flex lr-items-center lr-justify-center lr-gap-2 lr-text-xs lr-text-slate-400">
+            <svg class="lr-w-3.5 lr-h-3.5" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg> Secure checkout
           </p>
         </form>
         {%- else -%}
-        <div class="bg-white/5 rounded-2xl border border-white/10 p-6 text-slate-300">Choose your LoftRest product in the theme editor: <strong>Customize</strong> &rsaquo; this page &rsaquo; <strong>LoftRest landing page</strong> &rsaquo; <strong>Product</strong>.</div>
+        <div class="lr-bg-white/5 lr-rounded-2xl lr-border lr-border-white/10 lr-p-6 lr-text-slate-300">Choose your LoftRest product in the theme editor: <strong>Customize</strong> &rsaquo; this page &rsaquo; <strong>LoftRest landing page</strong> &rsaquo; <strong>Product</strong>.</div>
         {%- endif -%}
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section id="faq" class="py-16 md:py-24 bg-brand-cream border-t border-slate-200 scroll-mt-16">
-    <div class="max-w-3xl mx-auto px-4">
-      <div class="text-center mb-10">
-        <p class="text-brand-blue font-bold text-sm uppercase tracking-wide">FAQ</p>
-        <h2 class="mt-2 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">Neck pain &amp; sleep: your questions answered</h2>
+  <section id="faq" class="lr-py-16 md:lr-py-24 lr-bg-brand-cream lr-border-t lr-border-slate-200 lr-scroll-mt-16">
+    <div class="lr-max-w-3xl lr-mx-auto lr-px-4">
+      <div class="lr-text-center lr-mb-10">
+        <p class="lr-text-brand-blue lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">FAQ</p>
+        <h2 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">Neck pain &amp; sleep: your questions answered</h2>
       </div>
-      <div class="space-y-3">
+      <div class="lr-space-y-3">
         {%- for block in section.blocks -%}
           {%- if block.type == 'faq' -%}
-        <details class="group rounded-xl border border-slate-200 p-5" {{ block.shopify_attributes }}>
-          <summary class="flex items-center justify-between gap-4 cursor-pointer font-bold text-brand-navy list-none">
+        <details class="lr-group lr-rounded-xl lr-border lr-border-slate-200 lr-p-5" {{ block.shopify_attributes }}>
+          <summary class="lr-flex lr-items-center lr-justify-between lr-gap-4 lr-cursor-pointer lr-font-bold lr-text-brand-navy lr-list-none">
             <h3>{{ block.settings.question | escape }}</h3>
-            <i data-lucide="chevron-down" class="w-5 h-5 shrink-0 transition-transform group-open:rotate-180"></i>
+            <svg class="lr-w-5 lr-h-5 lr-shrink-0 lr-transition-transform group-open:lr-rotate-180" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m6 9 6 6 6-6" /></svg>
           </summary>
-          <p class="mt-3 text-slate-600 leading-relaxed">{{ block.settings.answer | escape }}</p>
+          <p class="lr-mt-3 lr-text-slate-600 lr-leading-relaxed">{{ block.settings.answer | escape }}</p>
         </details>
           {%- endif -%}
         {%- endfor -%}
@@ -349,9 +326,6 @@
 <script>
   (function () {
     var root = document.getElementById('loftrest-{{ section.id }}');
-    function icons() { if (window.lucide) lucide.createIcons(); }
-    if (window.lucide) icons(); else document.addEventListener('DOMContentLoaded', icons);
-
     var qty = root.querySelector('#qty');
     if (qty) {
       var price = {{ variant.price | default: 0 | json }};

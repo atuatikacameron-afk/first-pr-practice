@@ -1,6 +1,6 @@
 """Build the Shopify theme files from ../index.html.
 
-    python3 shopify/build.py
+    cd shopify && npm install && python3 build.py
 
 Writes:
   shopify/sections/loftrest-landing.liquid   (the page, as a theme section)
@@ -8,7 +8,7 @@ Writes:
 
 Re-run this after changing index.html, then re-upload both files to your theme.
 """
-import html, json, pathlib, re
+import html, json, pathlib, re, subprocess, tempfile
 
 ROOT = pathlib.Path(__file__).resolve().parent
 src = (ROOT.parent / 'index.html').read_text()
@@ -107,9 +107,6 @@ for a, b in [
 script = '''<script>
   (function () {
     var root = document.getElementById('loftrest-{{ section.id }}');
-    function icons() { if (window.lucide) lucide.createIcons(); }
-    if (window.lucide) icons(); else document.addEventListener('DOMContentLoaded', icons);
-
     var qty = root.querySelector('#qty');
     if (qty) {
       var price = {{ variant.price | default: 0 | json }};
@@ -145,8 +142,64 @@ script = '''<script>
 }
 </script>'''
 
+# ---- Icons: inline the Lucide SVGs so nothing loads from a CDN at runtime ----
+ICONS = ROOT / 'node_modules' / 'lucide-static' / 'icons'
+if not ICONS.is_dir():
+    raise SystemExit('Run "npm install" in the shopify folder first.')
+
+def icon_svg(m):
+    name, cls = m.group(1), m.group(2)
+    svg = (ICONS / f'{name}.svg').read_text()
+    svg = re.sub(r'<!--.*?-->', '', svg, flags=re.S)
+    svg = re.sub(r'\s+', ' ', svg).replace('> <', '><').strip()
+    return svg.replace(f'class="lucide lucide-{name}"', f'class="{cls}" aria-hidden="true" focusable="false"', 1)
+
+body = re.sub(r'<i data-lucide="([a-z0-9-]+)" class="([^"]*)"></i>', icon_svg, body)
+assert 'data-lucide' not in body
+
+# ---- Prefix every Tailwind class with "lr-" so none can clash with the theme's own
+#      classes (Horizon, for example, has its own .flex and .grid) ----
+PREFIX = 'lr-'
+
+def prefix_token(tok):
+    if '{' in tok or tok.startswith('loftrest'):
+        return tok
+    parts, depth, cur = [], 0, ''
+    for ch in tok:
+        depth += ch == '['
+        depth -= ch == ']'
+        if ch == ':' and depth == 0:
+            parts.append(cur); cur = ''
+        else:
+            cur += ch
+    util = cur
+    if util.startswith('['):
+        pass  # arbitrary properties like [appearance:textfield] can't take a prefix
+    elif util.startswith('-'):
+        util = '-' + PREFIX + util[1:]
+    else:
+        util = PREFIX + util
+    return ':'.join(parts + [util])
+
+body = re.sub(r'class="([^"]*)"', lambda m: 'class="' + ' '.join(prefix_token(t) for t in m.group(1).split()) + '"', body)
+
+# ---- Compile only the Tailwind CSS this page uses ----
 tw = re.search(r'    tailwind.config = (\{.*?\n    \})\n', src, re.S).group(1)
-tw = tw.replace('{\n      theme:', "{\n      important: '.loftrest',\n      corePlugins: { preflight: false },\n      theme:", 1)
+tw = tw.replace('{\n      theme:', "{\n      prefix: 'lr-',\n      important: '.loftrest',\n      corePlugins: { preflight: false },\n      theme:", 1)
+with tempfile.TemporaryDirectory() as tmp:
+    tmp = pathlib.Path(tmp)
+    (tmp / 'page.html').write_text(body)
+    (tmp / 'in.css').write_text('@tailwind base;\n@tailwind utilities;\n')
+    cfg = tw.rstrip()[:-1].rstrip() + f",\n      content: [{json.dumps(str(tmp / 'page.html'))}]\n    }}"
+    (tmp / 'tailwind.config.js').write_text('module.exports = ' + cfg + ';\n')
+    compiled_css = subprocess.run(
+        [str(ROOT / 'node_modules' / '.bin' / 'tailwindcss'), '-c', str(tmp / 'tailwind.config.js'), '-i', str(tmp / 'in.css'), '--minify'],
+        check=True, capture_output=True, text=True).stdout.strip()
+# With preflight off, "base" is only Tailwind's default --tw-* variables (needed for
+# shadows, rings and transforms). Scope them to this page instead of the whole store.
+compiled_css = compiled_css.replace('*,:after,:before{', '.loftrest,.loftrest *,.loftrest :after,.loftrest :before{', 1)
+compiled_css = compiled_css.replace('::backdrop{', '.loftrest ::backdrop{', 1)
+assert not re.search(r'(^|})(\*|::backdrop|html|body)[,{]', compiled_css), 'unscoped base rule left in CSS'
 
 schema = {
   "name": "LoftRest landing page",
@@ -185,11 +238,6 @@ liquid = f'''{{%- comment -%}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  tailwind.config = {tw};
-</script>
 <style>
   /* Minimal reset scoped to this page so the rest of your theme is untouched */
   .loftrest {{ font-family: 'Inter', -apple-system, sans-serif; color: #1e293b; background: #F8FAFC; -webkit-font-smoothing: antialiased; line-height: 1.5; }}
@@ -201,7 +249,10 @@ liquid = f'''{{%- comment -%}}
   .loftrest button, .loftrest input {{ font: inherit; color: inherit; margin: 0; background: transparent; }}
   .loftrest button {{ cursor: pointer; }}
   .loftrest svg {{ display: block; }}
+  .loftrest summary {{ padding: 0; }}
   .loftrest summary::-webkit-details-marker {{ display: none; }}
+  /* Page styles (Tailwind, compiled by build.py) */
+  {compiled_css}
 </style>
 
 <div class="loftrest" id="loftrest-{{{{ section.id }}}}">
