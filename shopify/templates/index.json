@@ -1,0 +1,99 @@
+{
+  "sections": {
+    "main": {
+      "type": "loftrest-landing",
+      "blocks": {
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Does neck traction actually work for neck pain?",
+            "answer": "Cervical traction is a long-standing technique used by physical therapists and chiropractors. It gently stretches the neck to ease pressure on discs, joints and nerves. Many people with neck stiffness or tension find it helpful, especially alongside stretching and posture work. Results vary from person to person, so if you have ongoing or severe pain, ask your doctor or physical therapist whether traction suits you."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I sleep on LoftRest™ all night?",
+            "answer": "Yes. That's what it's designed for. Run a 15–30 minute therapy session, and when the built-in timer switches the therapy off, LoftRest™ works as a contoured memory foam pillow that supports your neck until morning."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Can a cervical pillow help me sleep better?",
+            "answer": "Neck pain and poor sleep often feed each other: discomfort makes it hard to get comfortable, and bad sleep leaves muscles tighter the next day. LoftRest™ helps on both fronts. The therapy session relaxes tense muscles before bed, and the contoured memory foam keeps your neck supported so you can settle into a comfortable position and stay there."
+          }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "How long and how often should I use the therapy modes?",
+            "answer": "Each session runs for 15–30 minutes. Most people use it once a day, often in the evening before sleep. Start on the gentlest setting, build up gradually, and stop if anything feels painful rather than a comfortable stretch."
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "What happens if I fall asleep during a session?",
+            "answer": "LoftRest™ has a built-in automatic shut-off timer, so the therapy modes switch off on their own and you can keep sleeping on the memory foam pillow."
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "How is LoftRest™ powered?",
+            "answer": "It runs on a 5V USB connection, so you can plug it into a USB wall adapter, a laptop or a power bank."
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "question": "How big is LoftRest™?",
+            "answer": "It measures 42.5 × 27 cm (16.7 × 10.6 in). It's made from high-density contoured memory foam with a soft, breathable flannel cover."
+          }
+        },
+        "faq_8": {
+          "type": "faq",
+          "settings": {
+            "question": "Can LoftRest™ help with \"tech neck\" from phones and laptops?",
+            "answer": "Looking down at screens for hours puts extra load on the neck and shoulders and can leave them tight and sore. LoftRest™ gently stretches the neck in the opposite direction while heat and massage relax the surrounding muscles, then supports your neck overnight. Pair it with regular screen breaks and a raised monitor for best results."
+          }
+        },
+        "faq_9": {
+          "type": "faq",
+          "settings": {
+            "question": "Who should not use neck traction?",
+            "answer": "Talk to your doctor before using LoftRest™ if you are pregnant, have had neck or spine surgery, or have osteoporosis, a recent neck injury, rheumatoid arthritis, a known spinal condition, or a circulation disorder. LoftRest™ is a comfort device and is not a substitute for medical diagnosis or treatment."
+          }
+        },
+        "faq_10": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does shipping take, and what does it cost?",
+            "answer": "Express worldwide shipping is free during the Spring Sleep Sale."
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8",
+        "faq_9",
+        "faq_10"
+      ],
+      "settings": {
+        "product": "loftrest-neck-traction-device",
+        "sale_name": "Spring Sleep Sale",
+        "go_to_checkout": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -5,7 +5,8 @@ These two files add the LoftRest landing page to your Shopify store. Your store'
 | File | What it is |
 | --- | --- |
 | `sections/loftrest-landing.liquid` | The page itself, as a theme section |
-| `templates/page.loftrest.json` | A page template that uses it, with the 9 FAQ questions already filled in |
+| `templates/page.loftrest.json` | A page template that uses it, with the FAQ questions already filled in |
+| `templates/index.json` | The same page as your store's **homepage** |
 
 ## Install (about 10 minutes)
 
@@ -30,6 +31,10 @@ These two files add the LoftRest landing page to your Shopify store. Your store'
 **5. Connect the product.** Go to **Online Store → Themes → Customize**. At the top, switch to **Pages → LoftRest**. Click **LoftRest landing page** on the left and pick your product under **Product**. **Save**.
 
 **6. Check it, then go live.** Preview the page. Click **Buy Now** to test that checkout opens. When you're happy, go back to the page and set **Visibility** to **Visible**.
+
+## Using it as the homepage
+
+To make the LoftRest page your homepage, replace your theme's `templates/index.json` with the one here: **Edit code → Templates → index.json**, delete everything, paste in `templates/index.json`, **Save**. To edit the homepage version, go to **Customize** and pick **Home page** at the top. The homepage and the `/pages/loftrest` page have separate review and FAQ blocks, so if you use the homepage you can leave the page hidden.
 
 ## Editing on Shopify
 

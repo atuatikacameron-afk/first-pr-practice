@@ -5,6 +5,7 @@
 Writes:
   shopify/sections/loftrest-landing.liquid   (the page, as a theme section)
   shopify/templates/page.loftrest.json       (page template with the FAQ pre-filled)
+  shopify/templates/index.json               (the same page as the store's homepage)
 
 Re-run this after changing index.html, then re-upload both files to your theme.
 """
@@ -276,4 +277,6 @@ template = {
   "order": ["main"]
 }
 (ROOT / 'templates' / 'page.loftrest.json').write_text(json.dumps(template, indent=2, ensure_ascii=False) + '\n')
+# Same page as the store's homepage
+(ROOT / 'templates' / 'index.json').write_text(json.dumps(template, indent=2, ensure_ascii=False) + '\n')
 print(f'Wrote section and template ({len(faqs)} FAQ questions).')
