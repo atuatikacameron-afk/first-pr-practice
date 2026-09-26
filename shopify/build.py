@@ -23,7 +23,8 @@ body = between('  <!-- HERO SECTION -->', '  <!-- FOOTER -->')
 
 # ---- FAQ: pre-fill template blocks from the page, render from blocks ----
 faq_html = between('  <!-- FAQ -->', '  <!-- FOOTER -->')
-faqs = [(html.unescape(q.strip()), html.unescape(a.strip())) for q, a in
+strip_tags = lambda t: html.unescape(re.sub(r'<[^>]+>', '', t)).strip()
+faqs = [(strip_tags(q), strip_tags(a)) for q, a in
         re.findall(r'<h3>(.*?)</h3>.*?<p class="mt-3[^"]*">(.*?)</p>', faq_html, re.S)]
 assert len(faqs) >= 5, faqs
 faq_liquid = re.sub(r'      <div class="space-y-3">.*?\n      </div>\n    </div>\n  </section>',

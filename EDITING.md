@@ -45,7 +45,9 @@ Each section in `index.html` starts with a label in capitals, like `<!-- FAQ -->
 | `HOW IT WORKS` | The three therapy cards |
 | `NECK PAIN & SLEEP` | How neck pain and sleep affect each other |
 | `BENEFITS` | The six benefit cards |
-| `15-MINUTE ROUTINE` | The three steps |
+| `WHO IT'S FOR` | Desk workers, physical workers, people waking up stiff |
+| `ROUTINE: THERAPY THEN SLEEP` | The three steps |
+| `SPECS` | Size, materials, power and safety |
 | `REVIEWS` | Customer review cards |
 | `CHECKOUT & ORDER SECTION` | Price box and Buy Now button |
 | `FAQ` | Questions and answers |
@@ -62,7 +64,7 @@ To change any wording, find it in the file and type over it. Leave the parts ins
 **Add a product photo.** Upload the image next to `index.html`, e.g. `loftrest.jpg`. Then in the `HERO SECTION`, replace the placeholder box (the `<div class="relative aspect-square ...">` block) with:
 
 ```html
-<img src="loftrest.jpg" alt="LoftRest neck traction device" class="w-full rounded-3xl shadow-2xl">
+<img src="loftrest.jpg" alt="LoftRest cervical traction pillow" class="w-full rounded-3xl shadow-2xl">
 ```
 
 **Change the colors.** Near the top of the file, `tailwind.config` lists the brand colors (`navy`, `blue`, `heat` and so on). Change a color code, e.g. `'#0284C7'`, and every place that uses it updates.
