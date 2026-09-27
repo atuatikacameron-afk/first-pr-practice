@@ -44,6 +44,7 @@ Each section in `index.html` starts with a label in capitals, like `<!-- FAQ -->
 | `HERO SECTION` | Headline, intro text, main button, product image area |
 | `HOW IT WORKS` | The three therapy cards |
 | `NECK TENSION & SLEEP` | Why a tense neck makes it hard to switch off |
+| `BEDTIME RESET` | Why stress keeps you awake, and the 15-minute wind-down |
 | `BENEFITS` | The six benefit cards |
 | `WHO IT'S FOR` | Desk workers, physical workers, restless sleepers |
 | `ROUTINE: RELAX THEN SLEEP` | The three steps |
