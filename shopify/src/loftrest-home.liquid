@@ -1,0 +1,310 @@
+{%- comment -%}
+  SOURCE for sections/loftrest-home.liquid. Edit this file, then run
+  `python3 build_home.py` in the shopify folder.
+  <!--SLOT ...--> markers become theme-editor image pickers with an "Add image" placeholder.
+{%- endcomment -%}
+{%- assign product = section.settings.product -%}
+{%- assign variant = product.selected_or_first_available_variant -%}
+{%- assign reviews = section.blocks | where: 'type', 'review' -%}
+{%- assign review_count = reviews | size -%}
+{%- assign moments = section.blocks | where: 'type', 'moment' -%}
+{%- assign faqs = section.blocks | where: 'type', 'faq' -%}
+{%- assign bundle_ok = false -%}
+{%- if section.settings.bundle_code != blank and section.settings.bundle_percent > 0 -%}{%- assign bundle_ok = true -%}{%- endif -%}
+
+<style>
+  @keyframes lr-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .loftrest .lr-marquee { animation: lr-marquee 40s linear infinite; }
+  @media (prefers-reduced-motion: reduce) { .loftrest .lr-marquee { animation: none; } }
+</style>
+
+<!-- HERO -->
+<section class="relative overflow-hidden bg-gradient-to-br from-brand-indigo via-brand-royal to-brand-blue text-white">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-stretch">
+    <div class="px-4 py-12 md:py-20 lg:pr-12 flex flex-col justify-center order-2 lg:order-1">
+      {%- if section.settings.hero_badge != blank -%}<span class="self-start rounded-md border border-white/40 px-3 py-1 text-xs font-bold uppercase tracking-wide">{{ section.settings.hero_badge | escape }}</span>{%- endif -%}
+      <h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">{{ section.settings.hero_heading | escape }}</h1>
+      <p class="mt-4 text-lg text-sky-100 max-w-xl">{{ section.settings.hero_text | escape }}</p>
+      <ul class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
+        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-300"></i> Gentle air traction</li>
+        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-300"></i> Soothing warmth</li>
+        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-300"></i> All-night memory foam</li>
+      </ul>
+      <a href="#offers" class="mt-8 self-start inline-flex items-center gap-2 bg-white text-brand-royal hover:bg-sky-50 font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+    </div>
+    <div class="relative min-h-[320px] lg:min-h-[560px] order-1 lg:order-2">
+      <!--SLOT id="hero_image" label="Hero photo (person relaxing on LoftRest)" wrap="absolute inset-0" sizes="(min-width: 1024px) 50vw, 100vw" eager-->
+    </div>
+  </div>
+  <div class="bg-brand-indigo/60 border-t border-white/10">
+    <ul class="max-w-7xl mx-auto px-4 py-5 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+      <li class="flex items-center justify-center gap-3"><i data-lucide="wind" class="w-5 h-5 text-sky-300"></i> A relaxing 15&ndash;30 minute wind-down</li>
+      <li class="flex items-center justify-center gap-3"><i data-lucide="moon" class="w-5 h-5 text-sky-300"></i> Then contoured support all night</li>
+      <li class="flex items-center justify-center gap-3"><i data-lucide="timer-off" class="w-5 h-5 text-sky-300"></i> Automatic shut-off timer</li>
+    </ul>
+  </div>
+</section>
+
+<!-- INTRO: product + feature tiles -->
+<section class="py-16 md:py-24">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">Your evening wind-down, reinvented</h2>
+    <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">You spend a third of your life on your pillow. LoftRest™ turns bedtime into a moment to relax: a short session to unwind, then a pillow that supports your neck until morning.</p>
+    <div class="mt-10 relative aspect-[16/9] rounded-3xl overflow-hidden">
+      <!--SLOT id="product_image" label="Product photo (LoftRest on its own)" wrap="absolute inset-0" sizes="(min-width: 1024px) 960px, 100vw"-->
+    </div>
+    <ul class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <li class="rounded-2xl bg-white border border-slate-200 p-5"><i data-lucide="wind" class="w-7 h-7 mx-auto text-brand-royal"></i><p class="mt-3 font-bold text-brand-navy text-sm">Gentle air traction</p></li>
+      <li class="rounded-2xl bg-white border border-slate-200 p-5"><i data-lucide="flame" class="w-7 h-7 mx-auto text-brand-heat"></i><p class="mt-3 font-bold text-brand-navy text-sm">Soothing warmth</p></li>
+      <li class="rounded-2xl bg-white border border-slate-200 p-5"><i data-lucide="activity" class="w-7 h-7 mx-auto text-brand-emerald"></i><p class="mt-3 font-bold text-brand-navy text-sm">Micro-pulse massage</p></li>
+      <li class="rounded-2xl bg-white border border-slate-200 p-5"><i data-lucide="layers" class="w-7 h-7 mx-auto text-brand-royal"></i><p class="mt-3 font-bold text-brand-navy text-sm">All-night memory foam</p></li>
+    </ul>
+    <a href="#offers" class="mt-10 inline-flex items-center gap-2 bg-brand-royal hover:bg-brand-indigo text-white font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+  </div>
+</section>
+
+<!-- OFFERS -->
+<section id="offers" class="py-16 md:py-24 bg-brand-lightBlue/50 scroll-mt-16">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight text-center">Choose your LoftRest™</h2>
+    <p class="mt-3 text-center text-slate-600">Free standard shipping in Australia &middot; 30-day returns &middot; Secure checkout</p>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Offer 1 -->
+      <div class="rounded-3xl bg-white border border-slate-200 p-6 flex flex-col">
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden">
+          <!--SLOT id="offer1_image" label="Offer photo (1 pillow)" wrap="absolute inset-0" sizes="(min-width: 768px) 460px, 100vw"-->
+        </div>
+        <h3 class="mt-5 text-xl font-extrabold text-brand-navy">1 &times; LoftRest™</h3>
+        <ul class="mt-3 space-y-2 text-sm text-slate-700 flex-1">
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> Air traction, heat &amp; massage</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> Contoured memory foam for all-night support</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> USB powered with auto shut-off</li>
+        </ul>
+        {%- if variant -%}
+        <p class="mt-5 text-2xl font-extrabold text-brand-navy">{{ variant.price | money }}</p>
+        <form action="{{ routes.cart_add_url }}" method="post" class="mt-4">
+          <input type="hidden" name="id" value="{{ variant.id }}"><input type="hidden" name="quantity" value="1"><input type="hidden" name="return_to" value="/checkout">
+          <button type="submit" {% unless variant.available %}disabled{% endunless %} class="w-full bg-brand-royal hover:bg-brand-indigo disabled:opacity-50 text-white font-extrabold py-4 rounded-full transition-colors">{% if variant.available %}Buy 1 pillow{% else %}Sold out{% endif %}</button>
+        </form>
+        {%- endif -%}
+      </div>
+      <!-- Offer 2 -->
+      <div class="relative rounded-3xl bg-white border-2 border-brand-royal p-6 flex flex-col">
+        {%- if bundle_ok -%}<span class="absolute -top-3 left-6 bg-brand-emerald text-white text-xs font-bold px-3 py-1 rounded-full">Save {{ section.settings.bundle_percent }}%</span>{%- endif -%}
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden">
+          <!--SLOT id="offer2_image" label="Offer photo (2 pillows)" wrap="absolute inset-0" sizes="(min-width: 768px) 460px, 100vw"-->
+        </div>
+        <h3 class="mt-5 text-xl font-extrabold text-brand-navy">2 &times; LoftRest™</h3>
+        <ul class="mt-3 space-y-2 text-sm text-slate-700 flex-1">
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> One for you, one for someone you love</li>
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> Everything in the single pillow, twice</li>
+          {%- if bundle_ok -%}<li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> {{ section.settings.bundle_percent }}% off, applied at checkout</li>{%- endif -%}
+        </ul>
+        {%- if variant -%}
+          {%- assign pair = variant.price | times: 2 -%}
+          <p class="mt-5 text-2xl font-extrabold text-brand-navy">
+            {%- if bundle_ok -%}
+              {%- assign pair_off = pair | times: section.settings.bundle_percent | divided_by: 100 -%}
+              {{ pair | minus: pair_off | money }} <span class="text-base font-semibold text-slate-400 line-through">{{ pair | money }}</span>
+            {%- else -%}{{ pair | money }}{%- endif -%}
+          </p>
+          <form action="{{ routes.cart_add_url }}" method="post" class="mt-4">
+            <input type="hidden" name="id" value="{{ variant.id }}"><input type="hidden" name="quantity" value="2">
+            <input type="hidden" name="return_to" value="{% if bundle_ok %}/discount/{{ section.settings.bundle_code | url_encode }}?redirect=%2Fcheckout{% else %}/checkout{% endif %}">
+            <button type="submit" {% unless variant.available %}disabled{% endunless %} class="w-full bg-brand-royal hover:bg-brand-indigo disabled:opacity-50 text-white font-extrabold py-4 rounded-full transition-colors">{% if variant.available %}Buy 2 pillows{% else %}Sold out{% endif %}</button>
+          </form>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIFESTYLE: image left, text right -->
+<section class="py-16 md:py-24">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    <div class="relative aspect-[4/5] rounded-3xl overflow-hidden">
+      <!--SLOT id="lifestyle_image" label="Lifestyle photo (evening wind-down)" wrap="absolute inset-0" sizes="(min-width: 768px) 560px, 100vw"-->
+    </div>
+    <div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">Finally, a calmer end to every day</h2>
+      <p class="mt-4 text-lg text-slate-600">Tired of lying awake, trying to get comfortable? LoftRest™ gives you a simple evening ritual: unwind first, then stay put and sleep, supported all night.</p>
+      <ul class="mt-6 space-y-4">
+        <li class="flex gap-4"><span class="w-10 h-10 shrink-0 rounded-full bg-brand-lightBlue text-brand-royal flex items-center justify-center"><i data-lucide="layers" class="w-5 h-5"></i></span><span class="text-slate-700"><strong class="text-brand-navy">High-density memory foam</strong> that contours to your neck</span></li>
+        <li class="flex gap-4"><span class="w-10 h-10 shrink-0 rounded-full bg-orange-50 text-brand-heat flex items-center justify-center"><i data-lucide="flame" class="w-5 h-5"></i></span><span class="text-slate-700"><strong class="text-brand-navy">Constant, soothing warmth</strong> while you unwind</span></li>
+        <li class="flex gap-4"><span class="w-10 h-10 shrink-0 rounded-full bg-emerald-50 text-brand-emerald flex items-center justify-center"><i data-lucide="timer-off" class="w-5 h-5"></i></span><span class="text-slate-700"><strong class="text-brand-navy">Auto shut-off</strong> so you can drift off without a second thought</span></li>
+      </ul>
+      <a href="#offers" class="mt-8 inline-flex items-center gap-2 bg-brand-royal hover:bg-brand-indigo text-white font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- MOMENTS: text left, 2x2 photos right -->
+<section class="py-16 md:py-24 bg-white border-y border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+    <div class="lg:col-span-2">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">Made for your evening routine</h2>
+      <p class="mt-4 text-lg text-slate-600">In bed, on the sofa, or after a long shift: LoftRest™ runs on USB, so your wind-down goes wherever you do.</p>
+      <a href="#offers" class="mt-8 inline-flex items-center gap-2 bg-brand-royal hover:bg-brand-indigo text-white font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+    </div>
+    <div class="lg:col-span-3 grid grid-cols-2 gap-4">
+      <figure><div class="relative aspect-square rounded-2xl overflow-hidden"><!--SLOT id="moment1_image" label="In bed" wrap="absolute inset-0" sizes="(min-width: 1024px) 320px, 50vw"--></div><figcaption class="mt-2 text-center text-sm font-semibold text-slate-700">Winding down in bed</figcaption></figure>
+      <figure><div class="relative aspect-square rounded-2xl overflow-hidden"><!--SLOT id="moment2_image" label="On the sofa" wrap="absolute inset-0" sizes="(min-width: 1024px) 320px, 50vw"--></div><figcaption class="mt-2 text-center text-sm font-semibold text-slate-700">On the sofa</figcaption></figure>
+      <figure><div class="relative aspect-square rounded-2xl overflow-hidden"><!--SLOT id="moment3_image" label="After work" wrap="absolute inset-0" sizes="(min-width: 1024px) 320px, 50vw"--></div><figcaption class="mt-2 text-center text-sm font-semibold text-slate-700">After a long day</figcaption></figure>
+      <figure><div class="relative aspect-square rounded-2xl overflow-hidden"><!--SLOT id="moment4_image" label="Drifting off" wrap="absolute inset-0" sizes="(min-width: 1024px) 320px, 50vw"--></div><figcaption class="mt-2 text-center text-sm font-semibold text-slate-700">Drifting off</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMER MOMENTS (only when real photos are added) -->
+{%- if moments.size > 0 -%}
+<section class="py-16 md:py-20">
+  <h2 class="px-4 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight text-center">Real LoftRest™ moments</h2>
+  <div class="mt-10 flex gap-4 overflow-x-auto snap-x snap-mandatory px-4 pb-4 max-w-7xl mx-auto">
+    {%- for block in moments -%}
+      {%- if block.settings.image != blank -%}
+      <figure class="snap-start shrink-0 w-64 md:w-72" {{ block.shopify_attributes }}>
+        {{ block.settings.image | image_url: width: 600 | image_tag: widths: '300, 450, 600', sizes: '288px', class: 'lr-w-full lr-aspect-[3/4] lr-object-cover lr-rounded-2xl', loading: 'lazy', alt: block.settings.caption }}
+        {%- if block.settings.caption != blank -%}<figcaption class="mt-2 text-sm text-slate-600">{{ block.settings.caption | escape }}</figcaption>{%- endif -%}
+      </figure>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+{%- endif -%}
+
+<!-- FEATURES + COMPARISON (dark) -->
+<section class="py-16 md:py-24 bg-gradient-to-b from-brand-indigo via-brand-indigo to-brand-royal text-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight text-center">Designed for your whole wind-down</h2>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div class="relative aspect-square rounded-3xl overflow-hidden">
+        <!--SLOT id="features_image" label="Feature photo (close-up of LoftRest)" wrap="absolute inset-0" sizes="(min-width: 768px) 540px, 100vw"-->
+      </div>
+      <div class="space-y-3">
+        <details class="group rounded-2xl bg-white/10 p-5" open>
+          <summary class="flex items-center justify-between gap-4 cursor-pointer font-bold list-none"><span class="flex items-center gap-3"><i data-lucide="wind" class="w-5 h-5 text-sky-300"></i> Air traction chambers</span><i data-lucide="plus" class="w-5 h-5 shrink-0 transition-transform group-open:rotate-45"></i></summary>
+          <p class="mt-3 text-sky-100">Built-in air chambers gently lift and lengthen the neck for a soothing stretch.</p>
+        </details>
+        <details class="group rounded-2xl bg-white/10 p-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer font-bold list-none"><span class="flex items-center gap-3"><i data-lucide="flame" class="w-5 h-5 text-orange-300"></i> Warmth zone</span><i data-lucide="plus" class="w-5 h-5 shrink-0 transition-transform group-open:rotate-45"></i></summary>
+          <p class="mt-3 text-sky-100">A constant-temperature heat compress for steady, soothing warmth at the base of your neck.</p>
+        </details>
+        <details class="group rounded-2xl bg-white/10 p-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer font-bold list-none"><span class="flex items-center gap-3"><i data-lucide="activity" class="w-5 h-5 text-emerald-300"></i> Micro-pulse massage</span><i data-lucide="plus" class="w-5 h-5 shrink-0 transition-transform group-open:rotate-45"></i></summary>
+          <p class="mt-3 text-sky-100">Gentle massage modes to help you unwind. Use them with the stretch and warmth, or on their own.</p>
+        </details>
+        <details class="group rounded-2xl bg-white/10 p-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer font-bold list-none"><span class="flex items-center gap-3"><i data-lucide="layers" class="w-5 h-5 text-sky-300"></i> Contoured memory foam</span><i data-lucide="plus" class="w-5 h-5 shrink-0 transition-transform group-open:rotate-45"></i></summary>
+          <p class="mt-3 text-sky-100">High-density foam with a soft, breathable flannel cover, shaped to support your neck all night. 42.5 &times; 27 cm.</p>
+        </details>
+        <details class="group rounded-2xl bg-white/10 p-5">
+          <summary class="flex items-center justify-between gap-4 cursor-pointer font-bold list-none"><span class="flex items-center gap-3"><i data-lucide="timer-off" class="w-5 h-5 text-sky-300"></i> Auto shut-off &amp; USB power</span><i data-lucide="plus" class="w-5 h-5 shrink-0 transition-transform group-open:rotate-45"></i></summary>
+          <p class="mt-3 text-sky-100">Low-voltage 5V USB power, and a built-in timer that switches everything off at the end of your session.</p>
+        </details>
+        <a href="#offers" class="inline-flex items-center gap-2 bg-white text-brand-royal hover:bg-sky-50 font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+      </div>
+    </div>
+
+    <h2 class="mt-20 text-3xl md:text-4xl font-extrabold tracking-tight text-center">Why choose LoftRest™?</h2>
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full min-w-[520px] max-w-3xl mx-auto text-left text-sm md:text-base">
+        <thead>
+          <tr>
+            <th class="py-3 pr-4"></th>
+            <th class="py-3 px-3 text-center font-extrabold rounded-t-2xl bg-white/15">LoftRest™</th>
+            <th class="py-3 px-3 text-center font-semibold text-sky-100">Memory foam pillow</th>
+            <th class="py-3 pl-3 text-center font-semibold text-sky-100">Standard pillow</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-white/10"><td class="py-3 pr-4">Contoured neck support</td><td class="py-3 px-3 bg-white/15"><i data-lucide="check" class="w-5 h-5 mx-auto text-emerald-300"></i></td><td class="py-3 px-3"><i data-lucide="check" class="w-5 h-5 mx-auto text-emerald-300"></i></td><td class="py-3 pl-3"><i data-lucide="x" class="w-5 h-5 mx-auto text-white/40"></i></td></tr>
+          <tr class="border-t border-white/10"><td class="py-3 pr-4">Gentle air traction</td><td class="py-3 px-3 bg-white/15"><i data-lucide="check" class="w-5 h-5 mx-auto text-emerald-300"></i></td><td class="py-3 px-3"><i data-lucide="x" class="w-5 h-5 mx-auto text-white/40"></i></td><td class="py-3 pl-3"><i data-lucide="x" class="w-5 h-5 mx-auto text-white/40"></i></td></tr>
+          <tr class="border-t border-white/10"><td class="py-3 pr-4">Built-in warmth</td><td class="py-3 px-3 bg-white/15"><i data-lucide="check" class="w-5 h-5 mx-auto text-emerald-300"></i></td><td class="py-3 px-3"><i data-lucide="x" class="w-5 h-5 mx-auto text-white/40"></i></td><td class="py-3 pl-3"><i data-lucide="x" class="w-5 h-5 mx-auto text-white/40"></i></td></tr>
+          <tr class="border-t border-white/10"><td class="py-3 pr-4">Massage modes</td><td class="py-3 px-3 bg-white/15"><i data-lucide="check" class="w-5 h-5 mx-auto text-emerald-300"></i></td><td class="py-3 px-3"><i data-lucide="x" class="w-5 h-5 mx-auto text-white/40"></i></td><td class="py-3 pl-3"><i data-lucide="x" class="w-5 h-5 mx-auto text-white/40"></i></td></tr>
+          <tr class="border-t border-white/10"><td class="py-3 pr-4">Automatic shut-off timer</td><td class="py-3 px-3 bg-white/15"><i data-lucide="check" class="w-5 h-5 mx-auto text-emerald-300"></i></td><td class="py-3 px-3 text-center text-sky-100">n/a</td><td class="py-3 pl-3 text-center text-sky-100">n/a</td></tr>
+          <tr class="border-t border-white/10"><td class="py-3 pr-4">Sleep on it all night</td><td class="py-3 px-3 bg-white/15 rounded-b-2xl"><i data-lucide="check" class="w-5 h-5 mx-auto text-emerald-300"></i></td><td class="py-3 px-3"><i data-lucide="check" class="w-5 h-5 mx-auto text-emerald-300"></i></td><td class="py-3 pl-3"><i data-lucide="check" class="w-5 h-5 mx-auto text-emerald-300"></i></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
+      <li class="flex items-center gap-2"><i data-lucide="truck" class="w-5 h-5 text-sky-300"></i> Free standard shipping in Australia</li>
+      <li class="flex items-center gap-2"><i data-lucide="undo-2" class="w-5 h-5 text-sky-300"></i> 30-day returns</li>
+    </ul>
+  </div>
+</section>
+
+<!-- REVIEWS (only genuine reviews) -->
+{%- if review_count > 0 -%}
+<section class="py-16 md:py-20 bg-white">
+  <h2 class="px-4 text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight text-center">What customers say</h2>
+  <div class="mt-10 flex gap-4 overflow-x-auto snap-x snap-mandatory px-4 pb-4 max-w-7xl mx-auto">
+    {%- for block in reviews -%}
+    <figure class="snap-start shrink-0 w-72 md:w-80 rounded-2xl border border-slate-200 bg-white flex flex-col overflow-hidden" {{ block.shopify_attributes }}>
+      {%- if block.settings.photo != blank -%}{{ block.settings.photo | image_url: width: 640 | image_tag: widths: '320, 480, 640', sizes: '320px', class: 'lr-w-full lr-aspect-[4/3] lr-object-cover', loading: 'lazy', alt: block.settings.photo.alt }}{%- endif -%}
+      <div class="p-5 flex flex-col flex-1">
+        <span class="flex" aria-label="{{ block.settings.stars }} out of 5 stars">{%- for i in (1..5) -%}{%- if i <= block.settings.stars -%}<i data-lucide="star" class="w-4 h-4 fill-current text-amber-400"></i>{%- else -%}<i data-lucide="star" class="w-4 h-4 text-slate-300"></i>{%- endif -%}{%- endfor -%}</span>
+        <blockquote class="mt-3 text-slate-600 flex-1">&ldquo;{{ block.settings.review | escape }}&rdquo;</blockquote>
+        <figcaption class="mt-4 text-sm font-semibold text-slate-800">{{ block.settings.name | escape }}{% if block.settings.verified %} <span class="inline-flex items-center gap-1 font-normal text-brand-emerald"><i data-lucide="badge-check" class="w-4 h-4"></i> Verified buyer</span>{% endif %}</figcaption>
+      </div>
+    </figure>
+    {%- endfor -%}
+  </div>
+  <p class="mt-6 text-center"><a href="/pages/reviews" class="font-semibold text-brand-royal underline">Read all reviews</a></p>
+</section>
+{%- endif -%}
+
+<!-- TRUST MARQUEE -->
+<div class="overflow-hidden bg-brand-lightBlue border-y border-sky-200 py-4" aria-label="Free standard shipping in Australia, 30-day returns, secure checkout">
+  <div class="lr-marquee flex w-max gap-10 text-sm font-semibold text-brand-navy" aria-hidden="true">
+    {%- for i in (1..2) -%}
+      {%- for j in (1..4) -%}
+      <span class="flex items-center gap-2"><i data-lucide="truck" class="w-4 h-4 text-brand-royal"></i> Free standard shipping in Australia</span>
+      <span class="flex items-center gap-2"><i data-lucide="undo-2" class="w-4 h-4 text-brand-royal"></i> 30-day returns</span>
+      <span class="flex items-center gap-2"><i data-lucide="lock" class="w-4 h-4 text-brand-royal"></i> Secure checkout</span>
+      {%- endfor -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+<!-- FAQ -->
+{%- if faqs.size > 0 -%}
+<section class="py-16 md:py-24">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight text-center">Frequently asked questions</h2>
+    <div class="mt-10 divide-y divide-slate-200 border-y border-slate-200">
+      {%- for block in faqs -%}
+      <details class="group py-5" {{ block.shopify_attributes }}>
+        <summary class="flex items-center justify-between gap-4 cursor-pointer font-bold text-brand-navy list-none"><h3>{{ block.settings.question | escape }}</h3><i data-lucide="plus" class="w-5 h-5 shrink-0 text-brand-royal transition-transform group-open:rotate-45"></i></summary>
+        <p class="mt-3 text-slate-600 leading-relaxed">{{ block.settings.answer | escape }}</p>
+      </details>
+      {%- endfor -%}
+    </div>
+    <p class="mt-6 text-center"><a href="/pages/faq" class="font-semibold text-brand-royal underline">See all questions</a></p>
+  </div>
+</section>
+{%- endif -%}
+
+<!-- FINAL CTA -->
+<section class="pb-16 md:pb-24">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="rounded-3xl bg-gradient-to-br from-brand-indigo via-brand-royal to-brand-blue text-white p-8 md:p-12 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Relax first. Then sleep, supported.</h2>
+      {%- if variant -%}<p class="mt-3 text-sky-100">{{ variant.price | money }} &middot; Free standard shipping in Australia &middot; 30-day returns</p>{%- endif -%}
+      <a href="#offers" class="mt-8 inline-flex items-center gap-2 bg-white text-brand-royal hover:bg-sky-50 font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+    </div>
+  </div>
+</section>
+
+{%- if faqs.size > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for block in faqs -%}
+    { "@type": "Question", "name": {{ block.settings.question | json }}, "acceptedAnswer": { "@type": "Answer", "text": {{ block.settings.answer | json }} } }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+{%- endif -%}
