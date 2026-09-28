@@ -6,7 +6,6 @@ These two files add the LoftRest landing page to your Shopify store. Your store'
 | --- | --- |
 | `sections/loftrest-landing.liquid` | The page itself, as a theme section |
 | `templates/page.loftrest.json` | A page template that uses it, with the FAQ questions already filled in |
-| `templates/index.json` | The same page as your store's **homepage** |
 
 ## Install (about 10 minutes)
 
@@ -32,7 +31,16 @@ These two files add the LoftRest landing page to your Shopify store. Your store'
 
 **6. Check it, then go live.** Preview the page. Click **Buy Now** to test that checkout opens. When you're happy, go back to the page and set **Visibility** to **Visible**.
 
-## Using it as the homepage
+## Homepage (new layout)
+
+`sections/loftrest-home.liquid` + `templates/index.json` are the store homepage (source `src/loftrest-home.liquid`, built with `python3 build_home.py`). The older landing page is still available at `/pages/loftrest`.
+
+Edit it in **Customize → Home page → LoftRest homepage**:
+- **Images:** 10 image slots (hero, product, both offer cards, lifestyle, four routine photos, feature close-up). Empty slots show a dashed "Add image" box in the editor only; shoppers see a soft blue panel.
+- **Hero text** and the **2-pack discount** (code + %, both needed).
+- **Blocks:** *Customer photo* (carousel appears once added), *Customer review* (genuine only; carousel appears once added), *FAQ question*.
+
+## Using the landing page as the homepage (old)
 
 To make the LoftRest page your homepage, replace your theme's `templates/index.json` with the one here: **Edit code → Templates → index.json**, delete everything, paste in `templates/index.json`, **Save**. To edit the homepage version, go to **Customize** and pick **Home page** at the top. The homepage and the `/pages/loftrest` page have separate review and FAQ blocks, so if you use the homepage you can leave the page hidden.
 
