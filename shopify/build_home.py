@@ -22,28 +22,8 @@ PRODUCT = 'loftrest-neck-traction-device'
 
 body = re.sub(r'^\{%- comment -%\}.*?\{%- endcomment -%\}\n', '', src, count=1, flags=re.S)
 
-slots = []
-def slot(m):
-    attrs = dict(re.findall(r'(\w+)="([^"]*)"', m.group(1)))
-    eager = ' eager' in m.group(1)
-    sid, label = attrs['id'], attrs['label']
-    slots.append((sid, label))
-    loading = "loading: 'eager', fetchpriority: 'high'" if eager else "loading: 'lazy'"
-    return (f'<div class="{attrs.get("wrap", "")}">'
-            f"{{%- if section.settings.{sid} != blank -%}}"
-            f"{{%- assign img_alt = section.settings.{sid}.alt | default: 'LoftRest cervical traction pillow' -%}}"
-            f"{{{{ section.settings.{sid} | image_url: width: 1600 | image_tag: widths: '400, 600, 800, 1000, 1200, 1600', "
-            f"sizes: '{attrs.get('sizes', '100vw')}', class: 'lr-w-full lr-h-full lr-object-cover', {loading}, alt: img_alt }}}}"
-            f"{{%- else -%}}"
-            f'<div class="w-full h-full flex flex-col items-center justify-center gap-2 p-4 text-center bg-gradient-to-br from-brand-lightBlue to-sky-100 text-brand-royal">'
-            f"{{%- if request.design_mode -%}}"
-            f'<div class="absolute inset-3 rounded-2xl border-2 border-dashed border-sky-300"></div>'
-            f'<i data-lucide="image-plus" class="w-8 h-8"></i><span class="text-xs font-bold uppercase tracking-wide">Add image: {label}</span>'
-            f"{{%- else -%}}<i data-lucide=\"waves\" class=\"w-10 h-10 opacity-40\"></i>{{%- endif -%}}"
-            f"</div>{{%- endif -%}}</div>")
-
-body = re.sub(r'<!--SLOT (.*?)-->', slot, body)
-assert slots and '<!--SLOT' not in body
+body, slots = twkit.expand_slots(body)
+assert slots
 body = twkit.prefix_classes(twkit.inline_icons(body))
 css = twkit.compile_css(body, page_src)
 

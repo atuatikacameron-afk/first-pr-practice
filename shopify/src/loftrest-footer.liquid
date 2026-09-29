@@ -71,6 +71,7 @@
       <ul class="mt-4 space-y-3">
         {%- for link in section.settings.help_menu.links -%}<li><a href="{{ link.url }}" class="hover:text-white">{{ link.title | escape }}</a></li>{%- endfor -%}
         {%- if section.settings.help_menu == blank -%}
+        <li><a href="/pages/about" class="hover:text-white">About us</a></li>
         <li><a href="/pages/faq" class="hover:text-white">FAQ</a></li>
         {%- if shop.shipping_policy.url != blank -%}<li><a href="{{ shop.shipping_policy.url }}" class="hover:text-white">Shipping</a></li>{%- endif -%}
         {%- if shop.refund_policy.url != blank -%}<li><a href="{{ shop.refund_policy.url }}" class="hover:text-white">Returns &amp; refunds</a></li>{%- endif -%}

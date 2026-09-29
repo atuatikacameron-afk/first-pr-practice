@@ -68,6 +68,10 @@ After editing `src/loftrest-product.liquid`, run `python3 build_product.py` in t
 - **FAQ:** each **Question** block has a **Topic**. Questions with the same topic are grouped, and topic buttons at the top jump to each group. Google's FAQ data updates automatically.
 - **Reviews:** add genuine reviews with **Add block → Customer review** (stars, title, text, name, date, optional photo and your reply), or add a review app's block. The star summary appears once there's a review. Until then the page says honestly that there are no reviews yet.
 
+## About page
+
+`sections/loftrest-about.liquid` + `templates/page.about.json` (source `src/loftrest-about.liquid`, built with `python3 build_pages.py`). The founder's story (Dad, Mum, the turning point, building LoftRest) is all in section settings, so edit it in **Customize → Pages → about**, including your name under the quote and four image slots. Keep it about comfort and relaxation, not medical results.
+
 ## Footer
 
 `sections/loftrest-footer.liquid` (source `src/loftrest-footer.liquid`, built with `python3 build_pages.py`) replaces the theme footer through `sections/footer-group.json`. Edit it in **Customize → Footer → LoftRest footer**: tagline, email signup, contact details, ABN, social links (they only show once you add real URLs), and optional Shop and Help menus. The Legal column lists every policy you've saved under **Settings → Policies** automatically.

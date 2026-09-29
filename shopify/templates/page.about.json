@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "loftrest-about",
+      "settings": {
+        "product": "loftrest-neck-traction-device",
+        "hero_image": "shopify://shop_images/loftrest-hero.webp"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

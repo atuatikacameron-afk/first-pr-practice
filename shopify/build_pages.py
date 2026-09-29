@@ -18,6 +18,9 @@ PRODUCT = 'loftrest-neck-traction-device'
 def build(name, schema, title):
     src = (ROOT / 'src' / f'{name}.liquid').read_text()
     body = re.sub(r'^\{%- comment -%\}.*?\{%- endcomment -%\}\n', '', src, count=1, flags=re.S)
+    body, slots = twkit.expand_slots(body)
+    for sid, label in slots:
+        schema["settings"].append({"type": "image_picker", "id": sid, "label": label})
     body = twkit.prefix_classes(twkit.inline_icons(body))
     css = twkit.compile_css(body, PAGE_SRC)
     liquid = f'''{{%- comment -%}}
@@ -172,4 +175,38 @@ build('loftrest-footer', footer_schema, 'LoftRest footer')
                  "settings": {"product": PRODUCT, "phone": "+61 450 213 111", "location": "Melbourne, Australia", "show_newsletter": True}}},
     "order": ["loftrest_footer"]}, indent=2, ensure_ascii=False) + '\n')
 
-print(f'Wrote FAQ page ({len(FAQ)} questions), reviews page and footer.')
+# ---------------- About ----------------
+about_schema = {
+  "name": "LoftRest about page", "tag": "div", "class": "loftrest-section",
+  "settings": [
+    {"type": "paragraph", "content": "Tell your real story. Keep it about comfort and relaxation, not medical results (see COMPLIANCE.md)."},
+    {"type": "text", "id": "founder_name", "label": "Founder name", "info": "Shown under the quote. Leave empty to show 'Founder of LoftRest'."},
+    {"type": "text", "id": "heading", "label": "Heading", "default": "Built for the people we love"},
+    {"type": "textarea", "id": "intro", "label": "Intro", "default": "LoftRest™ didn't start in a lab. It started at home, watching the two people I love most struggle to switch off at night."},
+    {"type": "header", "content": "Dad"},
+    {"type": "text", "id": "dad_label", "label": "Label", "default": "Dad"},
+    {"type": "text", "id": "dad_heading", "label": "Heading", "default": "Long days, and a neck that never got a break"},
+    {"type": "textarea", "id": "dad_text", "label": "Story", "default": "Dad worked all day, every day. He'd come home with a stiff, sore neck, sink into the couch and try to get comfortable, and most nights he just couldn't. No pillow ever seemed to be right."},
+    {"type": "header", "content": "Mum"},
+    {"type": "text", "id": "mum_label", "label": "Label", "default": "Mum"},
+    {"type": "text", "id": "mum_heading", "label": "Heading", "default": "Long nights, lying awake"},
+    {"type": "textarea", "id": "mum_text", "label": "Story", "default": "Mum had her own battle. For years she struggled with sleep, lying awake long after the house went quiet and trying everything she could think of to wind down."},
+    {"type": "header", "content": "Turning point"},
+    {"type": "textarea", "id": "quote", "label": "Quote", "default": "I'd had enough of watching the people I love struggle to rest. So I set out to make the most comfortable headrest we could, and then build the rest around it."},
+    {"type": "header", "content": "Building LoftRest"},
+    {"type": "text", "id": "build_heading", "label": "Heading", "default": "We started with the headrest. Then we built the rest."},
+    {"type": "textarea", "id": "build_text", "label": "Text", "default": "The pillow came first: something that would support Dad's neck properly and give Mum somewhere comfortable to settle. Then we added the wind-down, so evenings could be a moment to relax instead of one more thing to push through."},
+    {"type": "header", "content": "Call to action"},
+    {"type": "text", "id": "cta_heading", "label": "Heading", "default": "Now it's your turn to rest"},
+    {"type": "text", "id": "cta_text", "label": "Text", "default": "Relax first, then sleep, supported. Try LoftRest™ with 30-day change-of-mind returns."},
+    PRODUCT_SETTING,
+    {"type": "header", "content": "Images"},
+  ],
+  "presets": [{"name": "LoftRest about page"}],
+}
+build('loftrest-about', about_schema, 'LoftRest about page')
+(ROOT / 'templates' / 'page.about.json').write_text(json.dumps({"sections": {"main": {
+    "type": "loftrest-about", "settings": {"product": PRODUCT, "hero_image": "shopify://shop_images/loftrest-hero.webp"}}},
+    "order": ["main"]}, indent=2, ensure_ascii=False) + '\n')
+
+print(f'Wrote FAQ page ({len(FAQ)} questions), reviews page, footer and about page.')
