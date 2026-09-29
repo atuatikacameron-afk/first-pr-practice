@@ -70,7 +70,7 @@ After editing `src/loftrest-product.liquid`, run `python3 build_product.py` in t
 
 ## About page
 
-`sections/loftrest-about.liquid` + `templates/page.about.json` (source `src/loftrest-about.liquid`, built with `python3 build_pages.py`). The founder's story (Dad, Mum, the turning point, building LoftRest) is all in section settings, so edit it in **Customize → Pages → about**, including your name under the quote and four image slots. Keep it about comfort and relaxation, not medical results.
+`sections/loftrest-about.liquid` + `templates/page.about.json` (source `src/loftrest-about.liquid`, built with `python3 build_pages.py`). The founder's story (his 10+ hour workdays, his girlfriend's sleepless nights, the turning point, building LoftRest) is all in section settings, so edit it in **Customize → Pages → about**, including your name under the quote and four image slots. Keep it about comfort and relaxation, not medical results.
 
 ## Footer
 

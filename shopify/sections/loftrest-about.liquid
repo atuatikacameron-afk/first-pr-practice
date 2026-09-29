@@ -40,30 +40,30 @@
   </div>
 </section>
 
-<!-- DAD -->
+<!-- ME: LONG WORKDAYS -->
 <section class="lr-py-16 md:lr-py-24">
   <div class="lr-max-w-6xl lr-mx-auto lr-px-4 lr-grid lr-grid-cols-1 md:lr-grid-cols-2 lr-gap-10 lr-items-center">
     <div class="lr-relative lr-aspect-[4/5] lr-rounded-3xl lr-overflow-hidden">
-      <div class="lr-absolute lr-inset-0">{%- if section.settings.dad_image != blank -%}{%- assign img_alt = section.settings.dad_image.alt | default: 'LoftRest cervical traction pillow' -%}{{ section.settings.dad_image | image_url: width: 1600 | image_tag: widths: '400, 600, 800, 1000, 1200, 1600', sizes: '(min-width: 768px) 560px, 100vw', class: 'lr-w-full lr-h-full lr-object-cover', loading: 'lazy', alt: img_alt }}{%- else -%}<div class="lr-w-full lr-h-full lr-flex lr-flex-col lr-items-center lr-justify-center lr-gap-2 lr-p-4 lr-text-center lr-bg-gradient-to-br lr-from-brand-lightBlue lr-to-sky-100 lr-text-brand-royal">{%- if request.design_mode -%}<div class="lr-absolute lr-inset-3 lr-rounded-2xl lr-border-2 lr-border-dashed lr-border-sky-300"></div><svg class="lr-w-8 lr-h-8" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M16 5h6" /><path d="M19 2v6" /><path d="M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /><circle cx="9" cy="9" r="2" /></svg><span class="lr-text-xs lr-font-bold lr-uppercase lr-tracking-wide">Add image: Photo of Dad (or his workday)</span>{%- else -%}<svg class="lr-w-10 lr-h-10 lr-opacity-40" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M2 12q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 19q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 5q2.5 2 5 0t5 0 5 0 5 0" /></svg>{%- endif -%}</div>{%- endif -%}</div>
+      <div class="lr-absolute lr-inset-0">{%- if section.settings.me_image != blank -%}{%- assign img_alt = section.settings.me_image.alt | default: 'LoftRest cervical traction pillow' -%}{{ section.settings.me_image | image_url: width: 1600 | image_tag: widths: '400, 600, 800, 1000, 1200, 1600', sizes: '(min-width: 768px) 560px, 100vw', class: 'lr-w-full lr-h-full lr-object-cover', loading: 'lazy', alt: img_alt }}{%- else -%}<div class="lr-w-full lr-h-full lr-flex lr-flex-col lr-items-center lr-justify-center lr-gap-2 lr-p-4 lr-text-center lr-bg-gradient-to-br lr-from-brand-lightBlue lr-to-sky-100 lr-text-brand-royal">{%- if request.design_mode -%}<div class="lr-absolute lr-inset-3 lr-rounded-2xl lr-border-2 lr-border-dashed lr-border-sky-300"></div><svg class="lr-w-8 lr-h-8" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M16 5h6" /><path d="M19 2v6" /><path d="M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /><circle cx="9" cy="9" r="2" /></svg><span class="lr-text-xs lr-font-bold lr-uppercase lr-tracking-wide">Add image: Photo of you (or your workday)</span>{%- else -%}<svg class="lr-w-10 lr-h-10 lr-opacity-40" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M2 12q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 19q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 5q2.5 2 5 0t5 0 5 0 5 0" /></svg>{%- endif -%}</div>{%- endif -%}</div>
     </div>
     <div>
-      <p class="lr-text-brand-royal lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">{{ s.dad_label | escape }}</p>
-      <h2 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">{{ s.dad_heading | escape }}</h2>
-      <p class="lr-mt-5 lr-text-lg lr-text-slate-700 lr-leading-relaxed lr-whitespace-pre-line">{{ s.dad_text | escape }}</p>
+      <p class="lr-text-brand-royal lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">{{ s.me_label | escape }}</p>
+      <h2 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">{{ s.me_heading | escape }}</h2>
+      <p class="lr-mt-5 lr-text-lg lr-text-slate-700 lr-leading-relaxed lr-whitespace-pre-line">{{ s.me_text | escape }}</p>
     </div>
   </div>
 </section>
 
-<!-- MUM -->
+<!-- HER: RESTLESS NIGHTS -->
 <section class="lr-py-16 md:lr-py-24 lr-bg-white lr-border-y lr-border-slate-200">
   <div class="lr-max-w-6xl lr-mx-auto lr-px-4 lr-grid lr-grid-cols-1 md:lr-grid-cols-2 lr-gap-10 lr-items-center">
     <div class="md:lr-order-2 lr-relative lr-aspect-[4/5] lr-rounded-3xl lr-overflow-hidden">
-      <div class="lr-absolute lr-inset-0">{%- if section.settings.mum_image != blank -%}{%- assign img_alt = section.settings.mum_image.alt | default: 'LoftRest cervical traction pillow' -%}{{ section.settings.mum_image | image_url: width: 1600 | image_tag: widths: '400, 600, 800, 1000, 1200, 1600', sizes: '(min-width: 768px) 560px, 100vw', class: 'lr-w-full lr-h-full lr-object-cover', loading: 'lazy', alt: img_alt }}{%- else -%}<div class="lr-w-full lr-h-full lr-flex lr-flex-col lr-items-center lr-justify-center lr-gap-2 lr-p-4 lr-text-center lr-bg-gradient-to-br lr-from-brand-lightBlue lr-to-sky-100 lr-text-brand-royal">{%- if request.design_mode -%}<div class="lr-absolute lr-inset-3 lr-rounded-2xl lr-border-2 lr-border-dashed lr-border-sky-300"></div><svg class="lr-w-8 lr-h-8" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M16 5h6" /><path d="M19 2v6" /><path d="M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /><circle cx="9" cy="9" r="2" /></svg><span class="lr-text-xs lr-font-bold lr-uppercase lr-tracking-wide">Add image: Photo of Mum (or her evenings)</span>{%- else -%}<svg class="lr-w-10 lr-h-10 lr-opacity-40" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M2 12q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 19q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 5q2.5 2 5 0t5 0 5 0 5 0" /></svg>{%- endif -%}</div>{%- endif -%}</div>
+      <div class="lr-absolute lr-inset-0">{%- if section.settings.her_image != blank -%}{%- assign img_alt = section.settings.her_image.alt | default: 'LoftRest cervical traction pillow' -%}{{ section.settings.her_image | image_url: width: 1600 | image_tag: widths: '400, 600, 800, 1000, 1200, 1600', sizes: '(min-width: 768px) 560px, 100vw', class: 'lr-w-full lr-h-full lr-object-cover', loading: 'lazy', alt: img_alt }}{%- else -%}<div class="lr-w-full lr-h-full lr-flex lr-flex-col lr-items-center lr-justify-center lr-gap-2 lr-p-4 lr-text-center lr-bg-gradient-to-br lr-from-brand-lightBlue lr-to-sky-100 lr-text-brand-royal">{%- if request.design_mode -%}<div class="lr-absolute lr-inset-3 lr-rounded-2xl lr-border-2 lr-border-dashed lr-border-sky-300"></div><svg class="lr-w-8 lr-h-8" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M16 5h6" /><path d="M19 2v6" /><path d="M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /><circle cx="9" cy="9" r="2" /></svg><span class="lr-text-xs lr-font-bold lr-uppercase lr-tracking-wide">Add image: Photo of her (or your evenings)</span>{%- else -%}<svg class="lr-w-10 lr-h-10 lr-opacity-40" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M2 12q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 19q2.5 2 5 0t5 0 5 0 5 0" /><path d="M2 5q2.5 2 5 0t5 0 5 0 5 0" /></svg>{%- endif -%}</div>{%- endif -%}</div>
     </div>
     <div class="md:lr-order-1">
-      <p class="lr-text-brand-royal lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">{{ s.mum_label | escape }}</p>
-      <h2 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">{{ s.mum_heading | escape }}</h2>
-      <p class="lr-mt-5 lr-text-lg lr-text-slate-700 lr-leading-relaxed lr-whitespace-pre-line">{{ s.mum_text | escape }}</p>
+      <p class="lr-text-brand-royal lr-font-bold lr-text-sm lr-uppercase lr-tracking-wide">{{ s.her_label | escape }}</p>
+      <h2 class="lr-mt-2 lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">{{ s.her_heading | escape }}</h2>
+      <p class="lr-mt-5 lr-text-lg lr-text-slate-700 lr-leading-relaxed lr-whitespace-pre-line">{{ s.her_text | escape }}</p>
     </div>
   </div>
 </section>
@@ -103,7 +103,7 @@
   <div class="lr-max-w-6xl lr-mx-auto lr-px-4">
     <h2 class="lr-text-3xl md:lr-text-4xl lr-font-extrabold lr-tracking-tight lr-text-center">What we stand for</h2>
     <div class="lr-mt-10 lr-grid lr-grid-cols-1 md:lr-grid-cols-3 lr-gap-6">
-      <div class="lr-rounded-2xl lr-bg-white/10 lr-p-6"><svg class="lr-w-8 lr-h-8 lr-text-sky-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762" /></svg><h3 class="lr-mt-4 lr-text-xl lr-font-bold">Made for family</h3><p class="lr-mt-2 lr-text-sky-100">We design every LoftRest™ as if it's going to our own parents, because that's where it started.</p></div>
+      <div class="lr-rounded-2xl lr-bg-white/10 lr-p-6"><svg class="lr-w-8 lr-h-8 lr-text-sky-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762" /></svg><h3 class="lr-mt-4 lr-text-xl lr-font-bold">Made for the people we love</h3><p class="lr-mt-2 lr-text-sky-100">We design every LoftRest™ as if it's going in our own bedroom, because that's where it started.</p></div>
       <div class="lr-rounded-2xl lr-bg-white/10 lr-p-6"><svg class="lr-w-8 lr-h-8 lr-text-sky-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" /><path d="m16 9-5.5 5.5L8 12" /></svg><h3 class="lr-mt-4 lr-text-xl lr-font-bold">Honest, always</h3><p class="lr-mt-2 lr-text-sky-100">Real reviews only, no fake sales, and no promises we can't keep. LoftRest™ is a comfort product, and we say so.</p></div>
       <div class="lr-rounded-2xl lr-bg-white/10 lr-p-6"><svg class="lr-w-8 lr-h-8 lr-text-sky-300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg><h3 class="lr-mt-4 lr-text-xl lr-font-bold">Here to help</h3><p class="lr-mt-2 lr-text-sky-100">A small team you can actually reach, with 30-day change-of-mind returns and free standard shipping in Australia.</p></div>
     </div>
@@ -143,57 +143,57 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Built for the people we love"
+      "default": "Built for two people who needed rest"
     },
     {
       "type": "textarea",
       "id": "intro",
       "label": "Intro",
-      "default": "LoftRest™ didn't start in a lab. It started at home, watching the two people I love most struggle to switch off at night."
+      "default": "LoftRest™ started at home. I was working 10+ hour days and finishing every one with a stiff, sore neck. My girlfriend was lying awake most nights, struggling to switch off. Between the two of us, nobody was getting the rest we needed."
     },
     {
       "type": "header",
-      "content": "Dad"
+      "content": "Your story"
     },
     {
       "type": "text",
-      "id": "dad_label",
+      "id": "me_label",
       "label": "Label",
-      "default": "Dad"
+      "default": "Me"
     },
     {
       "type": "text",
-      "id": "dad_heading",
+      "id": "me_heading",
       "label": "Heading",
-      "default": "Long days, and a neck that never got a break"
+      "default": "10+ hour days, and a neck that never got a break"
     },
     {
       "type": "textarea",
-      "id": "dad_text",
+      "id": "me_text",
       "label": "Story",
-      "default": "Dad worked all day, every day. He'd come home with a stiff, sore neck, sink into the couch and try to get comfortable, and most nights he just couldn't. No pillow ever seemed to be right."
+      "default": "Most days I work more than 10 hours. By the time I got home, my neck and shoulders were tight and sore, and no pillow I tried ever felt right. I'd lie down wanting to rest and just couldn't get comfortable."
     },
     {
       "type": "header",
-      "content": "Mum"
+      "content": "Her story"
     },
     {
       "type": "text",
-      "id": "mum_label",
+      "id": "her_label",
       "label": "Label",
-      "default": "Mum"
+      "default": "Her"
     },
     {
       "type": "text",
-      "id": "mum_heading",
+      "id": "her_heading",
       "label": "Heading",
       "default": "Long nights, lying awake"
     },
     {
       "type": "textarea",
-      "id": "mum_text",
+      "id": "her_text",
       "label": "Story",
-      "default": "Mum had her own battle. For years she struggled with sleep, lying awake long after the house went quiet and trying everything she could think of to wind down."
+      "default": "My girlfriend has struggled with sleep for as long as I've known her. She'd lie awake long after the lights went out, trying everything she could think of to wind down."
     },
     {
       "type": "header",
@@ -203,7 +203,7 @@
       "type": "textarea",
       "id": "quote",
       "label": "Quote",
-      "default": "I'd had enough of watching the people I love struggle to rest. So I set out to make the most comfortable headrest we could, and then build the rest around it."
+      "default": "One night, both of us lying awake, I'd had enough. I set out to make the most comfortable headrest we could, and then build the rest around it."
     },
     {
       "type": "header",
@@ -219,7 +219,7 @@
       "type": "textarea",
       "id": "build_text",
       "label": "Text",
-      "default": "The pillow came first: something that would support Dad's neck properly and give Mum somewhere comfortable to settle. Then we added the wind-down, so evenings could be a moment to relax instead of one more thing to push through."
+      "default": "The pillow came first: something that would support my neck after a long day and give her somewhere comfortable to settle. Then we added the wind-down, so our evenings could be a moment to relax together instead of one more thing to push through."
     },
     {
       "type": "header",
@@ -253,13 +253,13 @@
     },
     {
       "type": "image_picker",
-      "id": "dad_image",
-      "label": "Photo of Dad (or his workday)"
+      "id": "me_image",
+      "label": "Photo of you (or your workday)"
     },
     {
       "type": "image_picker",
-      "id": "mum_image",
-      "label": "Photo of Mum (or her evenings)"
+      "id": "her_image",
+      "label": "Photo of her (or your evenings)"
     },
     {
       "type": "image_picker",
