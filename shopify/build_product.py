@@ -8,7 +8,7 @@ Writes:
 """
 import json, pathlib, re
 
-import twkit
+import reviews_data, twkit
 
 ROOT = pathlib.Path(__file__).resolve().parent
 src = (ROOT / 'src' / 'loftrest-product.liquid').read_text()
@@ -66,11 +66,12 @@ schema = {
       {"type": "text", "id": "badge", "label": "Badge", "info": "e.g. Most popular"}]},
     {"type": "review", "name": "Customer review", "settings": [
       {"type": "paragraph", "content": "Only add genuine reviews from real customers, with their permission."},
-      {"type": "range", "id": "stars", "label": "Stars", "min": 1, "max": 5, "step": 1, "default": 5},
+      reviews_data.STARS,
       {"type": "text", "id": "title", "label": "Title"},
       {"type": "textarea", "id": "review", "label": "Review"},
       {"type": "text", "id": "name", "label": "Customer name", "info": "e.g. Sarah, Melbourne"},
-      {"type": "checkbox", "id": "verified", "label": "Verified buyer", "default": True}]},
+      {"type": "checkbox", "id": "verified", "label": "Verified buyer", "default": True},
+      reviews_data.SOURCE_SETTING]},
     {"type": "faq", "name": "FAQ question", "settings": [
       {"type": "text", "id": "question", "label": "Question"},
       {"type": "textarea", "id": "answer", "label": "Answer"}]}
@@ -99,6 +100,7 @@ blocks = {
   "offer_2": {"type": "offer", "settings": {"label": "2 × LoftRest™", "note": "One for you, one for someone you love", "quantity": 2,
                                             "discount_code": "LOFTREST2PACK", "discount_percent": 10, "badge": "Save 10%"}},
 }
+blocks.update(reviews_data.blocks())
 blocks.update({f"faq_{i+1}": {"type": "faq", "settings": {"question": q, "answer": a}} for i, (q, a) in enumerate(faqs)})
 template = {
   "sections": {"main": {"type": "loftrest-product", "blocks": blocks, "block_order": list(blocks),

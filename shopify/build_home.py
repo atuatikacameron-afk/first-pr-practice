@@ -13,7 +13,7 @@ editor shows a dashed "Add image" box; shoppers only see a soft brand-coloured p
 """
 import json, pathlib, re
 
-import twkit
+import reviews_data, twkit
 
 ROOT = pathlib.Path(__file__).resolve().parent
 src = (ROOT / 'src' / 'loftrest-home.liquid').read_text()
@@ -49,10 +49,11 @@ schema = {
       {"type": "text", "id": "caption", "label": "Caption"}]},
     {"type": "review", "name": "Customer review", "settings": [
       {"type": "paragraph", "content": "Only add genuine reviews from real customers, with their permission."},
-      {"type": "range", "id": "stars", "label": "Stars", "min": 1, "max": 5, "step": 1, "default": 5},
+      reviews_data.STARS,
       {"type": "textarea", "id": "review", "label": "Review"},
       {"type": "text", "id": "name", "label": "Customer name"},
       {"type": "checkbox", "id": "verified", "label": "Verified buyer", "default": True},
+      reviews_data.SOURCE_SETTING,
       {"type": "image_picker", "id": "photo", "label": "Photo (optional)"}]},
     {"type": "faq", "name": "FAQ question", "settings": [
       {"type": "text", "id": "question", "label": "Question"},
@@ -84,11 +85,12 @@ want = ["What is LoftRest™?", "How long and how often should I use it?", "Can 
         "Is LoftRest™ a medical device?", "How much is shipping, and how long does it take?",
         "Can I return LoftRest™ if I change my mind?"]
 by_q = {b['settings']['question']: b['settings']['answer'] for b in faq_page['blocks'].values()}
-blocks = {f"faq_{i+1}": {"type": "faq", "settings": {"question": q, "answer": by_q[q]}} for i, q in enumerate(want)}
+blocks = reviews_data.blocks()
+blocks.update({f"faq_{i+1}": {"type": "faq", "settings": {"question": q, "answer": by_q[q]}} for i, q in enumerate(want)})
 (ROOT / 'templates' / 'index.json').write_text(json.dumps({"sections": {"main": {
     "type": "loftrest-home", "blocks": blocks, "block_order": list(blocks),
     "settings": {"product": PRODUCT, "bundle_code": "LOFTREST2PACK", "bundle_percent": 10,
                  "hero_image": "shopify://shop_images/loftrest-hero.webp",
                  "lifestyle_image": "shopify://shop_images/waking-up.webp"}}},
     "order": ["main"]}, indent=2, ensure_ascii=False) + '\n')
-print(f'Wrote homepage section ({len(slots)} image slots, {len(blocks)} FAQ questions).')
+print(f'Wrote homepage section ({len(slots)} image slots, {len(blocks)} blocks).')

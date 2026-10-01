@@ -4,11 +4,11 @@
 
 Writes:
   sections/loftrest-faq.liquid       + templates/page.faq.json      (questions pre-filled)
-  sections/loftrest-reviews.liquid   + templates/page.reviews.json  (no reviews until you add real ones)
+  sections/loftrest-reviews.liquid   + templates/page.reviews.json  (customer reviews from reviews_data.py)
 """
 import json, pathlib, re
 
-import twkit
+import reviews_data, twkit
 
 ROOT = pathlib.Path(__file__).resolve().parent
 PAGE_SRC = (ROOT.parent / 'index.html').read_text()   # brand colours / tailwind.config
@@ -127,12 +127,13 @@ reviews_schema = {
     {"type": "@app"},
     {"type": "review", "name": "Customer review", "settings": [
       {"type": "paragraph", "content": "Only add genuine reviews from real customers, with their permission. Don't edit them to change their meaning, and don't leave out negative ones."},
-      {"type": "range", "id": "stars", "label": "Stars", "min": 1, "max": 5, "step": 1, "default": 5},
+      reviews_data.STARS,
       {"type": "text", "id": "title", "label": "Title"},
       {"type": "textarea", "id": "review", "label": "Review"},
       {"type": "text", "id": "name", "label": "Customer name", "info": "e.g. Sarah, Melbourne"},
       {"type": "text", "id": "date", "label": "Date", "info": "e.g. October 2026"},
       {"type": "checkbox", "id": "verified", "label": "Verified buyer", "default": True, "info": "Only tick if you've matched the review to an order."},
+      reviews_data.SOURCE_SETTING,
       {"type": "image_picker", "id": "photo", "label": "Customer photo (optional)"},
       {"type": "textarea", "id": "reply", "label": "Your reply (optional)"}]},
   ],
@@ -140,7 +141,8 @@ reviews_schema = {
 }
 build('loftrest-reviews', reviews_schema, 'LoftRest reviews page')
 (ROOT / 'templates' / 'page.reviews.json').write_text(json.dumps({"sections": {"main": {
-    "type": "loftrest-reviews", "settings": {"product": PRODUCT}}}, "order": ["main"]}, indent=2, ensure_ascii=False) + '\n')
+    "type": "loftrest-reviews", "blocks": reviews_data.blocks(), "block_order": list(reviews_data.blocks()),
+    "settings": {"product": PRODUCT}}}, "order": ["main"]}, indent=2, ensure_ascii=False) + '\n')
 
 # ---------------- Footer ----------------
 footer_schema = {

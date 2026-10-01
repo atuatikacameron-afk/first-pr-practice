@@ -6,10 +6,10 @@
 {%- assign reviews = section.blocks | where: 'type', 'review' -%}
 {%- assign review_count = reviews | size -%}
 {%- assign app_blocks = section.blocks | where: 'type', '@app' -%}
-{%- assign star_total = 0 -%}
-{%- for r in reviews -%}{%- assign star_total = star_total | plus: r.settings.stars -%}{%- endfor -%}
-{%- if review_count > 0 -%}
-  {%- assign rating = star_total | times: 1.0 | divided_by: review_count | round: 1 -%}
+{%- assign star_total = 0 -%}{%- assign rated_count = 0 -%}
+{%- for r in reviews -%}{%- if r.settings.stars > 0 -%}{%- assign star_total = star_total | plus: r.settings.stars -%}{%- assign rated_count = rated_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
+{%- if rated_count > 0 -%}
+  {%- assign rating = star_total | times: 1.0 | divided_by: rated_count | round: 1 -%}
   {%- assign rating_rounded = rating | round -%}
 {%- endif -%}
 {%- assign support_email = section.settings.support_email | default: shop.email -%}
@@ -21,10 +21,10 @@
     <div class="max-w-4xl mx-auto px-4 py-12 md:py-16 text-center">
       <p class="text-sky-400 font-bold text-sm uppercase tracking-wide">Reviews</p>
       <h1 class="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight">{{ section.settings.heading | escape }}</h1>
-      {%- if review_count > 0 -%}
+      {%- if rated_count > 0 -%}
       <div class="mt-6 inline-flex flex-col items-center gap-2">
         <span class="flex" aria-hidden="true">{%- for i in (1..5) -%}{%- if i <= rating_rounded -%}<i data-lucide="star" class="w-7 h-7 fill-current text-amber-400"></i>{%- else -%}<i data-lucide="star" class="w-7 h-7 text-slate-500"></i>{%- endif -%}{%- endfor -%}</span>
-        <p class="text-lg"><strong>{{ rating }} out of 5</strong> <span class="text-slate-300">from {{ review_count }} review{% if review_count != 1 %}s{% endif %}</span></p>
+        <p class="text-lg"><strong>{{ rating }} out of 5</strong> <span class="text-slate-300">from {{ rated_count }} rating{% if rated_count != 1 %}s{% endif %}</span></p>
       </div>
       {%- elsif section.settings.intro != blank -%}
       <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">{{ section.settings.intro | escape }}</p>
@@ -42,12 +42,12 @@
           {{ block.settings.photo | image_url: width: 800 | image_tag: widths: '400, 600, 800', sizes: '(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw', class: 'lr-w-full lr-aspect-square lr-object-cover lr-rounded-xl lr-mb-4', loading: 'lazy', alt: block.settings.photo.alt }}
         {%- endif -%}
         <div class="flex items-center justify-between gap-3">
-          <span class="flex" aria-label="{{ block.settings.stars }} out of 5 stars">{%- for i in (1..5) -%}{%- if i <= block.settings.stars -%}<i data-lucide="star" class="w-4 h-4 fill-current text-amber-400"></i>{%- else -%}<i data-lucide="star" class="w-4 h-4 text-slate-300"></i>{%- endif -%}{%- endfor -%}</span>
+          {%- if block.settings.stars > 0 -%}<span class="flex" aria-label="{{ block.settings.stars }} out of 5 stars">{%- for i in (1..5) -%}{%- if i <= block.settings.stars -%}<i data-lucide="star" class="w-4 h-4 fill-current text-amber-400"></i>{%- else -%}<i data-lucide="star" class="w-4 h-4 text-slate-300"></i>{%- endif -%}{%- endfor -%}</span>{%- else -%}<i data-lucide="quote" class="w-6 h-6 text-brand-royal/30"></i>{%- endif -%}
           {%- if block.settings.date != blank -%}<span class="text-xs text-slate-400">{{ block.settings.date | escape }}</span>{%- endif -%}
         </div>
         {%- if block.settings.title != blank -%}<h2 class="mt-3 font-bold text-brand-navy">{{ block.settings.title | escape }}</h2>{%- endif -%}
         <blockquote class="mt-2 text-slate-600 flex-1 whitespace-pre-line">{{ block.settings.review | escape }}</blockquote>
-        <figcaption class="mt-4 text-sm font-semibold text-slate-800">{{ block.settings.name | escape }}{% if block.settings.verified %} <span class="inline-flex items-center gap-1 font-normal text-brand-emerald"><i data-lucide="badge-check" class="w-4 h-4"></i> Verified buyer</span>{% endif %}</figcaption>
+        <figcaption class="mt-4 text-sm font-semibold text-slate-800">{{ block.settings.name | escape }}{% if block.settings.verified %} <span class="inline-flex items-center gap-1 font-normal text-brand-emerald"><i data-lucide="badge-check" class="w-4 h-4"></i> Verified buyer</span>{% endif %}{% if block.settings.source != blank %}<span class="block mt-0.5 text-xs font-normal text-slate-500">{{ block.settings.source | escape }}</span>{% endif %}</figcaption>
         {%- if block.settings.reply != blank -%}
         <div class="mt-4 rounded-xl bg-slate-50 p-4 text-sm text-slate-600"><p class="font-semibold text-brand-navy">Reply from LoftRest™</p><p class="mt-1 whitespace-pre-line">{{ block.settings.reply | escape }}</p></div>
         {%- endif -%}

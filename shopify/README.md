@@ -66,7 +66,9 @@ After editing `src/loftrest-product.liquid`, run `python3 build_product.py` in t
 `sections/loftrest-faq.liquid` + `templates/page.faq.json` and `sections/loftrest-reviews.liquid` + `templates/page.reviews.json` (sources in `src/`, built with `python3 build_pages.py`).
 
 - **FAQ:** each **Question** block has a **Topic**. Questions with the same topic are grouped, and topic buttons at the top jump to each group. Google's FAQ data updates automatically.
-- **Reviews:** add genuine reviews with **Add block → Customer review** (stars, title, text, name, date, optional photo and your reply), or add a review app's block. The star summary appears once there's a review. Until then the page says honestly that there are no reviews yet.
+- **Reviews:** add genuine reviews with **Add block → Customer review** (stars, title, text, name, date, optional photo and your reply), or add a review app's block. The star summary appears once a review has stars (set **Stars** to 0 for a review with no rating, so it isn't counted). Until then the page says honestly that there are no reviews yet.
+
+The 8 customer reviews on the product page, homepage and Reviews page come from `reviews_data.py`. These customers bought before the online store opened, so they're shown word for word with "Purchased before our online store opened" instead of **Verified buyer**, and without stars because they didn't give a rating. Reviews that mention medical conditions (insomnia, disc problems, years of pain) are left out: on your own site, a testimonial counts as your advertising, so it can't make health claims you couldn't make yourself.
 
 ## About page
 
