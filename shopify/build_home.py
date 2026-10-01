@@ -89,8 +89,15 @@ blocks = reviews_data.blocks()
 blocks.update({f"faq_{i+1}": {"type": "faq", "settings": {"question": q, "answer": by_q[q]}} for i, q in enumerate(want)})
 (ROOT / 'templates' / 'index.json').write_text(json.dumps({"sections": {"main": {
     "type": "loftrest-home", "blocks": blocks, "block_order": list(blocks),
-    "settings": {"product": PRODUCT, "bundle_code": "LOFTREST2PACK", "bundle_percent": 10,
+    "settings": {"product": PRODUCT, "hero_badge": "3-in-1 traction pillow",
+                 "hero_heading": "Your evening wind-down starts here",
+                 "hero_text": "Gentle air traction, soothing warmth and massage to help you unwind, then contoured memory foam that supports your neck all night.",
+                 "bundle_code": "LOFTREST2PACK", "bundle_percent": 10,
                  "hero_image": "shopify://shop_images/loftrest-hero.webp",
-                 "lifestyle_image": "shopify://shop_images/waking-up.webp"}}},
+                 "product_image": "shopify://shop_images/Title_ad188c19-967a-4386-bb65-74cf28fb6639.png",
+                 "offer1_image": "shopify://shop_images/u8512767942_edit_tis_kee_it_clean_and_studio_vibes_just_keep__1052460e-07fa-4269-8423-eaafffc4b717_3.png",
+                 "offer2_image": "shopify://shop_images/u8512767942_edit_tis_kee_it_clean_and_studio_vibes_just_keep__4380a481-880e-476c-8e3f-df624be1e107_3.png",
+                 "lifestyle_image": "shopify://shop_images/waking-up.webp",
+                 "features_image": "shopify://shop_images/IMG_5504.jpg"}}},
     "order": ["main"]}, indent=2, ensure_ascii=False) + '\n')
 print(f'Wrote homepage section ({len(slots)} image slots, {len(blocks)} blocks).')
