@@ -98,7 +98,7 @@ liquid = f'''{{%- comment -%}}
 blocks = {
   "offer_1": {"type": "offer", "settings": {"label": "1 × LoftRest™", "note": "For you", "quantity": 1}},
   "offer_2": {"type": "offer", "settings": {"label": "2 × LoftRest™", "note": "One for you, one for someone you love", "quantity": 2,
-                                            "discount_code": "LOFTREST2PACK", "discount_percent": 10, "badge": "Save 10%"}},
+                                            "discount_code": "LOFTREST2PACK", "discount_percent": 10, "badge": "Save 10% + Free AU shipping"}},
 }
 blocks.update(reviews_data.blocks())
 blocks.update({f"faq_{i+1}": {"type": "faq", "settings": {"question": q, "answer": a}} for i, (q, a) in enumerate(faqs)})

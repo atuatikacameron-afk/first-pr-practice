@@ -90,7 +90,11 @@
               {%- assign off = bundle_price | times: block.settings.discount_percent | divided_by: 100 -%}
               {%- assign bundle_final = bundle_price | minus: off -%}
             {%- endif -%}
-          <label class="flex items-center gap-4 rounded-xl border-2 border-slate-200 p-4 cursor-pointer has-[:checked]:border-brand-blue has-[:checked]:bg-brand-lightBlue/40" {{ block.shopify_attributes }}>
+          {%- if block.settings.badge != blank -%}
+          <label class="relative mt-5 flex items-center gap-4 rounded-xl border-2 border-brand-royal bg-gradient-to-r from-brand-lightBlue/60 to-white p-4 shadow-lg shadow-brand-royal/10 cursor-pointer has-[:checked]:border-brand-blue has-[:checked]:bg-brand-lightBlue/40" {{ block.shopify_attributes }}>
+          {%- else -%}
+          <label class="relative flex items-center gap-4 rounded-xl border-2 border-slate-200 p-4 cursor-pointer has-[:checked]:border-brand-blue has-[:checked]:bg-brand-lightBlue/40" {{ block.shopify_attributes }}>
+          {%- endif -%}
             <input type="radio" name="lr-offer" class="accent-brand-blue w-4 h-4" value="{{ qty }}" data-code="{% if use_discount %}{{ block.settings.discount_code | escape }}{% endif %}" {% if forloop.first %}checked{% endif %}>
             <span class="flex-1">
               <span class="block font-bold text-brand-navy">{{ block.settings.label | escape }}</span>
@@ -104,7 +108,7 @@
               <span class="block font-extrabold text-brand-navy">{{ bundle_price | money }}</span>
               {%- endif -%}
             </span>
-            {%- if block.settings.badge != blank -%}<span class="text-xs font-bold bg-brand-emerald text-white px-2 py-1 rounded">{{ block.settings.badge | escape }}</span>{%- endif -%}
+            {%- if block.settings.badge != blank -%}<span class="absolute -top-3.5 left-4 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-emerald to-emerald-500 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-white shadow-md"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> {{ block.settings.badge | escape }}</span>{%- endif -%}
           </label>
           {%- endfor -%}
         </fieldset>

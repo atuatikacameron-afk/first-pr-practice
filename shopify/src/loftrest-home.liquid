@@ -89,8 +89,8 @@
         {%- endif -%}
       </div>
       <!-- Offer 2 -->
-      <div class="relative rounded-3xl bg-white border-2 border-brand-royal p-6 flex flex-col">
-        {%- if bundle_ok -%}<span class="absolute -top-3 left-6 bg-brand-emerald text-white text-xs font-bold px-3 py-1 rounded-full">Save {{ section.settings.bundle_percent }}%</span>{%- endif -%}
+      <div class="relative rounded-3xl bg-gradient-to-b from-brand-lightBlue/60 to-white border-2 border-brand-royal p-6 flex flex-col shadow-xl shadow-brand-royal/15">
+        {%- if bundle_ok or section.settings.bundle_badge != blank -%}<span class="absolute -top-4 left-6 z-10 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-emerald to-emerald-500 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wide text-white shadow-md"><i data-lucide="sparkles" class="w-4 h-4"></i> {% if section.settings.bundle_badge != blank %}{{ section.settings.bundle_badge | escape }}{% else %}Save {{ section.settings.bundle_percent }}%{% endif %}</span>{%- endif -%}
         <div class="relative aspect-[4/3] rounded-2xl overflow-hidden">
           <!--SLOT id="offer2_image" label="Offer photo (2 pillows)" wrap="absolute inset-0" sizes="(min-width: 768px) 460px, 100vw"-->
         </div>
@@ -99,6 +99,7 @@
           <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> One for you, one for someone you love</li>
           <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> Everything in the single pillow, twice</li>
           {%- if bundle_ok -%}<li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> {{ section.settings.bundle_percent }}% off, applied at checkout</li>{%- endif -%}
+          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> Free standard shipping within Australia</li>
         </ul>
         {%- if variant -%}
           {%- assign pair = variant.price | times: 2 -%}
