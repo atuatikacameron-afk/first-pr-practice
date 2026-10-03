@@ -36,7 +36,7 @@ These two files add the LoftRest landing page to your Shopify store. Your store'
 `sections/loftrest-home.liquid` + `templates/index.json` are the store homepage (source `src/loftrest-home.liquid`, built with `python3 build_home.py`). The older landing page is still available at `/pages/loftrest`.
 
 Edit it in **Customize → Home page → LoftRest homepage**:
-- **Images:** 10 image slots (hero, product, both offer cards, lifestyle, four routine photos, feature close-up). Empty slots show a dashed "Add image" box in the editor only; shoppers see a soft blue panel.
+- **Images:** 6 image slots (hero, product, both offer cards, lifestyle, feature close-up). Empty slots show a dashed "Add image" box in the editor only; shoppers see a soft blue panel.
 - **Hero text** and the **2-pack discount** (code + %, both needed).
 - **Blocks:** *Customer photo* (carousel appears once added), *Customer review* (genuine only; carousel appears once added), *FAQ question*.
 
@@ -107,3 +107,7 @@ python3 build.py
 The build turns the page's styles and icons into plain CSS and SVG inside the section, so nothing loads from outside at runtime. It also adds an `lr-` prefix to every style class so none can clash with your theme's own classes.
 
 Then paste the new `sections/loftrest-landing.liquid` into your theme again. Pasting the template again resets the FAQ to what's in `index.html`, so skip that step if you've edited questions in Shopify.
+
+## Theme file overrides
+
+`theme-overrides/` holds theme files we've patched (not built by a script). `sections/header-announcements.liquid` is Horizon's announcement bar with one change: the text is centred on mobile. If you update the theme to a new Horizon version, re-apply that CSS rule.
