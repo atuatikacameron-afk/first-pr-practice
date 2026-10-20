@@ -101,14 +101,14 @@
           "type": "faq",
           "settings": {
             "question": "How long should I use it each day?",
-            "answer": "Each LoftRest™ session runs for 15–30 minutes. Most people use it once a day, often in the evening before sleep. Start on the gentlest setting, build up gradually, and stop if anything feels uncomfortable."
+            "answer": "Each LoftRest™ session runs for 15 minutes. Most people use it once a day, often in the evening before sleep. Start on the gentlest setting, build up gradually, and stop if anything feels uncomfortable."
           }
         },
         "faq_4": {
           "type": "faq",
           "settings": {
             "question": "Will it help me get comfortable at night?",
-            "answer": "A relaxing wind-down before bed and a pillow that supports your neck can make it easier to get comfortable. LoftRest™ gives you both: a 15–30 minute session to unwind, then a contoured pillow to drift off on."
+            "answer": "A relaxing wind-down before bed and a pillow that supports your neck can make it easier to get comfortable. LoftRest™ gives you both: a 15-minute session to unwind, then a contoured pillow to drift off on."
           }
         },
         "faq_5": {
@@ -143,7 +143,7 @@
           "type": "faq",
           "settings": {
             "question": "How long does shipping take, and can I return it?",
-            "answer": "Standard shipping is free within Australia and usually takes 7–14 business days. International shipping is A$20 and usually takes 10–25 business days. If you change your mind, you can return LoftRest™ within 30 days, and faulty items are always covered. Full details are in our shipping and refund policies. Both are linked at the bottom of this page."
+            "answer": "Standard shipping within Australia is free on orders of A$200 or more (otherwise A$11) and usually takes 7–14 business days. International shipping is A$20 and usually takes 10–25 business days. If you change your mind, you can return LoftRest™ within 30 days, and faulty items are always covered. Full details are in our shipping and refund policies. Both are linked at the bottom of this page."
           }
         }
       },
@@ -168,7 +168,7 @@
       ],
       "settings": {
         "go_to_checkout": true,
-        "shipping_note": "Free standard shipping in Australia",
+        "shipping_note": "Free AU shipping over A$200",
         "returns_label": "30-day returns",
         "show_trial": false
       }

@@ -36,7 +36,7 @@
   </div>
   <div class="bg-brand-indigo/60 border-t border-white/10">
     <ul class="max-w-7xl mx-auto px-4 py-5 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-      <li class="flex items-center justify-center gap-3"><i data-lucide="wind" class="w-5 h-5 text-sky-300"></i> A relaxing 15&ndash;30 minute wind-down</li>
+      <li class="flex items-center justify-center gap-3"><i data-lucide="wind" class="w-5 h-5 text-sky-300"></i> A relaxing 15-minute wind-down</li>
       <li class="flex items-center justify-center gap-3"><i data-lucide="moon" class="w-5 h-5 text-sky-300"></i> Then contoured support all night</li>
       <li class="flex items-center justify-center gap-3"><i data-lucide="timer-off" class="w-5 h-5 text-sky-300"></i> Automatic shut-off timer</li>
     </ul>
@@ -89,7 +89,7 @@
       <a href="{{ product.url | default: routes.all_products_collection_url }}" class="mt-8 inline-flex items-center gap-2 bg-brand-royal hover:bg-brand-indigo text-white font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
     </div>
     <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div class="rounded-2xl bg-brand-lightBlue/50 border border-slate-200 p-5"><span class="inline-flex w-11 h-11 items-center justify-center rounded-full bg-brand-royal text-white"><i data-lucide="bed" class="w-5 h-5"></i></span><h3 class="mt-3 font-bold text-brand-navy">Winding down in bed</h3><p class="mt-1 text-sm text-slate-600">A 15&ndash;30 minute session before you switch off the light.</p></div>
+      <div class="rounded-2xl bg-brand-lightBlue/50 border border-slate-200 p-5"><span class="inline-flex w-11 h-11 items-center justify-center rounded-full bg-brand-royal text-white"><i data-lucide="bed" class="w-5 h-5"></i></span><h3 class="mt-3 font-bold text-brand-navy">Winding down in bed</h3><p class="mt-1 text-sm text-slate-600">A 15-minute session before you switch off the light.</p></div>
       <div class="rounded-2xl bg-brand-lightBlue/50 border border-slate-200 p-5"><span class="inline-flex w-11 h-11 items-center justify-center rounded-full bg-brand-royal text-white"><i data-lucide="sofa" class="w-5 h-5"></i></span><h3 class="mt-3 font-bold text-brand-navy">On the sofa</h3><p class="mt-1 text-sm text-slate-600">Lie back with a show while the warmth does its thing.</p></div>
       <div class="rounded-2xl bg-brand-lightBlue/50 border border-slate-200 p-5"><span class="inline-flex w-11 h-11 items-center justify-center rounded-full bg-brand-royal text-white"><i data-lucide="briefcase" class="w-5 h-5"></i></span><h3 class="mt-3 font-bold text-brand-navy">After a long day</h3><p class="mt-1 text-sm text-slate-600">Plug in after work and give your neck a break from the screen.</p></div>
       <div class="rounded-2xl bg-brand-lightBlue/50 border border-slate-200 p-5"><span class="inline-flex w-11 h-11 items-center justify-center rounded-full bg-brand-royal text-white"><i data-lucide="moon" class="w-5 h-5"></i></span><h3 class="mt-3 font-bold text-brand-navy">Drifting off</h3><p class="mt-1 text-sm text-slate-600">Auto shut-off means you can fall asleep on it, no second thought.</p></div>
@@ -169,7 +169,7 @@
       </table>
     </div>
     <ul class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
-      <li class="flex items-center gap-2"><i data-lucide="truck" class="w-5 h-5 text-sky-300"></i> Free standard shipping in Australia</li>
+      <li class="flex items-center gap-2"><i data-lucide="truck" class="w-5 h-5 text-sky-300"></i> Free AU shipping over A$200</li>
       <li class="flex items-center gap-2"><i data-lucide="undo-2" class="w-5 h-5 text-sky-300"></i> 30-day returns</li>
     </ul>
   </div>
@@ -197,11 +197,11 @@
 {%- endif -%}
 
 <!-- TRUST MARQUEE -->
-<div class="overflow-hidden bg-brand-lightBlue border-y border-sky-200 py-4" aria-label="Free standard shipping in Australia, 30-day returns, secure checkout">
+<div class="overflow-hidden bg-brand-lightBlue border-y border-sky-200 py-4" aria-label="Free AU shipping over A$200, 30-day returns, secure checkout">
   <div class="lr-marquee flex w-max gap-10 text-sm font-semibold text-brand-navy" aria-hidden="true">
     {%- for i in (1..2) -%}
       {%- for j in (1..4) -%}
-      <span class="flex items-center gap-2"><i data-lucide="truck" class="w-4 h-4 text-brand-royal"></i> Free standard shipping in Australia</span>
+      <span class="flex items-center gap-2"><i data-lucide="truck" class="w-4 h-4 text-brand-royal"></i> Free AU shipping over A$200</span>
       <span class="flex items-center gap-2"><i data-lucide="undo-2" class="w-4 h-4 text-brand-royal"></i> 30-day returns</span>
       <span class="flex items-center gap-2"><i data-lucide="lock" class="w-4 h-4 text-brand-royal"></i> Secure checkout</span>
       {%- endfor -%}
@@ -232,7 +232,7 @@
   <div class="max-w-5xl mx-auto px-4">
     <div class="rounded-3xl bg-gradient-to-br from-brand-indigo via-brand-royal to-brand-blue text-white p-8 md:p-12 text-center">
       <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Relax first. Then sleep, supported.</h2>
-      {%- if variant -%}<p class="mt-3 text-sky-100">{{ variant.price | money }} &middot; Free standard shipping in Australia &middot; 30-day returns</p>{%- endif -%}
+      {%- if variant -%}<p class="mt-3 text-sky-100">{{ variant.price | money }} &middot; Free AU shipping over A$200 &middot; 30-day returns</p>{%- endif -%}
       <a href="{{ product.url | default: routes.all_products_collection_url }}" class="mt-8 inline-flex items-center gap-2 bg-white text-brand-royal hover:bg-sky-50 font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
     </div>
   </div>

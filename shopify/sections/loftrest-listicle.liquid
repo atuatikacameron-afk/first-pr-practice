@@ -57,7 +57,7 @@
       <section class="lr-mt-14">
         <div class="lr-flex lr-items-start lr-gap-4">
           <span class="lr-shrink-0 lr-w-10 lr-h-10 lr-rounded-full lr-bg-brand-navy lr-text-white lr-font-extrabold lr-flex lr-items-center lr-justify-center">1</span>
-          <h2 class="lr-text-2xl md:lr-text-3xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">It combines 3 relaxation modes in one 15&ndash;30 minute session</h2>
+          <h2 class="lr-text-2xl md:lr-text-3xl lr-font-extrabold lr-text-brand-navy lr-tracking-tight">It combines 3 relaxation modes in one 15-minute session</h2>
         </div>
         <p class="lr-mt-5 lr-text-lg lr-text-slate-700 lr-leading-relaxed">Most at-home neck products do one thing: a foam stretcher <em>or</em> a heat pack. LoftRest™ runs three together, or one at a time:</p>
         <ul class="lr-mt-5 lr-space-y-3">
@@ -101,7 +101,7 @@
           <div class="lr-rounded-2xl lr-bg-brand-navy lr-text-white lr-p-6">
             <p class="lr-text-xs lr-font-bold lr-uppercase lr-tracking-wide lr-text-sky-400">Phase 1 &middot; Bedtime</p>
             <h3 class="lr-mt-2 lr-text-xl lr-font-bold">Relaxation session</h3>
-            <p class="lr-mt-2 lr-text-slate-300">Turn on heat, traction and massage for a 15&ndash;30 minute session while you read or unwind.</p>
+            <p class="lr-mt-2 lr-text-slate-300">Turn on heat, traction and massage for a 15-minute session while you read or unwind.</p>
           </div>
           <div class="lr-rounded-2xl lr-bg-brand-lightBlue lr-p-6">
             <p class="lr-text-xs lr-font-bold lr-uppercase lr-tracking-wide lr-text-brand-blue">Phase 2 &middot; Overnight</p>
@@ -195,7 +195,7 @@
         <ul class="lr-mt-5 lr-space-y-2 lr-text-slate-300">
           <li class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="m16 9-5.5 5.5L8 12" /></svg> 3-in-1 traction, heat &amp; massage</li>
           <li class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="m16 9-5.5 5.5L8 12" /></svg> Contoured pillow, soft flannel cover</li>
-          <li class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="m16 9-5.5 5.5L8 12" /></svg> Free standard shipping in Australia</li>
+          <li class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="m16 9-5.5 5.5L8 12" /></svg> Free AU shipping over A$200</li>
           <li class="lr-flex lr-items-center lr-gap-3"><svg class="lr-w-5 lr-h-5 lr-text-brand-emerald" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10" /><path d="m16 9-5.5 5.5L8 12" /></svg> 30-day returns</li>
         </ul>
         {%- if variant -%}<form action="{{ routes.cart_add_url }}" method="post" class="lr-contents"><input type="hidden" name="id" value="{{ variant.id }}"><input type="hidden" name="quantity" value="1"><input type="hidden" name="return_to" value="/checkout"><button type="submit" class="lr-mt-6 lr-block lr-w-full lr-text-center lr-bg-brand-blue hover:lr-bg-sky-600 lr-text-white lr-font-extrabold lr-text-lg lr-px-8 lr-py-4 lr-rounded-xl lr-shadow-xl lr-transition-colors">Check availability{% if on_sale %} &amp; claim <span>{{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round }}%</span> off{% endif %}</button></form>{%- else -%}<a href="{{ routes.all_products_collection_url }}" class="lr-mt-6 lr-block lr-w-full lr-text-center lr-bg-brand-blue hover:lr-bg-sky-600 lr-text-white lr-font-extrabold lr-text-lg lr-px-8 lr-py-4 lr-rounded-xl lr-shadow-xl lr-transition-colors">Check availability{% if on_sale %} &amp; claim <span>{{ variant.compare_at_price | minus: variant.price | times: 100.0 | divided_by: variant.compare_at_price | round }}%</span> off{% endif %}</a>{%- endif -%}

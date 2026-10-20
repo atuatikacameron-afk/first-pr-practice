@@ -25,9 +25,9 @@ faqs = [
   ("Is it safe to sleep on LoftRest™ all night?",
    "Yes. That's what it's designed for. The built-in automatic shut-off timer switches off the heat, stretch and massage at the end of a session, and LoftRest™ then works as a contoured pillow you can keep resting on."),
   ("How long should I use it each day?",
-   "Each LoftRest™ session runs for 15–30 minutes. Most people use it once a day, often in the evening before sleep. Start on the gentlest setting, build up gradually, and stop if anything feels uncomfortable."),
+   "Each LoftRest™ session runs for 15 minutes. Most people use it once a day, often in the evening before sleep. Start on the gentlest setting, build up gradually, and stop if anything feels uncomfortable."),
   ("Will it help me get comfortable at night?",
-   "A relaxing wind-down before bed and a pillow that supports your neck can make it easier to get comfortable. LoftRest™ gives you both: a 15–30 minute session to unwind, then a contoured pillow to drift off on."),
+   "A relaxing wind-down before bed and a pillow that supports your neck can make it easier to get comfortable. LoftRest™ gives you both: a 15-minute session to unwind, then a contoured pillow to drift off on."),
   ("Is it good after a long day at a desk?",
    "Many people use LoftRest™ to unwind after long days at a screen: lie back, let the warmth and gentle stretch relax you, then drift off. Regular screen breaks and a raised monitor are good habits too."),
   ("Who should not use LoftRest™?",
@@ -37,7 +37,7 @@ faqs = [
   ("What size is it?",
    "LoftRest™ measures 42.5 × 27 cm (16.7 × 10.6 in). It has a contoured shape and a soft, breathable flannel cover."),
   ("How long does shipping take, and can I return it?",
-   "Standard shipping is free within Australia and usually takes 7–14 business days. International shipping is A$20 and usually takes 10–25 business days. If you change your mind, you can return LoftRest™ within 30 days, and faulty items are always covered. Full details are in our shipping and refund policies. Both are linked at the bottom of this page."),
+   "Standard shipping within Australia is free on orders of A$200 or more (otherwise A$11) and usually takes 7–14 business days. International shipping is A$20 and usually takes 10–25 business days. If you change your mind, you can return LoftRest™ within 30 days, and faulty items are always covered. Full details are in our shipping and refund policies. Both are linked at the bottom of this page."),
 ]
 
 schema = {
@@ -45,10 +45,10 @@ schema = {
   "tag": "div",
   "class": "loftrest-section",
   "settings": [
-    {"type": "text", "id": "subtitle", "label": "Short description", "default": "A 3-in-1 cervical traction pillow: a 15–30 minute relaxation session of gentle air traction, heat and massage, then all-night neck support."},
+    {"type": "text", "id": "subtitle", "label": "Short description", "default": "A 3-in-1 cervical traction pillow: a 15-minute relaxation session of gentle air traction, heat and massage, then all-night neck support."},
     {"type": "checkbox", "id": "go_to_checkout", "label": "Add to cart goes straight to checkout", "default": True},
     {"type": "header", "content": "Trust"},
-    {"type": "text", "id": "shipping_note", "label": "Shipping promise", "default": "Free standard shipping in Australia", "info": "Only say what your shipping settings really offer. Leave empty to hide."},
+    {"type": "text", "id": "shipping_note", "label": "Shipping promise", "default": "Free AU shipping over A$200", "info": "Only say what your shipping settings really offer. Leave empty to hide."},
     {"type": "text", "id": "returns_label", "label": "Returns link text", "default": "30-day returns", "info": "Shown when your store has a refund policy. Keep it in line with that policy."},
     {"type": "checkbox", "id": "show_trial", "label": "Show trial badge", "default": False, "info": "Only turn on if you really offer a trial with a full refund."},
     {"type": "range", "id": "trial_days", "label": "Trial length (nights)", "min": 7, "max": 100, "step": 1, "default": 30},
@@ -101,7 +101,7 @@ blocks.update(reviews_data.blocks())
 blocks.update({f"faq_{i+1}": {"type": "faq", "settings": {"question": q, "answer": a}} for i, (q, a) in enumerate(faqs)})
 template = {
   "sections": {"main": {"type": "loftrest-product", "blocks": blocks, "block_order": list(blocks),
-                        "settings": {"go_to_checkout": True, "shipping_note": "Free standard shipping in Australia", "returns_label": "30-day returns", "show_trial": False}}},
+                        "settings": {"go_to_checkout": True, "shipping_note": "Free AU shipping over A$200", "returns_label": "30-day returns", "show_trial": False}}},
   "order": ["main"]
 }
 (ROOT / 'templates' / 'product.loftrest.json').write_text(json.dumps(template, indent=2, ensure_ascii=False) + '\n')
