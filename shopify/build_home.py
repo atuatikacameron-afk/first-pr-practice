@@ -90,7 +90,7 @@ blocks = reviews_data.blocks()
 blocks.update({f"faq_{i+1}": {"type": "faq", "settings": {"question": q, "answer": by_q[q]}} for i, q in enumerate(want)})
 # Quiz app sections the owner added in Customize (RevenueHunt). Kept so a rebuild doesn't remove them.
 def _quiz(block_id, block_type, settings, disabled=False):
-    b = {"type": f"shopify://apps/revenuehunt-product-quiz-maker/blocks/{block_type}/672f3d48-fd3b-4227-8778-c6e58c4f8a98", "settings": settings}
+    b = {"type": f"shopify://apps/rh-product-quiz-builder/blocks/{block_type}/672f3d48-fd3b-4227-8778-c6e58c4f8a98", "settings": settings}
     if disabled: b["disabled"] = True
     return {"type": "_blocks", "blocks": {block_id: b}, "block_order": [block_id], "settings": {
         "content_direction": "column", "vertical_on_mobile": True, "horizontal_alignment": "flex-start", "vertical_alignment": "center",

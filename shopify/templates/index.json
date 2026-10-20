@@ -162,7 +162,7 @@
       "type": "_blocks",
       "blocks": {
         "revenuehunt_product_quiz_maker_v2_inline_quiz_dYwTRp": {
-          "type": "shopify://apps/revenuehunt-product-quiz-maker/blocks/v2-inline-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+          "type": "shopify://apps/rh-product-quiz-builder/blocks/v2-inline-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
           "settings": {
             "quiz_height": 500,
             "quiz_height_unit": "px",
@@ -210,7 +210,7 @@
       "type": "_blocks",
       "blocks": {
         "revenuehunt_product_quiz_maker_v2_automatic_popup_block_ne66a4": {
-          "type": "shopify://apps/revenuehunt-product-quiz-maker/blocks/v2-automatic-popup-block/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+          "type": "shopify://apps/rh-product-quiz-builder/blocks/v2-automatic-popup-block/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
           "settings": {
             "popup_timeout": 20,
             "quiz_width": "100",
@@ -258,7 +258,7 @@
       "type": "_blocks",
       "blocks": {
         "revenuehunt_product_quiz_maker_v2_inline_quiz_9fQ73U": {
-          "type": "shopify://apps/revenuehunt-product-quiz-maker/blocks/v2-inline-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+          "type": "shopify://apps/rh-product-quiz-builder/blocks/v2-inline-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
           "settings": {
             "quiz_height": 500,
             "quiz_height_unit": "px",
@@ -307,7 +307,7 @@
       "type": "_blocks",
       "blocks": {
         "revenuehunt_product_quiz_maker_v2_inline_quiz_b7xPJx": {
-          "type": "shopify://apps/revenuehunt-product-quiz-maker/blocks/v2-inline-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+          "type": "shopify://apps/rh-product-quiz-builder/blocks/v2-inline-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
           "settings": {
             "quiz_height": 500,
             "quiz_height_unit": "px",
