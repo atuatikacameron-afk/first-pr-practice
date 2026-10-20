@@ -83,7 +83,7 @@ FAQ = [
   ("Orders & shipping", "Will I get tracking?",
    "Yes. Once your order ships, we'll email you tracking details where available."),
   ("Orders & shipping", "Is there a discount for buying two?",
-   "Yes. Buy 2 or more LoftRest™ pillows and get 10% off with the code LOFTREST2PACK. If you choose the 2 × LoftRest™ option on the product page, the code is applied for you at checkout."),
+   "Yes. Buy 2 or more LoftRest™ pillows and get 10% off with the code LOFTREST2PACK. Add 2 or more to your cart and enter the code at checkout."),
   ("Orders & shipping", "Is checkout secure?",
    "Yes. Payments are processed securely by Shopify, and we never see or store your full card details."),
   ("Returns & refunds", "Can I return LoftRest™ if I change my mind?",

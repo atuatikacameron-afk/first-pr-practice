@@ -55,7 +55,6 @@
       <ul class="mt-4 space-y-3">
         {%- if product != blank -%}
         <li><a href="{{ product.url }}" class="hover:text-white">LoftRest™ Pillow</a></li>
-        <li><a href="{{ product.url }}" class="hover:text-white">2-Pack (save 10%)</a></li>
         {%- endif -%}
         {%- for link in section.settings.shop_menu.links -%}<li><a href="{{ link.url }}" class="hover:text-white">{{ link.title | escape }}</a></li>{%- endfor -%}
         {%- if section.settings.shop_menu == blank -%}

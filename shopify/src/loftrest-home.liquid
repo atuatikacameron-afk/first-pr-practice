@@ -9,8 +9,6 @@
 {%- assign review_count = reviews | size -%}
 {%- assign moments = section.blocks | where: 'type', 'moment' -%}
 {%- assign faqs = section.blocks | where: 'type', 'faq' -%}
-{%- assign bundle_ok = false -%}
-{%- if section.settings.bundle_code != blank and section.settings.bundle_percent > 0 -%}{%- assign bundle_ok = true -%}{%- endif -%}
 
 <style>
   @keyframes lr-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
@@ -30,7 +28,7 @@
         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-300"></i> Soothing warmth</li>
         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-sky-300"></i> Contoured, soft flannel</li>
       </ul>
-      <a href="#offers" class="mt-8 self-start inline-flex items-center gap-2 bg-white text-brand-royal hover:bg-sky-50 font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+      <a href="{{ product.url | default: routes.all_products_collection_url }}" class="mt-8 self-start inline-flex items-center gap-2 bg-white text-brand-royal hover:bg-sky-50 font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
     </div>
     <div class="relative min-h-[320px] lg:min-h-[560px] order-1 lg:order-2">
       <!--SLOT id="hero_image" label="Hero photo (person relaxing on LoftRest)" wrap="absolute inset-0" sizes="(min-width: 1024px) 50vw, 100vw" eager-->
@@ -59,64 +57,7 @@
       <li class="rounded-2xl bg-white border border-slate-200 p-5"><i data-lucide="activity" class="w-7 h-7 mx-auto text-brand-emerald"></i><p class="mt-3 font-bold text-brand-navy text-sm">Micro-pulse massage</p></li>
       <li class="rounded-2xl bg-white border border-slate-200 p-5"><i data-lucide="layers" class="w-7 h-7 mx-auto text-brand-royal"></i><p class="mt-3 font-bold text-brand-navy text-sm">Contoured, soft flannel</p></li>
     </ul>
-    <a href="#offers" class="mt-10 inline-flex items-center gap-2 bg-brand-royal hover:bg-brand-indigo text-white font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
-  </div>
-</section>
-
-<!-- OFFERS -->
-<section id="offers" class="py-16 md:py-24 bg-brand-lightBlue/50 scroll-mt-16">
-  <div class="max-w-5xl mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight text-center">Choose your LoftRest™</h2>
-    <p class="mt-3 text-center text-slate-600">Free standard shipping in Australia &middot; 30-day returns &middot; Secure checkout</p>
-    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- Offer 1 -->
-      <div class="rounded-3xl bg-white border border-slate-200 p-6 flex flex-col">
-        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden">
-          <!--SLOT id="offer1_image" label="Offer photo (1 pillow)" wrap="absolute inset-0" sizes="(min-width: 768px) 460px, 100vw"-->
-        </div>
-        <h3 class="mt-5 text-xl font-extrabold text-brand-navy">1 &times; LoftRest™</h3>
-        <ul class="mt-3 space-y-2 text-sm text-slate-700 flex-1">
-          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> Air traction, heat &amp; massage</li>
-          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> Contoured pillow with a soft flannel cover</li>
-          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> USB powered with auto shut-off</li>
-        </ul>
-        {%- if variant -%}
-        <p class="mt-5 text-2xl font-extrabold text-brand-navy">{{ variant.price | money }}</p>
-        <form action="{{ routes.cart_add_url }}" method="post" class="mt-4">
-          <input type="hidden" name="id" value="{{ variant.id }}"><input type="hidden" name="quantity" value="1"><input type="hidden" name="return_to" value="/checkout">
-          <button type="submit" {% unless variant.available %}disabled{% endunless %} class="w-full bg-brand-royal hover:bg-brand-indigo disabled:opacity-50 text-white font-extrabold py-4 rounded-full transition-colors">{% if variant.available %}Buy 1 pillow{% else %}Sold out{% endif %}</button>
-        </form>
-        {%- endif -%}
-      </div>
-      <!-- Offer 2 -->
-      <div class="relative rounded-3xl bg-gradient-to-b from-brand-lightBlue/60 to-white border-2 border-brand-royal p-6 flex flex-col shadow-xl shadow-brand-royal/15">
-        {%- if bundle_ok or section.settings.bundle_badge != blank -%}<span class="absolute -top-4 left-6 z-10 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-brand-emerald to-emerald-500 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wide text-white shadow-md"><i data-lucide="sparkles" class="w-4 h-4"></i> {% if section.settings.bundle_badge != blank %}{{ section.settings.bundle_badge | escape }}{% else %}Save {{ section.settings.bundle_percent }}%{% endif %}</span>{%- endif -%}
-        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden">
-          <!--SLOT id="offer2_image" label="Offer photo (2 pillows)" wrap="absolute inset-0" sizes="(min-width: 768px) 460px, 100vw"-->
-        </div>
-        <h3 class="mt-5 text-xl font-extrabold text-brand-navy">2 &times; LoftRest™</h3>
-        <ul class="mt-3 space-y-2 text-sm text-slate-700 flex-1">
-          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> One for you, one for someone you love</li>
-          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> Everything in the single pillow, twice</li>
-          {%- if bundle_ok -%}<li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> {{ section.settings.bundle_percent }}% off, applied at checkout</li>{%- endif -%}
-          <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 shrink-0 mt-0.5 text-brand-emerald"></i> Free standard shipping within Australia</li>
-        </ul>
-        {%- if variant -%}
-          {%- assign pair = variant.price | times: 2 -%}
-          <p class="mt-5 text-2xl font-extrabold text-brand-navy">
-            {%- if bundle_ok -%}
-              {%- assign pair_off = pair | times: section.settings.bundle_percent | divided_by: 100 -%}
-              {{ pair | minus: pair_off | money }} <span class="text-base font-semibold text-slate-400 line-through">{{ pair | money }}</span>
-            {%- else -%}{{ pair | money }}{%- endif -%}
-          </p>
-          <form action="{{ routes.cart_add_url }}" method="post" class="mt-4">
-            <input type="hidden" name="id" value="{{ variant.id }}"><input type="hidden" name="quantity" value="2">
-            <input type="hidden" name="return_to" value="{% if bundle_ok %}/discount/{{ section.settings.bundle_code | url_encode }}?redirect=%2Fcheckout{% else %}/checkout{% endif %}">
-            <button type="submit" {% unless variant.available %}disabled{% endunless %} class="w-full bg-brand-royal hover:bg-brand-indigo disabled:opacity-50 text-white font-extrabold py-4 rounded-full transition-colors">{% if variant.available %}Buy 2 pillows{% else %}Sold out{% endif %}</button>
-          </form>
-        {%- endif -%}
-      </div>
-    </div>
+    <a href="{{ product.url | default: routes.all_products_collection_url }}" class="mt-10 inline-flex items-center gap-2 bg-brand-royal hover:bg-brand-indigo text-white font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
   </div>
 </section>
 
@@ -134,7 +75,7 @@
         <li class="flex gap-4"><span class="w-10 h-10 shrink-0 rounded-full bg-orange-50 text-brand-heat flex items-center justify-center"><i data-lucide="flame" class="w-5 h-5"></i></span><span class="text-slate-700"><strong class="text-brand-navy">Constant, soothing warmth</strong> while you unwind</span></li>
         <li class="flex gap-4"><span class="w-10 h-10 shrink-0 rounded-full bg-emerald-50 text-brand-emerald flex items-center justify-center"><i data-lucide="timer-off" class="w-5 h-5"></i></span><span class="text-slate-700"><strong class="text-brand-navy">Auto shut-off</strong> so you can drift off without a second thought</span></li>
       </ul>
-      <a href="#offers" class="mt-8 inline-flex items-center gap-2 bg-brand-royal hover:bg-brand-indigo text-white font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+      <a href="{{ product.url | default: routes.all_products_collection_url }}" class="mt-8 inline-flex items-center gap-2 bg-brand-royal hover:bg-brand-indigo text-white font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
     </div>
   </div>
 </section>
@@ -145,7 +86,7 @@
     <div class="lg:col-span-2">
       <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight">Made for your evening routine</h2>
       <p class="mt-4 text-lg text-slate-600">In bed, on the sofa, or after a long shift: LoftRest™ runs on USB, so your wind-down goes wherever you do.</p>
-      <a href="#offers" class="mt-8 inline-flex items-center gap-2 bg-brand-royal hover:bg-brand-indigo text-white font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+      <a href="{{ product.url | default: routes.all_products_collection_url }}" class="mt-8 inline-flex items-center gap-2 bg-brand-royal hover:bg-brand-indigo text-white font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
     </div>
     <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
       <div class="rounded-2xl bg-brand-lightBlue/50 border border-slate-200 p-5"><span class="inline-flex w-11 h-11 items-center justify-center rounded-full bg-brand-royal text-white"><i data-lucide="bed" class="w-5 h-5"></i></span><h3 class="mt-3 font-bold text-brand-navy">Winding down in bed</h3><p class="mt-1 text-sm text-slate-600">A 15&ndash;30 minute session before you switch off the light.</p></div>
@@ -202,7 +143,7 @@
           <summary class="flex items-center justify-between gap-4 cursor-pointer font-bold list-none"><span class="flex items-center gap-3"><i data-lucide="timer-off" class="w-5 h-5 text-sky-300"></i> Auto shut-off &amp; USB power</span><i data-lucide="plus" class="w-5 h-5 shrink-0 transition-transform group-open:rotate-45"></i></summary>
           <p class="mt-3 text-sky-100">Low-voltage 5V USB power, and a built-in timer that switches everything off at the end of your session.</p>
         </details>
-        <a href="#offers" class="inline-flex items-center gap-2 bg-white text-brand-royal hover:bg-sky-50 font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+        <a href="{{ product.url | default: routes.all_products_collection_url }}" class="inline-flex items-center gap-2 bg-white text-brand-royal hover:bg-sky-50 font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
       </div>
     </div>
 
@@ -292,7 +233,7 @@
     <div class="rounded-3xl bg-gradient-to-br from-brand-indigo via-brand-royal to-brand-blue text-white p-8 md:p-12 text-center">
       <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Relax first. Then sleep, supported.</h2>
       {%- if variant -%}<p class="mt-3 text-sky-100">{{ variant.price | money }} &middot; Free standard shipping in Australia &middot; 30-day returns</p>{%- endif -%}
-      <a href="#offers" class="mt-8 inline-flex items-center gap-2 bg-white text-brand-royal hover:bg-sky-50 font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
+      <a href="{{ product.url | default: routes.all_products_collection_url }}" class="mt-8 inline-flex items-center gap-2 bg-white text-brand-royal hover:bg-sky-50 font-extrabold px-8 py-4 rounded-full shadow-lg transition-colors">Shop LoftRest™ <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
     </div>
   </div>
 </section>

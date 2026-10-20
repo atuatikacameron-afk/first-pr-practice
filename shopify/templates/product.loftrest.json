@@ -3,25 +3,6 @@
     "main": {
       "type": "loftrest-product",
       "blocks": {
-        "offer_1": {
-          "type": "offer",
-          "settings": {
-            "label": "1 × LoftRest™",
-            "note": "For you",
-            "quantity": 1
-          }
-        },
-        "offer_2": {
-          "type": "offer",
-          "settings": {
-            "label": "2 × LoftRest™",
-            "note": "One for you, one for someone you love",
-            "quantity": 2,
-            "discount_code": "LOFTREST2PACK",
-            "discount_percent": 10,
-            "badge": "Save 10% + Free AU shipping"
-          }
-        },
         "review_1": {
           "type": "review",
           "settings": {
@@ -167,8 +148,6 @@
         }
       },
       "block_order": [
-        "offer_1",
-        "offer_2",
         "review_1",
         "review_2",
         "review_3",
