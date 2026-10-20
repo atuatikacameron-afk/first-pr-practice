@@ -143,7 +143,7 @@
         "faq_6"
       ],
       "settings": {
-        "product": "products-loftrest-3in1-massaging-orthopedic-cervical-pillowhttps-yourdomain-com-products-loftrest-3in1-massaging-orthopedic-cervical-pillow",
+        "product": "loftrest-3-in-1-neck-relaxation-pillow",
         "hero_badge": "3-in-1 traction pillow",
         "hero_heading": "Your evening wind-down starts here",
         "hero_text": "Gentle air traction, soothing warmth and massage to help you unwind, then a contoured pillow with a soft flannel cover to drift off on.",
@@ -166,7 +166,8 @@
             "quiz_retake_autoscroll": "disabled",
             "quiz_question_autoscroll": "disabled",
             "quiz_id": ""
-          }
+          },
+          "disabled": true
         }
       },
       "block_order": [
@@ -214,7 +215,8 @@
             "popup_close_color": "#777777",
             "quiz_exit_intent": false,
             "quiz_id": ""
-          }
+          },
+          "disabled": true
         }
       },
       "block_order": [

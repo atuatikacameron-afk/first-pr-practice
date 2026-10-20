@@ -12,7 +12,7 @@ import reviews_data, twkit
 
 ROOT = pathlib.Path(__file__).resolve().parent
 PAGE_SRC = (ROOT.parent / 'index.html').read_text()   # brand colours / tailwind.config
-PRODUCT = 'products-loftrest-3in1-massaging-orthopedic-cervical-pillowhttps-yourdomain-com-products-loftrest-3in1-massaging-orthopedic-cervical-pillow'
+PRODUCT = 'loftrest-3-in-1-neck-relaxation-pillow'
 
 
 def build(name, schema, title):

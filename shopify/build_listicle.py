@@ -135,7 +135,7 @@ liquid = f'''{{%- comment -%}}
 
 template = {
   "sections": {"main": {"type": "loftrest-listicle",
-    "settings": {"product": "products-loftrest-3in1-massaging-orthopedic-cervical-pillowhttps-yourdomain-com-products-loftrest-3in1-massaging-orthopedic-cervical-pillow",
+    "settings": {"product": "loftrest-3-in-1-neck-relaxation-pillow",
                  "image_top": "shopify://shop_images/neck-pain-hd.webp", "caption_top": cap_text['image_top'],
                  "image_middle": "shopify://shop_images/loftrest-hero.webp", "caption_middle": cap_text['image_middle'],
                  "image_bottom": "shopify://shop_images/waking-up.webp", "caption_bottom": "The goal: waking up comfortable and ready for the day.",

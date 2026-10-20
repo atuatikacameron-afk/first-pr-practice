@@ -18,7 +18,7 @@ import reviews_data, twkit
 ROOT = pathlib.Path(__file__).resolve().parent
 src = (ROOT / 'src' / 'loftrest-home.liquid').read_text()
 page_src = (ROOT.parent / 'index.html').read_text()   # brand colours / tailwind.config
-PRODUCT = 'products-loftrest-3in1-massaging-orthopedic-cervical-pillowhttps-yourdomain-com-products-loftrest-3in1-massaging-orthopedic-cervical-pillow'
+PRODUCT = 'loftrest-3-in-1-neck-relaxation-pillow'
 
 body = re.sub(r'^\{%- comment -%\}.*?\{%- endcomment -%\}\n', '', src, count=1, flags=re.S)
 
@@ -97,9 +97,10 @@ def _quiz(block_id, block_type, settings, disabled=False):
 _inline = {"quiz_height": 500, "quiz_height_unit": "px", "quiz_fixed_height": False, "quiz_full_width": False,
            "quiz_retake_autoscroll": "disabled", "quiz_question_autoscroll": "disabled", "quiz_id": ""}
 QUIZ_SECTIONS = {
-  "1791865482cb1476cb": _quiz("revenuehunt_product_quiz_maker_v2_inline_quiz_dYwTRp", "v2-inline-quiz", _inline),
+  # The two active quiz blocks are switched off until a quiz is chosen (quiz_id is empty, so they'd show nothing or an empty pop-up).
+  "1791865482cb1476cb": _quiz("revenuehunt_product_quiz_maker_v2_inline_quiz_dYwTRp", "v2-inline-quiz", _inline, disabled=True),
   "179186557683b020a2": _quiz("revenuehunt_product_quiz_maker_v2_automatic_popup_block_ne66a4", "v2-automatic-popup-block",
-      {"popup_timeout": 20, "quiz_width": "100", "quiz_height": "100", "quiz_z_index": 100, "popup_close_color": "#777777", "quiz_exit_intent": False, "quiz_id": ""}),
+      {"popup_timeout": 20, "quiz_width": "100", "quiz_height": "100", "quiz_z_index": 100, "popup_close_color": "#777777", "quiz_exit_intent": False, "quiz_id": ""}, disabled=True),
   "1791865646e2665dbe": _quiz("revenuehunt_product_quiz_maker_v2_inline_quiz_9fQ73U", "v2-inline-quiz", _inline, disabled=True),
   "1791865728cf917bc4": _quiz("revenuehunt_product_quiz_maker_v2_inline_quiz_b7xPJx", "v2-inline-quiz", _inline, disabled=True),
 }
