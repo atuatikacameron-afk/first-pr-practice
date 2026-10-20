@@ -13,6 +13,8 @@
 {%- for r in reviews -%}{%- if r.settings.stars > 0 -%}{%- assign star_total = star_total | plus: r.settings.stars -%}{%- assign rated_count = rated_count | plus: 1 -%}{%- endif -%}{%- endfor -%}
 {%- if rated_count > 0 -%}{%- assign rating = star_total | times: 1.0 | divided_by: rated_count | round: 1 -%}{%- endif -%}
 {%- assign offers = section.blocks | where: 'type', 'offer' -%}
+{%- assign app_blocks = section.blocks | where: 'type', '@app' -%}
+{%- assign apps_at_price = false -%}{%- if section.settings.app_position == 'price' -%}{%- assign apps_at_price = true -%}{%- endif -%}
 {%- assign support_email = section.settings.support_email | default: shop.email -%}
 
 <div class="pb-24 md:pb-0">
@@ -67,6 +69,11 @@
       </div>
       <p class="mt-1 text-xs text-slate-500">{% if cart.taxes_included %}Tax included. {% endif %}Shipping calculated at checkout.</p>
 
+      {%- comment -%} Bundle app slot: app blocks (e.g. a bundle app) show here when "App blocks position" is "Under the price". {%- endcomment -%}
+      {%- if apps_at_price -%}
+        {%- for block in app_blocks -%}<div class="mt-5" {{ block.shopify_attributes }}>{% render block %}</div>{%- endfor -%}
+      {%- endif -%}
+
       <ul class="mt-6 space-y-2.5 text-slate-700">
         <li class="flex gap-3"><i data-lucide="wind" class="w-5 h-5 shrink-0 text-brand-blue"></i> Pneumatic air traction for a gentle, relaxing stretch</li>
         <li class="flex gap-3"><i data-lucide="flame" class="w-5 h-5 shrink-0 text-brand-heat"></i> Constant-temperature heat for soothing warmth</li>
@@ -80,7 +87,7 @@
 
         {%- if offers.size > 0 -%}
         <fieldset class="space-y-3">
-          <legend class="font-bold text-brand-navy mb-3">Choose your offer</legend>
+          <legend class="font-bold text-brand-navy mb-3">{{ section.settings.offers_heading | default: "Choose your bundle" | escape }}</legend>
           {%- for block in offers -%}
             {%- assign qty = block.settings.quantity -%}
             {%- assign bundle_price = variant.price | times: qty -%}
@@ -235,8 +242,8 @@
   </section>
 
   <!-- REVIEWS: genuine reviews only (review blocks or a review app block) -->
-  {%- assign app_blocks = section.blocks | where: 'type', '@app' -%}
-  {%- if review_count > 0 or app_blocks.size > 0 -%}
+  {%- assign review_apps = 0 -%}{%- unless apps_at_price -%}{%- assign review_apps = app_blocks.size -%}{%- endunless -%}
+  {%- if review_count > 0 or review_apps > 0 -%}
   <section id="reviews" class="bg-white border-t border-slate-200 scroll-mt-16">
     <div class="max-w-6xl mx-auto px-4 py-16">
       <h2 class="text-3xl md:text-4xl font-extrabold text-brand-navy tracking-tight text-center">Customer reviews</h2>
@@ -253,7 +260,7 @@
         {%- endfor -%}
       </div>
       {%- endif -%}
-      {%- for block in app_blocks -%}<div class="mt-10">{% render block %}</div>{%- endfor -%}
+      {%- unless apps_at_price -%}{%- for block in app_blocks -%}<div class="mt-10">{% render block %}</div>{%- endfor -%}{%- endunless -%}
     </div>
   </section>
   {%- endif -%}

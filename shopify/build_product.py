@@ -52,18 +52,23 @@ schema = {
     {"type": "text", "id": "returns_label", "label": "Returns link text", "default": "30-day returns", "info": "Shown when your store has a refund policy. Keep it in line with that policy."},
     {"type": "checkbox", "id": "show_trial", "label": "Show trial badge", "default": False, "info": "Only turn on if you really offer a trial with a full refund."},
     {"type": "range", "id": "trial_days", "label": "Trial length (nights)", "min": 7, "max": 100, "step": 1, "default": 30},
-    {"type": "text", "id": "support_email", "label": "Support email", "info": "Shown to customers. Leave empty to use your store email."}
+    {"type": "text", "id": "support_email", "label": "Support email", "info": "Shown to customers. Leave empty to use your store email."},
+    {"type": "header", "content": "Bundles"},
+    {"type": "paragraph", "content": "To add your own bundles under the price: Add block > Bundle option (one block per option, e.g. Buy 1, Buy 2, Buy 3). To use a bundle app instead: Add block > Apps, then set the position below to Under the price."},
+    {"type": "text", "id": "offers_heading", "label": "Bundle heading", "default": "Choose your bundle"},
+    {"type": "select", "id": "app_position", "label": "App blocks position", "default": "reviews",
+     "options": [{"value": "price", "label": "Under the price (bundle apps)"}, {"value": "reviews", "label": "Reviews area (review apps)"}]}
   ],
   "blocks": [
     {"type": "@app"},
-    {"type": "offer", "name": "Offer", "settings": [
+    {"type": "offer", "name": "Bundle option", "settings": [
       {"type": "text", "id": "label", "label": "Label", "default": "Buy 1"},
       {"type": "text", "id": "note", "label": "Note"},
-      {"type": "range", "id": "quantity", "label": "Quantity", "min": 1, "max": 5, "step": 1, "default": 1},
+      {"type": "range", "id": "quantity", "label": "Quantity", "min": 1, "max": 10, "step": 1, "default": 1, "info": "How many pillows this option adds to the cart."},
       {"type": "paragraph", "content": "To show a bundle discount, create a real discount code in Shopify (Discounts) first, then enter the same code and percentage here. Both must be filled in or no discount is shown."},
       {"type": "text", "id": "discount_code", "label": "Discount code"},
       {"type": "range", "id": "discount_percent", "label": "Discount %", "min": 0, "max": 50, "step": 1, "default": 0},
-      {"type": "text", "id": "badge", "label": "Badge", "info": "e.g. Most popular"}]},
+      {"type": "text", "id": "badge", "label": "Badge", "info": "e.g. Most popular. Only promise what's true. An option with a badge is highlighted."}]},
     {"type": "review", "name": "Customer review", "settings": [
       {"type": "paragraph", "content": "Only add genuine reviews from real customers, with their permission."},
       reviews_data.STARS,
