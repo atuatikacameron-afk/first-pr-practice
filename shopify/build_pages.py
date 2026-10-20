@@ -87,7 +87,7 @@ FAQ = [
   ("Orders & shipping", "Is checkout secure?",
    "Yes. Payments are processed securely by Shopify, and we never see or store your full card details."),
   ("Returns & refunds", "Can I return LoftRest™ if I change my mind?",
-   "Yes. You can return it within 30 days of delivery if it's in its original condition and packaging. For change-of-mind returns, you pay the return shipping."),
+   "Yes. You can return it within 30 days of delivery if it's unused and in its original packaging. For change-of-mind returns, you pay the return shipping. Faulty items are always covered under the Australian Consumer Law."),
   ("Returns & refunds", "What if my LoftRest™ is faulty or damaged?",
    "Contact us and we'll arrange a repair, replacement or refund, and cover the return shipping. Your rights under the Australian Consumer Law always apply."),
   ("Returns & refunds", "How do I start a return?",
