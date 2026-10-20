@@ -143,7 +143,7 @@
         "faq_6"
       ],
       "settings": {
-        "product": "loftrest-neck-traction-device",
+        "product": "products-loftrest-3in1-massaging-orthopedic-cervical-pillowhttps-yourdomain-com-products-loftrest-3in1-massaging-orthopedic-cervical-pillow",
         "hero_badge": "3-in-1 traction pillow",
         "hero_heading": "Your evening wind-down starts here",
         "hero_text": "Gentle air traction, soothing warmth and massage to help you unwind, then a contoured pillow with a soft flannel cover to drift off on.",
@@ -157,9 +157,207 @@
         "lifestyle_image": "shopify://shop_images/waking-up.webp",
         "features_image": "shopify://shop_images/IMG_5504.jpg"
       }
+    },
+    "1791865482cb1476cb": {
+      "type": "_blocks",
+      "blocks": {
+        "revenuehunt_product_quiz_maker_v2_inline_quiz_dYwTRp": {
+          "type": "shopify://apps/revenuehunt-product-quiz-maker/blocks/v2-inline-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+          "settings": {
+            "quiz_height": 500,
+            "quiz_height_unit": "px",
+            "quiz_fixed_height": false,
+            "quiz_full_width": false,
+            "quiz_retake_autoscroll": "disabled",
+            "quiz_question_autoscroll": "disabled",
+            "quiz_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "revenuehunt_product_quiz_maker_v2_inline_quiz_dYwTRp"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "179186557683b020a2": {
+      "type": "_blocks",
+      "blocks": {
+        "revenuehunt_product_quiz_maker_v2_automatic_popup_block_ne66a4": {
+          "type": "shopify://apps/revenuehunt-product-quiz-maker/blocks/v2-automatic-popup-block/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+          "settings": {
+            "popup_timeout": 20,
+            "quiz_width": "100",
+            "quiz_height": "100",
+            "quiz_z_index": 100,
+            "popup_close_color": "#777777",
+            "quiz_exit_intent": false,
+            "quiz_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "revenuehunt_product_quiz_maker_v2_automatic_popup_block_ne66a4"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "1791865646e2665dbe": {
+      "type": "_blocks",
+      "blocks": {
+        "revenuehunt_product_quiz_maker_v2_inline_quiz_9fQ73U": {
+          "type": "shopify://apps/revenuehunt-product-quiz-maker/blocks/v2-inline-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+          "settings": {
+            "quiz_height": 500,
+            "quiz_height_unit": "px",
+            "quiz_fixed_height": false,
+            "quiz_full_width": false,
+            "quiz_retake_autoscroll": "disabled",
+            "quiz_question_autoscroll": "disabled",
+            "quiz_id": ""
+          },
+          "disabled": true
+        }
+      },
+      "block_order": [
+        "revenuehunt_product_quiz_maker_v2_inline_quiz_9fQ73U"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "1791865728cf917bc4": {
+      "type": "_blocks",
+      "blocks": {
+        "revenuehunt_product_quiz_maker_v2_inline_quiz_b7xPJx": {
+          "type": "shopify://apps/revenuehunt-product-quiz-maker/blocks/v2-inline-quiz/672f3d48-fd3b-4227-8778-c6e58c4f8a98",
+          "settings": {
+            "quiz_height": 500,
+            "quiz_height_unit": "px",
+            "quiz_fixed_height": false,
+            "quiz_full_width": false,
+            "quiz_retake_autoscroll": "disabled",
+            "quiz_question_autoscroll": "disabled",
+            "quiz_id": ""
+          },
+          "disabled": true
+        }
+      },
+      "block_order": [
+        "revenuehunt_product_quiz_maker_v2_inline_quiz_b7xPJx"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1791865482cb1476cb",
+    "179186557683b020a2",
+    "1791865646e2665dbe",
+    "1791865728cf917bc4"
   ]
 }
