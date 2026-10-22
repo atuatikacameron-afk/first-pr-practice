@@ -9,7 +9,7 @@ In Australia, a product advertised to relieve pain or treat a condition counts a
 | OK to say | Don't say |
 | --- | --- |
 | relax, unwind, soothing, comfortable, gentle stretch | relieves / reduces neck pain, pain relief |
-| contoured pillow, soft flannel cover (LoftRest has no memory foam: never say it does) | decompresses the spine, spinal decompression, pinched nerves |
+| contoured memory foam, soft flannel cover (don't add "high-density" unless confirmed) | decompresses the spine, spinal decompression, pinched nerves |
 | relaxation session, modes, warmth, massage | therapy, therapeutic, clinical, treatment, heals, cures |
 | made for desk workers and physical workers | fixes / corrects posture, reverses tech neck |
 | helps you get comfortable at night | treats insomnia, stops headaches |

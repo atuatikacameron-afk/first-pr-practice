@@ -34,7 +34,7 @@ schema = {
     {"type": "header", "content": "Hero"},
     {"type": "text", "id": "hero_badge", "label": "Badge", "default": "3-in-1 traction pillow"},
     {"type": "text", "id": "hero_heading", "label": "Heading", "default": "Your evening wind-down starts here"},
-    {"type": "textarea", "id": "hero_text", "label": "Text", "default": "Gentle air traction, soothing warmth and massage to help you unwind, then a contoured pillow with a soft flannel cover to drift off on."},
+    {"type": "textarea", "id": "hero_text", "label": "Text", "default": "Gentle air traction, soothing warmth and massage to help you unwind, then contoured memory foam with a soft flannel cover to drift off on."},
     {"type": "header", "content": "Images"},
     *[{"type": "image_picker", "id": sid, "label": label} for sid, label in slots],
   ],
@@ -108,7 +108,7 @@ QUIZ_SECTIONS = {
     "type": "loftrest-home", "blocks": blocks, "block_order": list(blocks),
     "settings": {"product": PRODUCT, "hero_badge": "3-in-1 traction pillow",
                  "hero_heading": "Your evening wind-down starts here",
-                 "hero_text": "Gentle air traction, soothing warmth and massage to help you unwind, then a contoured pillow with a soft flannel cover to drift off on.",
+                 "hero_text": "Gentle air traction, soothing warmth and massage to help you unwind, then contoured memory foam with a soft flannel cover to drift off on.",
                  
                  "hero_image": "shopify://shop_images/loftrest-hero.webp",
                  "product_image": "shopify://shop_images/Title_ad188c19-967a-4386-bb65-74cf28fb6639.png",
