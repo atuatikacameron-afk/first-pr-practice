@@ -35,7 +35,7 @@ faqs = [
   ("How is LoftRest™ powered?",
    "It runs on a 5V USB connection, so you can plug it into a USB wall adapter, a laptop or a power bank."),
   ("What size is it?",
-   "LoftRest™ measures 42.5 × 27 cm (16.7 × 10.6 in). It's made from contoured memory foam with a soft, breathable flannel cover."),
+   "LoftRest™ measures 42.5 × 27 cm (16.7 × 10.6 in). It's made from high-quality contoured memory foam with a soft, breathable flannel cover."),
   ("How long does shipping take, and can I return it?",
    "Standard shipping within Australia is free on orders of A$200 or more (otherwise A$11) and usually takes 7–14 business days. International shipping is A$20 and usually takes 10–25 business days. If you change your mind, you can return LoftRest™ within 30 days, and faulty items are always covered. Full details are in our shipping and refund policies. Both are linked at the bottom of this page."),
 ]

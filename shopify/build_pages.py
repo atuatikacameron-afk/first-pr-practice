@@ -55,7 +55,7 @@ FAQ = [
   ("About LoftRest™", "Can I use the modes separately?",
    "Yes. Use air traction, heat and massage together or one at a time, whichever you find most relaxing."),
   ("About LoftRest™", "What size is it, and what is it made of?",
-   "LoftRest™ measures 42.5 × 27 cm (16.7 × 10.6 in). It's made from contoured memory foam with a soft, breathable flannel cover."),
+   "LoftRest™ measures 42.5 × 27 cm (16.7 × 10.6 in). It's made from high-quality contoured memory foam with a soft, breathable flannel cover."),
   ("About LoftRest™", "Who is LoftRest™ for?",
    "It's popular with people who spend long days at a desk, people who do physical work, and anyone who finds it hard to get comfortable on their pillow at night."),
   ("Using LoftRest™", "How do I use it?",
